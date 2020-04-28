@@ -1,0 +1,14 @@
+<table>
+	<thead>
+	<tr>
+		<th *ngFor="let col of field.columns" style="text-align: left; border: 1px solid #ddd; padding: 4px;">{{ col.title }}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr *ngFor="let el of [].constructor(field.rows); let i = index;">
+		<td *ngFor="let col of field.columns; let colI = index;" style="border: 1px solid #ddd; padding: 4px;">
+			<input [placeholder]="col.placeholder" [readOnly]="field.readonly">
+		</td>
+	</tr>
+	</tbody>
+</table>

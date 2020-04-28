@@ -1,0 +1,34 @@
+:host {
+  padding: 8px;
+  display: block;
+}
+
+mat-card-actions {
+  display: flex;
+}
+
+.exercises-card {
+  margin-bottom: 5px;
+  border: 1px solid;
+
+  & .header-form-field {
+    width: 100%;
+  }
+
+  & .flex-div {
+    flex: 1;
+  }
+}
+
+.status {
+  white-space: pre;
+  color: #f44336;
+}
+
+.json-form-field {
+  width: 100%;
+}
+
+.load-save-actions {
+  display: flex;
+}

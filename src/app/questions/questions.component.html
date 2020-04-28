@@ -1,0 +1,30 @@
+<div class="swiper-container" #swiperEl>
+	<div class="swiper-wrapper">
+		<div class="swiper-slide" #slideElements *ngFor="let question of questions; let i = index">
+			<div>
+				<mat-card>
+					<mat-card-title [innerHTML]="question._title"></mat-card-title>
+					<img mat-card-image *ngIf="question.image" [src]="question.image">
+					<ng-container *ngFor="let in of question.inputs; let qi = index">
+						<mat-card-content>
+							<mat-form-field *ngIf="in.type != 'checkbox'" appearance="outline">
+								<mat-label>{{ in.label }}</mat-label>
+								<input matInput required [type]="in.type ? in.type : 'text'" [placeholder]="in.label" [(ngModel)]="questions[i].inputs[qi]._response" [name]="'q_' + i + '_' + in.name">
+							</mat-form-field>
+							<mat-checkbox [id]="'q_' + i + '_' + in.name" *ngIf="in.type == 'checkbox'" [name]="'q_' + i + '_' + in.name" [(ngModel)]="questions[i].inputs[qi]._response">{{ in.label }}</mat-checkbox>
+							<img mat-card-image *ngIf="in.image" [src]="in.image">
+						</mat-card-content>
+						<mat-divider></mat-divider>
+					</ng-container>
+
+					<mat-card-actions>
+						<button [color]="button.color ? button.color : 'primary'" *ngFor="let button of question.buttons" mat-raised-button (click)="pressedButton(question, button)">{{ button.title }}</button>
+					</mat-card-actions>
+				</mat-card>
+				<!-- <h1 [innerHTML]="question._title"></h1> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="swiper-naivgation"></div>
+</div>

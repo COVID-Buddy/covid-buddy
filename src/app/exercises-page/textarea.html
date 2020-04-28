@@ -1,0 +1,39 @@
+<mat-card style="margin-bottom: 5px; border: 1px solid">
+  <mat-card-header>
+    <mat-card-title>Textarea</mat-card-title>
+    <div>
+      <button color="warn" (click)="delete.emit()" mat-button>Delete</button>
+      <button color="primary" (click)="clone.emit()" mat-button>Clone</button>
+      <button color="primary" (click)="shiftDown.emit()" [disabled]="last" mat-button>&darr;</button>
+      <button color="primary" (click)="shiftUp.emit()" [disabled]="first" mat-button>&uarr;</button>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="label" name="label" type="text" [(ngModel)]="field.label">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="name" name="name" type="text" [(ngModel)]="field.name" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="placeholder" name="placeholder" type="text" [(ngModel)]="field.placeholder">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="rows" name="rows" type="number" [(ngModel)]="field.rows">
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-card-content>
+
+  <mat-card-content>
+    <h4>Preview</h4>
+    <app-exercise-field-textarea [field]="field"></app-exercise-field-textarea>
+  </mat-card-content>
+  <mat-card-footer *ngIf="!last">
+    <button color="primary" (click)="showButtons()" mat-button>{{showAddButtons ? 'Hide' : 'Insert Below'}}</button>
+    <app-add-field-buttons *ngIf="showAddButtons" (addField)="onClickField($event)"></app-add-field-buttons>
+  </mat-card-footer>
+</mat-card>
+

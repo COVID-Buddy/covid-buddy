@@ -1,0 +1,12 @@
+<ng-container [ngSwitch]="_field.type">
+	<p *ngSwitchCase="'paragraph'">{{ _field.text }}</p>
+	<app-exercise-field-textarea *ngSwitchCase="'textarea'" [field]="_field"></app-exercise-field-textarea>
+	<app-exercise-field-input *ngSwitchCase="'input'" [field]="_field"></app-exercise-field-input>
+	<app-exercise-field-grid *ngSwitchCase="'grid'" [field]="_field"></app-exercise-field-grid>
+	<app-exercise-field-dropdown *ngSwitchCase="'dropdown'" [field]="_field"></app-exercise-field-dropdown>
+	<app-exercise-field-table *ngSwitchCase="'table'" [field]="_field"></app-exercise-field-table>
+	<app-exercise-field-radio *ngSwitchCase="'radio'" [field]="_field"></app-exercise-field-radio>
+	<app-exercise-field-rating *ngSwitchCase="'rating'" [field]="_field"></app-exercise-field-rating>
+	<app-exercise-field-list *ngSwitchCase="'list'" [field]="_field"></app-exercise-field-list>
+	<p *ngSwitchDefault>No matching type</p>
+</ng-container>

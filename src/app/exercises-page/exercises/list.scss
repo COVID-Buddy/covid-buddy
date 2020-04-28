@@ -1,0 +1,20 @@
+:host {
+  & > div {
+    display: flex;
+    flex-direction: row;
+
+    app-exercise-field {
+      flex: 1;
+    }
+
+    ion-button {
+      height: auto;
+      min-height: 30px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      padding: 8px;
+    }
+  }
+}

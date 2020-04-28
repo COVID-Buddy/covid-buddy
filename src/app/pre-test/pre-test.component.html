@@ -1,0 +1,13 @@
+<div class="swiper-container" #swiperEl>
+	<div class="swiper-wrapper">
+		<div class="swiper-slide" #slideElements *ngFor="let slide of slides; let i = index">
+			<div>
+				<div [innerHTML]="slide._html"></div>
+				<button mat-raised-button color="primary" (click)="next()" *ngIf="i < slides.length - 1">{{ 'buttons.slide_next' | translate }}</button>
+				<a mat-raised-button color="primary" [routerLink]="['/questions']" *ngIf="i == slides.length - 1">{{ 'buttons.start_questions' | translate }}</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="swiper-naivgation"></div>
+</div>

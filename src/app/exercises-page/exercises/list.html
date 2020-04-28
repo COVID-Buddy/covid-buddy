@@ -1,0 +1,9 @@
+<p class="ion-no-margin" *ngIf="field.label">{{ field.label }}</p>
+<div *ngFor="let f of fields; let i = index; trackBy: trackByFn;">
+	<app-exercise-field [field]="f"></app-exercise-field>
+	<button color="danger" size="small" *ngIf="field.readonly !== true && canRemove(i)" (click)="removeField(i)">Remove</button>
+</div>
+<div>
+	<button *ngIf="field.readonly !== true && field.repeatable && canAddMore()" (click)="addField()">Add more</button>
+	<p class="ion-no-margin" style="flex: 1;" *ngIf="field.repeatable && fields.length < field.min">At least {{ field.min }} responses required</p>
+</div>

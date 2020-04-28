@@ -1,0 +1,11 @@
+<h1 translate>faq.title</h1>
+
+<mat-accordion>
+	<mat-expansion-panel *ngFor="let faq of faqs">
+		<mat-expansion-panel-header>
+			<mat-panel-title>{{ faq.title }}</mat-panel-title>
+		</mat-expansion-panel-header>
+
+		<p [innerHTML]="faq._html"></p>
+	</mat-expansion-panel>
+</mat-accordion>

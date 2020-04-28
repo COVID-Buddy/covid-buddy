@@ -1,0 +1,33 @@
+mat-card-title {
+  margin: 0 0 0 -16px;
+}
+mat-card-header {
+  justify-content: space-between;
+
+  button {
+    float: right;
+  }
+}
+
+mat-card-content {
+  margin-bottom: 0;
+}
+
+form {
+  min-width: 150px;
+  width: 100%;
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+
+    mat-form-field {
+      flex: 1;
+      margin: 4px;
+    }
+  }
+}
+
+table, mat-form-field {
+  width: 100%;
+}

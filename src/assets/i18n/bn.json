@@ -1,0 +1,110 @@
+{
+	"toolbar": {
+		"title": "COVID Checker",
+		"get_started": "এবার শুরু করা যাক",
+		"faq": "FAQ"
+	},
+	"langs": {
+		"language": "Language",
+		"title": "হ্যালো, দয়া করে একটি ভাষা নির্বাচন করুন",
+		"english": "English",
+		"bangladesh": "বাংলা",
+		"thai": "ไทย"
+	},
+	"faq": {
+		"title": "সচরাচর জিজ্ঞাস্য",
+		"items": [{
+			"title": "এটা কি?",
+			"text": "**COVID 19** Help"
+		}, {
+			"title": "গোপনীয়তা",
+			"text": "This website x y z"
+		}]
+	},
+	"slides": [{
+		"content": "## কর্মীরা কোভিড -19 ক্লাস্টার চেক করছে\n\nWe are"
+	}, {
+		"content": "## আমরা নিশ্চিত হয়েছি যে আপনি ভাল আছেন"
+	}, {
+		"content": "## আপনার প্রতিক্রিয়া যাই হোক না কেন, আমরা আপনার যত্ন নেওয়া হয়েছে তা নিশ্চিত করব।.\n\n - আপনার নিয়োগকর্তা / কাজের বিষয়ে চিন্তা করবেন না\n - We will talk to your employer and let you know what happens after"
+	}, {
+		"content": "## Help us with some questions\n\nYour info is confidential, only doctors will see it"
+	}],
+	"buttons": {
+		"slide_next": "পরবর্তী",
+		"start_questions": "শুরু"
+	},
+	"qr": {
+		"message": "এই পৃষ্ঠাটির স্ক্রিনশট করুন বা কোনও স্বাস্থ্যকর্মীর কাছে সরাসরি এটি দেখান"
+	},
+	"questions": [{
+		"title": "আপনি কি **শর্ট অফ ব্রিট**?\n\n![](https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg)",
+		"name": "short_breath",
+		"buttons": [{
+			"title": "হ্যাঁ",
+			"value": "yes",
+			"color": "primary",
+			"action": "emergency"
+		}, {
+			"title": "না",
+			"value": "no"
+		}]
+	}, {
+		"title": "আপনার নিজের সম্পর্কে বলুন",
+		"name": "gender",
+		"buttons": [{
+			"title": "পুরুষ",
+			"value": "m"
+		}, {
+			"title": "মহিলা",
+			"value": "f"
+		}],
+		"inputs": [{
+			"label": "আপনার বয়স কত ?",
+			"name": "age",
+			"type": "number"
+		}]
+	}, {
+		"title": "আপনি কোথায় বাস করেন?",
+		"name": "location",
+		"buttons": [{
+			"title": "Tuas View Dorm",
+			"value": "tuas view dorm"
+		}, {
+			"title": "Westlite Toh Guan",
+			"value": "westlite"
+		}]
+	}, {
+		"title": "লক্ষণ",
+		"name": "symptoms",
+		"inputs": [{
+			"label": "Fever, chills or sweating",
+			"type": "checkbox",
+			"name": "fever"
+		}, {
+			"label": "Cough",
+			"type": "checkbox",
+			"name": "cough"
+		}, {
+			"label": "Loss of smell",
+			"type": "checkbox",
+			"name": "loss of smell"
+		}, {
+			"label": "Sore Throat",
+			"type": "checkbox",
+			"name": "sore throat"
+		}],
+		"buttons": [{
+			"title": "Next"
+		}]
+	}],
+	"emergency": {
+		"title": "এখনই আমাদের কল করুন",
+		"message": "আমরা সরাসরি আপনার সাথে কথা বলতে চাই",
+		"phone": "+65123123123",
+		"button": "এখন ডাকো"
+	},
+	"home": {
+		"text": "আমি একজন ডাক্তার এবং আমি আপনার করোনা ভাইরাস আছে কি না সেটা টেস্ট করতে এসেছি | আপনাদের ডরমিটরি তে covid-১৯ এর কিছু কেস দেখা দিয়েছে , তাই আমরা এসেছি আপনাদের কিছু মেডিকেল টেস্ট করতে । আমরা চাই আপনারা সুস্থ এবং সুরক্ষিত থাকেন, তাই আপনাদের কাছে অনুরোধ যে আপনাদের স্বাস্থ নিয়ে কয়েকটি প্রশ্নের উত্তর দেন | আপনাদের উত্তর অনুযায়ী আমরা আপনাদের সঠিক সাহায্য করতে পারবো | আপনারা আপনাদের কোম্পানি বা সুপারভিসর নিয়ে চিন্তা করবেন না, আমরা তাদের সাথে কথা বলবো এই বিষয়ে যাতে আপনাদের কোনো অনসুবিধা না হয় ।"
+	}
+}

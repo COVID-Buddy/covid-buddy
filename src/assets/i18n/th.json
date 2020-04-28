@@ -1,0 +1,107 @@
+{
+	"toolbar": {
+		"title": "COVID Checker",
+		"get_started": "เริ่ม",
+		"faq": "FAQ"
+	},
+	"langs": {
+		"language": "Language",
+		"title": "สวัสดีกรุณาเลือกภาษา",
+		"english": "English",
+		"bangladesh": "বাংলা",
+		"thai": "ไทย"
+	},
+	"faq": {
+		"title": "คำถามที่พบบ่อย",
+		"items": [{
+			"title": "นี่คืออะไร?",
+			"text": "**COVID 19** Help"
+		}, {
+			"title": "ความเป็นส่วนตัว",
+			"text": "This website x y z"
+		}]
+	},
+	"slides": [{
+		"content": "## เจ้าหน้าที่กำลังตรวจสอบ COVID-19 คลัสเตอร์.\n\nWe are"
+	}, {
+		"content": "## เราต้องการทำให้แน่ใจว่าคุณสบายดี"
+	}, {
+		"content": "## ไม่ว่าคุณจะให้คำตอบเราจะทำให้แน่ใจว่าคุณได้รับการดูแล\n\n - Don't worry about your employer / work\n - We will talk to your employer and let you know what happens after"
+	}, {
+		"content": "## Help us with some questions\n\nYour info is confidential, only doctors will see it"
+	}],
+	"buttons": {
+		"slide_next": "Next",
+		"start_questions": "Start"
+	},
+	"qr": {
+		"message": "Screenshot this page or show this directly to a health worker"
+	},
+	"questions": [{
+		"title": "คุณ **ลมหายใจสั้น**?\n\n![](https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg)",
+		"name": "short_breath",
+		"buttons": [{
+			"title": "ใช่",
+			"value": "yes",
+			"color": "primary",
+			"action": "emergency"
+		}, {
+			"title": "ไม่",
+			"value": "no"
+		}]
+	}, {
+		"title": "บอกเราเกี่ยวกับตัวคุณ",
+		"name": "gender",
+		"buttons": [{
+			"title": "ชาย",
+			"value": "m"
+		}, {
+			"title": "หญิง",
+			"value": "f"
+		}],
+		"inputs": [{
+			"label": "อายุ",
+			"name": "age",
+			"type": "number"
+		}]
+	}, {
+		"title": "คุณอาศัยอยู่ที่ไหน?",
+		"name": "location",
+		"buttons": [{
+			"title": "Tuas View Dorm",
+			"value": "tuas view dorm"
+		}, {
+			"title": "Westlite Toh Guan",
+			"value": "westlite"
+		}]
+	}, {
+		"title": "อาการ",
+		"name": "symptoms",
+		"inputs": [{
+			"label": "Fever, chills or sweating",
+			"type": "checkbox",
+			"name": "fever"
+		}, {
+			"label": "Cough",
+			"type": "checkbox",
+			"name": "cough"
+		}, {
+			"label": "Loss of smell",
+			"type": "checkbox",
+			"name": "loss of smell"
+		}, {
+			"label": "Sore Throat",
+			"type": "checkbox",
+			"name": "sore throat"
+		}],
+		"buttons": [{
+			"title": "Next"
+		}]
+	}],
+	"emergency": {
+		"title": "กรุณาโทรหาเราตอนนี้",
+		"message": "เราอยากคุยกับคุณโดยตรง",
+		"phone": "+65123123123",
+		"button": "โทรเลย"
+	}
+}

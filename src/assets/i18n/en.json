@@ -1,0 +1,212 @@
+{
+	"toolbar": {
+		"title": "COVID Checker",
+		"get_started": "Get Started",
+		"faq": "FAQ"
+	},
+	"langs": {
+		"language": "Language",
+		"title": "Hello, please select a language",
+		"english": "English",
+		"bangladesh": "বাংলা",
+		"thai": "ไทย"
+	},
+	"faq": {
+		"title": "Frequently Asked Questions",
+		"items": [{
+			"title": "What is this?",
+			"text": "**COVID 19** Help"
+		}, {
+			"title": "Privacy",
+			"text": "This website x y z"
+		}]
+	},
+	"slides": [{
+		"content": "### I am a doctor and I am here to test for COVID-19 virus.\nWe have found a few cases of the virus in this dormitory so we are here to help test all of you, and protect you from getting the virus.\n\nWe want to make sure that you are well, so we need you to fill up some basic questions about your health. Based on your answers we will be able to help you better.\n\nAlso, don’t worry about your employer or work, we will talk to them so that you don’t have to face any problems."
+	}, {
+		"content": "## We want to make sure you are well"
+	}, {
+		"content": "## No matter your response, we will make sure you are taken care of.\n\n - Don't worry about your employer / work\n - We will talk to your employer and let you know what happens after"
+	}, {
+		"content": "## Help us with some questions\n\nYour info is confidential, only doctors will see it"
+	}],
+	"buttons": {
+		"slide_next": "Next",
+		"start_questions": "Start"
+	},
+	"qr": {
+		"message": "Screenshot this page or show this directly to a health worker"
+	},
+	"questions": [{
+		"title": "Are you **SHORT OF BREATH**?",
+		"name": "short_breath",
+		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "primary",
+			"action": "emergency"
+		}, {
+			"title": "No",
+			"value": "no"
+		}]
+	}, {
+		"title": "Tell us about yourself",
+		"name": "gender",
+		"buttons": [{
+			"title": "Male",
+			"value": "m"
+		}, {
+			"title": "Female",
+			"value": "f"
+		}],
+		"inputs": [{
+			"label": "What is your age?",
+			"name": "age",
+			"type": "number"
+		}]
+	}, {
+		"title": "What is your current occupation?",
+		"name": "occupation",
+		"inputs": [{
+			"label": "Occupation",
+			"name": "occupation",
+			"type": "text"
+		}],
+		"buttons": [{
+			"title": "Next"
+		}]
+	}, {
+		"title": "Where do you stay?",
+		"name": "location",
+		"inputs": [{
+			"label": "Address",
+			"name": "address",
+			"type": "text"
+		}],
+		"buttons": [{
+			"title": "Next"
+		}]
+	}, {
+		"title": "Do you have any chronic disease?",
+		"name": "chronic_disease",
+		"inputs": [{
+			"label": "Asthma",
+			"type": "checkbox",
+			"name": "asthma"
+		}, {
+			"label": "Pneumonia",
+			"type": "checkbox",
+			"name": "pneumonia"
+		}, {
+			"label": "Hypertension (Blood pressure)",
+			"type": "checkbox",
+			"name": "hypertension"
+		}, {
+			"label": "Hyperlipidemia (Cholesterol)",
+			"type": "checkbox",
+			"name": "hyperlipidemia"
+		}, {
+			"label": "Diabetes",
+			"type": "checkbox",
+			"name": "diabetes"
+		}, {
+			"label": "Heart problems",
+			"type": "checkbox",
+			"name": "heart_problems"
+		}, {
+			"label": "Kidney problems",
+			"type": "checkbox",
+			"name": "kidney_problems"
+		}],
+		"buttons": [{
+			"title": "Next"
+		}]
+	}, {
+		"title": "Do you have the following symptoms?",
+		"name": "symptoms",
+		"inputs": [{
+			"label": "Are you having difficulty breathing?",
+			"type": "checkbox",
+			"name": "difficulty_breathing"
+		}, {
+			"label": "Do you have cough?",
+			"image": "assets/symptoms/cough.jpg",
+			"type": "checkbox",
+			"name": "cough"
+		}, {
+			"label": "Do you have fever?",
+			"image": "assets/symptoms/fever.jpg",
+			"type": "checkbox",
+			"name": "fever"
+		}, {
+			"label": "When was the last time that you checked your temperature?",
+			"type": "datetime",
+			"name": "temperature_time"
+		}, {
+			"label": "What was your maximum temperature?",
+			"type": "number",
+			"name": "temperature_degrees"
+		}, {
+			"label": "Do you have loss of smell?",
+			"type": "checkbox",
+			"name": "loss of smell"
+		}, {
+			"label": "Do you have loss of taste?",
+			"type": "checkbox",
+			"name": "loss of taste"
+		}, {
+			"label": "Sore throat",
+			"type": "checkbox",
+			"name": "sore throat",
+			"image": "assets/symptoms/sore-throat.jpg"
+		}, {
+			"label": "Diarrhea",
+			"type": "checkbox",
+			"name": "diarrhea",
+			"image": "assets/symptoms/diarrhea.png"
+		}, {
+			"label": "Body ache",
+			"type": "checkbox",
+			"name": "body ache",
+			"image": "assets/symptoms/muscle-pain.jpg"
+		}, {
+			"label": "Runny nose",
+			"type": "checkbox",
+			"name": "runny nose",
+			"image": "assets/symptoms/runny-nose.jpg"
+		}],
+		"buttons": [{
+			"title": "Next"
+		}]
+	}, {
+		"title": "Have you traveled outside Singapore in the past 14 days, before onset of symptoms?",
+		"name": "travel outside singapore",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes"
+		}, {
+			"title": "No",
+			"value": "no"
+		}]
+	}, {
+		"title": "Have you been in close contact with a person who has been confirmed/suspected to have COVID-19?",
+		"name": "close contact",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes"
+		}, {
+			"title": "No",
+			"value": "no"
+		}]
+	}],
+	"emergency": {
+		"title": "Please call us NOW",
+		"message": "We would like to speak with you directly",
+		"phone": "+65123123123",
+		"button": "CALL NOW"
+	},
+	"home": {
+		"text": "I am a doctor and I am here to test for COVID-19 virus. We have found a few cases of the virus in this dormitory so we are here to help test all of you, and protect you from getting the virus. We want to make sure that you are well, so we need you to fill up some basic questions about your health. Based on your answers we will be able to help you better. Also, don’t worry about your employer or work, we will talk to them so that you don’t have to face any problems."
+	}
+}
