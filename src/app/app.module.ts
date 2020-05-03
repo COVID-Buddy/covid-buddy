@@ -29,22 +29,6 @@ import { QrComponent } from './qr/qr.component';
 import { EmergencyComponent } from './emergency/emergency.component';
 import { ViewQrComponent } from './view-qr/view-qr.component';
 
-// import { ExercisesPage } from './exercises-page/exercises-page';
-// import { ExerciseService } from './exercises-page/svc';
-// import { AddFieldButtonsComponent } from './exercises-page/add-field-buttons.component';
-// import { DropdownComponent } from './exercises-page/dropdown';
-// import { ExercisesModule } from './exercises-page/exercises/exercises.module';
-// import { GenericFieldComponent } from './exercises-page/field';
-// import { GridFieldComponent } from './exercises-page/grid';
-// import { InputFieldComponent } from './exercises-page/input';
-// import { ListComponent } from './exercises-page/list';
-// import { ParagraphComponent } from './exercises-page/paragraph';
-// import { RadioComponent } from './exercises-page/radio';
-// import { RatingComponent } from './exercises-page/rating';
-// import { TableComponent } from './exercises-page/table';
-// import { TextareaFieldComponent } from './exercises-page/textarea';
-
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -60,18 +44,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     QrComponent,
     EmergencyComponent,
     ViewQrComponent,
-    // ExercisesPage,
-    // GenericFieldComponent,
-    // InputFieldComponent,
-    // TextareaFieldComponent,
-    // GridFieldComponent,
-    // ParagraphComponent,
-    // DropdownComponent,
-    // RadioComponent,
-    // TableComponent,
-    // RatingComponent,
-    // ListComponent,
-    // AddFieldButtonsComponent,
   ],
   imports: [
     BrowserModule,

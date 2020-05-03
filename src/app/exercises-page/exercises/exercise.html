@@ -1,4 +1,0 @@
-<div *ngFor="let step of content.fields.exercises">
-  <h1 *ngIf="step.header && step.header.length > 0">{{ step.header }}</h1>
-  <app-exercise-field [field]="field" *ngFor="let field of step.fields"></app-exercise-field>
-</div>
