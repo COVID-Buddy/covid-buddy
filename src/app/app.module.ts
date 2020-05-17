@@ -71,7 +71,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatDividerModule,
   ],
   providers: [
-    // ExerciseService
   ],
   bootstrap: [AppComponent]
 })
