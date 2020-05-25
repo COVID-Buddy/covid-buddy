@@ -1,18 +1,20 @@
 <div style="display: flex; flex-direction: column; height: 100%;">
 	<mat-toolbar color="primary">
-		<span (click)="goHome()" translate>toolbar.title</span>
+		<a (click)="goHome()"><i translate>toolbar.title</i></a>
 
 		<span style="flex: 1 1 auto;"></span>
 
-		<a mat-button [routerLink]="['/language']">{{ 'toolbar.get_started' | translate }}</a>
-		<a mat-button [routerLink]="['/faq']">{{ 'toolbar.faq' | translate }}</a>
-		<a mat-button [matMenuTriggerFor]="menu">{{ 'langs.language' | translate }}
-			<mat-icon>arrow_drop_down</mat-icon>
+		<a mat-button [href]="qrLink" target="_blank">{{ 'toolbar.qr' | translate }}</a>
+		<a mat-button *ngIf="hasResults" [routerLink]="['/qr', results]">{{ 'toolbar.has_results' | translate }}</a>
+		<a mat-button [matMenuTriggerFor]="menu">
+			<mat-icon>language</mat-icon>
+			<!-- <mat-icon>arrow_drop_down</mat-icon> -->
 		</a>
 		<mat-menu class="languageMenu" #menu="matMenu" xPosition="before">
 			<button mat-menu-item [class.active]="translate.currentLang == 'en'" (click)="setLanguage('en')">{{ 'langs.english' | translate }}</button>
 			<button mat-menu-item [class.active]="translate.currentLang == 'bn'" (click)="setLanguage('bn')">{{ 'langs.bangladesh' | translate }}</button>
 			<button mat-menu-item [class.active]="translate.currentLang == 'th'" (click)="setLanguage('th')">{{ 'langs.thai' | translate }}</button>
+			<button mat-menu-item [class.active]="translate.currentLang == 'zh'" (click)="setLanguage('zh')">{{ 'langs.chinese' | translate }}</button>
 		</mat-menu>
 	</mat-toolbar>
 

@@ -2,7 +2,9 @@ import { Component, OnInit, ViewChild, ElementRef, NgZone, ViewChildren, QueryLi
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
+import * as mixpanel from 'mixpanel-browser';
 import marked from 'marked';
 import Swiper from 'swiper';
 
@@ -23,7 +25,8 @@ export class QuestionsComponent implements OnInit {
   constructor(private translate: TranslateService,
     private sanitizer: DomSanitizer,
     private zone: NgZone,
-    private router: Router) { }
+    private router: Router,
+    private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.changeSub = this.translate.onLangChange.subscribe(change => {
@@ -43,13 +46,26 @@ export class QuestionsComponent implements OnInit {
       this.questions = JSON.parse(JSON.stringify(questions));
       this.questions.forEach(q => {
         q._title = this.sanitizer.bypassSecurityTrustHtml(marked(q.title));
+
+        if (q.inputs) {
+          q.inputs.forEach(input => {
+            input._response = JSON.parse(localStorage.getItem(q.name + "_" + input.name));
+            if (input.type == "number") {
+              input._response = parseInt(input._response)
+              if (isNaN(input._response)) {
+                delete(input._response);
+              }
+            }
+          })
+        }
       });
     });
   }
 
   ngAfterViewInit() {
     this.swiper = new Swiper(this._swiperEl.nativeElement, {
-      allowSlideNext: false
+      allowSlideNext: false,
+      allowSlidePrev: false,
     });
     this.test.start = Math.round((+new Date()) / 1000);
   }
@@ -78,22 +94,41 @@ export class QuestionsComponent implements OnInit {
     }
 
     if (question.inputs) {
+      let hasError = false;
       question.inputs.forEach(input => {
         if (input._response) {
-          this.test[question.name + "_" + input.name] = input._response;
+          let key = question.name + "_" + input.name;
+          this.test[key] = input._response;
+          localStorage.setItem(key, JSON.stringify(input._response));
+        }
+
+        if (input.required && (!input._response || input._response == "")) {
+          this.snackbar.open(this.translate.instant('input_required'), this.translate.instant('buttons.ok'), {
+            duration: 3000,
+          });
+          hasError = true;
+          mixpanel.track('input error', { question: question.name, input: input.name });
+          return;
         }
       });
+
+      if (hasError) {
+        return;
+      }
     }
 
     window.scrollTo(0, 0);
 
     if (this.swiper.isEnd) {
+      localStorage.setItem('test_results', JSON.stringify(this.test));
       this.router.navigate(['/qr', this.test]);
       return;
     }
 
     this.swiper.allowSlideNext = true;
+    mixpanel.track('next question', { index: this.swiper.activeIndex });
     this.next();
     this.swiper.allowSlideNext = false;
+    this.swiper.allowSlidePrev = false;
   }
 }

@@ -1,110 +1,327 @@
 {
 	"toolbar": {
-		"title": "COVID Checker",
-		"get_started": "এবার শুরু করা যাক",
-		"faq": "FAQ"
+		"title": "COVID buddy",
+		"qr": "QR Reader",
+		"has_results": "Results"
 	},
 	"langs": {
-		"language": "Language",
 		"title": "হ্যালো, দয়া করে একটি ভাষা নির্বাচন করুন",
 		"english": "English",
 		"bangladesh": "বাংলা",
-		"thai": "ไทย"
+		"thai": "ไทย",
+		"chinese": "新加坡华语"
 	},
-	"faq": {
-		"title": "সচরাচর জিজ্ঞাস্য",
-		"items": [{
-			"title": "এটা কি?",
-			"text": "**COVID 19** Help"
-		}, {
-			"title": "গোপনীয়তা",
-			"text": "This website x y z"
-		}]
-	},
-	"slides": [{
-		"content": "## কর্মীরা কোভিড -19 ক্লাস্টার চেক করছে\n\nWe are"
-	}, {
-		"content": "## আমরা নিশ্চিত হয়েছি যে আপনি ভাল আছেন"
-	}, {
-		"content": "## আপনার প্রতিক্রিয়া যাই হোক না কেন, আমরা আপনার যত্ন নেওয়া হয়েছে তা নিশ্চিত করব।.\n\n - আপনার নিয়োগকর্তা / কাজের বিষয়ে চিন্তা করবেন না\n - We will talk to your employer and let you know what happens after"
-	}, {
-		"content": "## Help us with some questions\n\nYour info is confidential, only doctors will see it"
-	}],
+	"slides": [
+		{
+			"content": "### Hello, this app lets you tell doctors what symptoms you have, and what medication to take\n\nPress the green button if you have a symptom. If not press the red button",
+			"sound": "assets/audio/en/intro.mp3"
+		}
+	],
 	"buttons": {
 		"slide_next": "পরবর্তী",
-		"start_questions": "শুরু"
+		"start_questions": "শুরু",
+		"ok": "Ok",
+		"share": "Share"
 	},
-	"qr": {
-		"message": "এই পৃষ্ঠাটির স্ক্রিনশট করুন বা কোনও স্বাস্থ্যকর্মীর কাছে সরাসরি এটি দেখান"
-	},
+	"input_required": "Input is required",
 	"questions": [{
-		"title": "আপনি কি **শর্ট অফ ব্রিট**?\n\n![](https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg)",
-		"name": "short_breath",
+		"title": "আপনার বয়স কত ?",
+		"name": "age",
 		"buttons": [{
-			"title": "হ্যাঁ",
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "Age",
+			"name": "age",
+			"sound": "assets/audio/en/age.mp3",
+			"type": "number",
+			"required": true
+		}, {
+			"label": "Where do you live?",
+			"placeholder": "Address",
+			"sound": "assets/audio/en/address.mp3",
+			"name": "address",
+			"type": "text",
+			"required": true
+		}]
+	}, {
+		"title": "What is your phone number?",
+		"name": "phone",
+		"inputs": [{
+			"label": "Your Phone Number",
+			"sound": "assets/audio/en/phone_number.mp3",
+			"name": "phone",
+			"type": "tel",
+			"required": true
+		}, {
+			"label": "Your Employer's Phone Number",
+			"name": "phone",
+			"type": "tel",
+			"required": true
+		}],
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}]
+	}, {
+		"title": "আপনি কি **শর্ট অফ ব্রিট**?",
+		"name": "short_breath",
+		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
+		"sound": "assets/audio/en/shortness_of_breath.mp3",
+		"buttons": [{
+			"title": "Yes",
 			"value": "yes",
-			"color": "primary",
+			"color": "success",
 			"action": "emergency"
 		}, {
-			"title": "না",
+			"title": "No",
+			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "আপনার নিজের সম্পর্কে বলুন",
-		"name": "gender",
+		"title": "Do you have a cough?",
+		"image": "assets/symptoms/cough.jpg",
+		"name": "cough",
+		"sound": "assets/audio/en/cough.mp3",
 		"buttons": [{
-			"title": "পুরুষ",
-			"value": "m"
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
 		}, {
-			"title": "মহিলা",
-			"value": "f"
-		}],
-		"inputs": [{
-			"label": "আপনার বয়স কত ?",
-			"name": "age",
-			"type": "number"
+			"title": "No",
+			"color": "warn",
+			"value": "no"
 		}]
 	}, {
-		"title": "আপনি কোথায় বাস করেন?",
-		"name": "location",
+		"title": "Do you have a sore throat?",
+		"image": "assets/symptoms/sore-throat.jpg",
+		"sound": "assets/audio/en/sore_throat.mp3",
+		"name": "sore throat",
 		"buttons": [{
-			"title": "Tuas View Dorm",
-			"value": "tuas view dorm"
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
 		}, {
-			"title": "Westlite Toh Guan",
-			"value": "westlite"
+			"title": "No",
+			"color": "warn",
+			"value": "no"
 		}]
 	}, {
-		"title": "লক্ষণ",
-		"name": "symptoms",
+		"title": "Do you have a runny nose?",
+		"image": "assets/symptoms/runny-nose.jpg",
+		"name": "runny-nose",
+		"sound": "assets/audio/en/runny_nose.mp3",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "Do you have stomach pain?",
+		"image": "assets/symptoms/abdominal-pain.jpg",
+		"name": "stomach pain",
+		"sound": "assets/audio/en/stomach_pain.mp3",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "Do you feel like vomiting?",
+		"image": "assets/symptoms/vomiting.jpg",
+		"sound": "assets/audio/en/vomiting.mp3",
+		"name": "vomiting",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "Do you have diarrhea?",
+		"image": "assets/symptoms/diarrhea.png",
+		"sound": "assets/audio/en/diarrhea.mp3",
+		"name": "diarrhea",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "Do you have muscle pains?",
+		"image": "assets/symptoms/muscle-pain.jpg",
+		"sound": "assets/audio/en/muscle_pain.mp3",
+		"name": "muscle-pain",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "Are you worried or stressed?",
+		"image": "assets/symptoms/stress.jpg",
+		"name": "stress",
+		"sound": "assets/audio/en/stress.mp3",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "Any other problems?",
+		"image": "assets/symptoms/question.png",
+		"name": "other",
+		"sound": "assets/audio/en/problems.mp3",
 		"inputs": [{
-			"label": "Fever, chills or sweating",
-			"type": "checkbox",
-			"name": "fever"
-		}, {
-			"label": "Cough",
-			"type": "checkbox",
-			"name": "cough"
-		}, {
-			"label": "Loss of smell",
-			"type": "checkbox",
-			"name": "loss of smell"
-		}, {
-			"label": "Sore Throat",
-			"type": "checkbox",
-			"name": "sore throat"
+			"label": "Symptoms",
+			"name": "symptoms",
+			"type": "text"
 		}],
 		"buttons": [{
-			"title": "Next"
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
 		}]
 	}],
 	"emergency": {
-		"title": "এখনই আমাদের কল করুন",
-		"message": "আমরা সরাসরি আপনার সাথে কথা বলতে চাই",
+		"title": "Please call us NOW",
+		"message": "We would like to speak with you directly",
+		"sound": "assets/audio/en/emergency.mp3",
 		"phone": "+65123123123",
-		"button": "এখন ডাকো"
+		"button": "CALL NOW"
 	},
-	"home": {
-		"text": "আমি একজন ডাক্তার এবং আমি আপনার করোনা ভাইরাস আছে কি না সেটা টেস্ট করতে এসেছি | আপনাদের ডরমিটরি তে covid-১৯ এর কিছু কেস দেখা দিয়েছে , তাই আমরা এসেছি আপনাদের কিছু মেডিকেল টেস্ট করতে । আমরা চাই আপনারা সুস্থ এবং সুরক্ষিত থাকেন, তাই আপনাদের কাছে অনুরোধ যে আপনাদের স্বাস্থ নিয়ে কয়েকটি প্রশ্নের উত্তর দেন | আপনাদের উত্তর অনুযায়ী আমরা আপনাদের সঠিক সাহায্য করতে পারবো | আপনারা আপনাদের কোম্পানি বা সুপারভিসর নিয়ে চিন্তা করবেন না, আমরা তাদের সাথে কথা বলবো এই বিষয়ে যাতে আপনাদের কোনো অনসুবিধা না হয় ।"
+	"allergy": {
+		"title": "Drug allergy warning",
+		"text": "text of allergy warning audio",
+		"sound": "assets/audio/en/med_allergy.mp3"
+	},
+	"qr_audio": "assets/audio/en/qr.mp3",
+	"share_ready": "Sharing function is ready",
+	"medsTitle": "Recommended medications",
+	"meds": [
+		{
+			"symptoms": ["cough"],
+			"text": "For cough, please use the cough syrup",
+			"image": "assets/meds/dextromethorphan.png",
+			"dosage": "When required: 10ml 3 times a day",
+			"sound": "assets/audio/en/med_cough_syrup.mp3"
+		}, {
+			"symptoms": ["sore throat"],
+			"text": "sore throat",
+			"image": "assets/meds/dequalinium.png",
+			"dosage": "When required: Suck on 1 lozenge 4 times a day",
+			"sound": "assets/audio/en/med_sore_throat.mp3"
+		}, {
+			"symptoms": ["runny-nose"],
+			"text": "For runny nose, please take cetrizine",
+			"dosage": "When required: 1 tablet 1 time a day",
+			"image": "assets/meds/cetrizine.png",
+			"sound": "assets/audio/en/med_blocked_nose.mp3"
+		}, {
+			"symptoms": ["vomiting"],
+			"text": "For vomiting, please use maxolon",
+			"sound": "assets/audio/en/med_vomit.mp3",
+			"dosage": "When required: 1 tablet 3 times a day",
+			"image": "assets/meds/metoclopramide.png"
+		}, {
+			"symptoms": ["fever", "muscle-pain"],
+			"text": "For fever or muscle pain, take panadol",
+			"dosage": "When required: 2 tablets 4 times a day",
+			"sound": "assets/audio/en/med_fever.mp3",
+			"image": "assets/meds/paracetamol.png"
+		}, {
+			"symptoms": ["diarrhea"],
+			"text": "For diarrhea, take loperamide",
+			"dosage": "When required: 1 tablet 3 times a day",
+			"sound": "assets/audio/en/med_diarrhea.mp3",
+			"image": "assets/meds/loperamide.png"
+		}, {
+			"symptoms": ["stress"],
+			"text": "If you feel very stressed, please let us know or call xyz"
+		}
+	],
+	"doctor": {
+		"title": "Doctor results",
+		"covid": {
+			"y": {
+				"title": "You are COVID positive",
+				"text": "some text",
+				"sound": "assets/audio/en/doc_covid_positive.mp3"
+			},
+			"n": {
+				"title": "You are COVID negative",
+				"text": "some text",
+				"sound": "assets/audio/en/doc_covid_negative.mp3"
+			}
+		},
+		"cxr": {
+			"normal": {
+				"title": "Your chest x-ray results are normal",
+				"text": "some text",
+				"sound": "assets/audio/en/doc_cxr_ok.mp3"
+			},
+			"abnormal": {
+				"title": "Your chest x-ray results are abnormal",
+				"text": "some text",
+				"sound": "assets/audio/en/doc_cxr_nok.mp3"
+			}
+		},
+		"blood_tests": {
+			"normal": {
+				"title": "Your blood results are ok",
+				"text": "some text",
+				"sound": "assets/audio/en/doc_blood_nok.mp3"
+			},
+			"abnormal": {
+				"title": "Your blood results are not ok",
+				"text": "some text",
+				"sound": "assets/audio/en/doc_blood_ok.mp3"
+			}
+		},
+		"disposition": {
+			"hospital": {
+				"title": "We will be sending you to a hospital",
+				"text": "You will ",
+				"sound": "assets/audio/en/doc_admission.mp3"
+			},
+			"ccf": {
+				"title": "We will be sending you to a community care facility",
+				"text": "You will ",
+				"sound": "assets/audio/en/doc_ccf.mp3"
+			},
+			"discharge": {
+				"title": "You are being discharged",
+				"text": "some text",
+				"sound": "assets/audio/en/doc_discharge.mp3"
+			}
+		}
 	}
 }

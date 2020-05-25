@@ -4,10 +4,47 @@
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	height: 100%;
+	min-height: 100%;
 	text-align: center;
+	padding: 16px;
 }
 
 canvas {
-	width: 85%;
+	width: 45%;
+}
+
+mat-card {
+	margin-top: 16px;
+	text-align: left;
+	position: relative;
+
+	.share-btn {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+	}
+
+	mat-card-content {
+		p {
+			margin-top: 16px;
+			user-select: initial;
+		}
+	}
+}
+
+.med-images {
+	display: flex;
+	margin: 0 -16px;
+
+	img {
+		flex: 1;
+		width: 50%;
+		object-fit: contain;
+	}
+}
+
+h1 {
+	text-align: left;
+	margin-top: 24px;
+	margin-bottom: 0px;
 }

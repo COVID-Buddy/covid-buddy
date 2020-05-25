@@ -1,20 +1,29 @@
-.swiper-container {
-	height: 100%;
-}
-
-.swiper-slide {
-	& > div {
-		margin: 16px;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
+app-pre-test {
+	.swiper-container {
 		height: 100%;
+	}
 
-		ul {
-			li {
-				text-align: left;
+	.swiper-slide {
+		& > div {
+			margin: 16px;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 100%;
+
+			ul {
+				li {
+					text-align: left;
+				}
 			}
 		}
+	}
+
+	a.mat-raised-button {
+		height: 48px;
+		line-height: 48px;
+		font-size: 110%;
+		margin: 8px 0;
 	}
 }

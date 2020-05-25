@@ -1,8 +1,8 @@
 {
-  "name": "sg-health",
-  "short_name": "sg-health",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "covid lah",
+  "short_name": "covid lah",
+  "theme_color": "#d97d54",
+  "background_color": "#334856",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

@@ -1,47 +1,88 @@
 app-questions {
-	background: #efefef;
 	display: block;
-}
 
-.swiper-container {
-	min-height: 100vh;
-}
+	mat-card-actions {
+		display: flex !important;
 
-.swiper-slide {
-	& > div {
-		margin: 16px;
-		text-align: left;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		height: 100%;
+		button {
+			flex: 1;
+		}		
+	}
 
-		img {
-			// max-width: 100%;
-		}
+	.swiper-container, .swiper-wrapper, .swiper-slide, .swiper-slide > div {
+		min-height: 70vh;
+		min-height: calc(75vh - 36px);
+	}
 
-		ul {
-			li {
-				text-align: left;
+	.swiper-slide {
+		& > div {
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 100%;
+
+			& > mat-card {
+				margin: 16px;
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+
+				mat-card-title {
+					p {
+						margin: 0;
+					}
+				}
+
+				// img[mat-card-image] {
+					// padding-top: 8px;
+				// }
+				mat-card-title {
+					padding-top: 8px;
+				}
+
+				mat-card-content.mat-card-content {
+					padding: 8px 0 16px;
+					margin: 0;
+					flex: 1;
+					overflow-y: scroll;
+
+					img {
+						margin-top: 8px;
+						margin-bottom: -8px !important;
+					}
+				}
+
+				mat-card-actions {
+					button {
+						height: 50px;
+						font-size: 120%;
+					}
+				}
+			}
+
+			ul {
+				li {
+					text-align: left;
+				}
 			}
 		}
-	}
 
-	.mat-card-content {
-		padding: 16px 0;
-		margin: 0;
-
-		img {
+		mat-basic-audio-player + mat-form-field {
 			margin-top: 8px;
-			margin-bottom: -8px !important;
 		}
-	}
 
-	mat-form-field {
-		width: 100%;
+		mat-form-field {
+			width: 100%;
+			margin-bottom: 16px;
 
-		.mat-form-field-wrapper {
-			padding-bottom: 0;
+			mat-label {
+				font-size: 120%;
+			}
+
+			.mat-form-field-wrapper {
+				padding-bottom: 0;
+			}
 		}
 	}
 }

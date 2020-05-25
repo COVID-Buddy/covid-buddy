@@ -1,0 +1,54 @@
+<mat-card *ngIf="unlocked == false">
+	<mat-card-title>Doctor access portal</mat-card-title>
+
+	<mat-card-content>
+		<mat-form-field>
+			<label>Access code</label>
+			<input type="number" matInput [(ngModel)]="accessCode">
+		</mat-form-field>
+	</mat-card-content>
+
+	<mat-card-actions>
+		<button mat-raised-button color="primary" (click)="access()">Access</button>
+	</mat-card-actions>
+</mat-card>
+
+<mat-card *ngIf="unlocked">
+	<mat-card-title>Doctor access portal</mat-card-title>
+	<mat-card-subtitle>Program patient results here</mat-card-subtitle>
+
+	<mat-card-content>
+		<mat-label>COVID-19 Result:</mat-label>
+		<mat-radio-group [(ngModel)]="results.covid">
+			<mat-radio-button value="y">Y</mat-radio-button>
+			<mat-radio-button value="n">N</mat-radio-button>
+			<mat-radio-button value="n/a">N/A</mat-radio-button>
+		</mat-radio-group>
+
+		<mat-label>CXR:</mat-label>
+		<mat-radio-group [(ngModel)]="results.cxr">
+			<mat-radio-button value="normal">Norm</mat-radio-button>
+			<mat-radio-button value="abnormal">Abnormal</mat-radio-button>
+			<mat-radio-button value="n/a">N/A</mat-radio-button>
+		</mat-radio-group>
+
+		<mat-label>Blood tests:</mat-label>
+		<mat-radio-group [(ngModel)]="results.blood_tests">
+			<mat-radio-button value="normal">Norm</mat-radio-button>
+			<mat-radio-button value="abnormal">Abnormal</mat-radio-button>
+			<mat-radio-button value="n/a">N/A</mat-radio-button>
+		</mat-radio-group>
+
+		<mat-label>Disposition:</mat-label>
+		<mat-radio-group [(ngModel)]="results.disposition">
+			<mat-radio-button value="hospital">Hospital</mat-radio-button>
+			<mat-radio-button value="ccf">CCF</mat-radio-button>
+			<mat-radio-button value="discharge">Discharge</mat-radio-button>
+			<mat-radio-button value="n/a">N/A</mat-radio-button>
+		</mat-radio-group>
+	</mat-card-content>
+
+	<mat-card-actions>
+		<button mat-raised-button color="primary" (click)="save()">Save</button>
+	</mat-card-actions>
+</mat-card>

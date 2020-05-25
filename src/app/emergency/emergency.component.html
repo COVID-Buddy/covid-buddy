@@ -1,1 +1,12 @@
-<p>emergency works!</p>
+<mat-card>
+	<img mat-card-image src="assets/doctor.jpg">
+	<mat-card-title>{{ 'emergency.title' | translate }}</mat-card-title>
+	
+	<mat-card-content>
+		<!-- <mat-basic-audio-player [audioUrl]="question.sound" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player> -->
+	</mat-card-content>
+
+	<mat-card-actions>
+		<button color="secondary" mat-stroked-button (click)="back()">{{ 'emergency.back' | translate }}</button>
+	</mat-card-actions>
+</mat-card>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-emergency',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emergency.component.scss']
 })
 export class EmergencyComponent implements OnInit {
-
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit(): void {
   }
 
+  back() {
+  	this.location.back();
+  }
 }

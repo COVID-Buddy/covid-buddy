@@ -1,3 +1,50 @@
 <canvas #canvas></canvas>
 
-<p translate style="font-size: 110%; padding: 16px;">qr.message</p>
+<mat-basic-audio-player audioUrl="{{ 'qr_audio' | translate }}" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player>
+
+<div>
+	<!-- <p translate style="font-size: 110%; padding: 16px;">qr.message</p> -->
+
+	<h1 *ngIf="doctor.length > 0">{{ 'doctor.title' | translate }}</h1>
+	<mat-card *ngFor="let question of doctor">
+		<mat-card-title [innerHTML]="question.title"></mat-card-title>
+		<button class="share-btn" (click)="share(question.title, question.text)" mat-button>
+			<mat-icon>share</mat-icon>
+		</button>
+		<mat-card-content>
+			<p>{{ question.text }}</p>
+
+			<ng-container *ngIf="question.sound">
+				<mat-basic-audio-player [audioUrl]="question.sound" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player>
+			</ng-container>
+		</mat-card-content>
+	</mat-card>
+
+	<h1 *ngIf="questions.length > 0">{{ 'medsTitle' | translate }}</h1>
+	<mat-card *ngIf="questions.length > 0">
+		<mat-card-title>{{ 'allergy.title' | translate }}</mat-card-title>
+		<mat-card-content>
+			<p>{{ 'allergy.text' | translate }}</p>
+
+			<mat-basic-audio-player audioUrl="{{ 'allergy.sound' | translate }}" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player>
+		</mat-card-content>
+	</mat-card>
+	<mat-card *ngFor="let question of questions">
+		<mat-card-title [innerHTML]="question.title"></mat-card-title>
+		<mat-card-subtitle>{{ question.med?.text }}</mat-card-subtitle>
+		<button class="share-btn" (click)="share(question.question.title, question.med.dosage ? question.med.dosage : question.med.text)" mat-button>
+			<mat-icon>share</mat-icon>
+		</button>
+		<div class="med-images">
+			<img [src]="question.med?.image">
+			<img [src]="question.question.image">
+		</div>
+		<mat-card-content>
+			<p>{{ question.med?.dosage }}</p>
+			
+			<ng-container *ngIf="question.med?.sound">
+				<mat-basic-audio-player [audioUrl]="question.med.sound" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player>
+			</ng-container>
+		</mat-card-content>
+	</mat-card>
+</div>

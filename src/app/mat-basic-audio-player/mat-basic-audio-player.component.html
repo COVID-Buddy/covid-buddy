@@ -1,0 +1,29 @@
+<mat-card class="d-flex ngx-basic-audio-player z-depth-1 mat-elevation-z1">
+	<audio *ngIf="audio" [src]="audio" #player></audio>
+	
+	<button mat-button (click)='playBtnHandler();' class="ngx-basic-audio-player-button-handler" [disabled]="loaderDisplay">
+			<mat-icon *ngIf="!loaderDisplay && !isPlaying" class="play-track" aria-hidden="true">
+				<!-- Play icon (play_arrow) -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+			</mat-icon>
+			<mat-icon *ngIf="!loaderDisplay && isPlaying" class="pause-track" aria-hidden="true">
+				<!-- Pause icon (pause) -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+			</mat-icon>
+	</button>
+	
+	<div class="flex-fill pl-1 ngx-basic-audio-player-slider">
+		<mat-slider style="width: 100%" min="0" max="{{duration}}" value="{{currentTime}}"
+			(change)="currTimePosChanged($event)"></mat-slider>
+	</div>
+	
+	<div class="d-flex ngx-basic-audio-player-duration">
+		<span *ngIf="duration !== 0.01" class="pl-2 pr-3 my-auto">
+			-{{duration-currentTime | secondsToMinutes }}
+		</span>
+	</div>
+
+	<button mat-button (click)='share()' class="share-btn">
+			<mat-icon class="play-track">share</mat-icon>
+	</button>
+</mat-card>

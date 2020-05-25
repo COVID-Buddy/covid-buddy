@@ -2,11 +2,50 @@
 @import "../node_modules/swiper/css/swiper.min.css";
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	background: #334856;
+	color: white;
+}
 
 .languageMenu {
 	.active {
 		background: rgba(0,0,0,.08);
 		font-weight: 500;
+	}
+}
+
+.mat-success {
+	background-color: green;
+	color: #fff;
+}
+
+a, button {
+	&.mat-raised-button.mat-primary {
+		background-color: #d97d54;
+	}
+
+	&.mat-raised-button.mat-secondary {
+		background-color: #ba621f;
+	}
+
+	&.mat-stroked-button.mat-secondary {
+		border-color: #87bcbf;
+	}
+}
+
+mat-basic-audio-player {
+	background: white;
+	border-radius: 32px;
+	overflow: hidden;
+}
+
+mat-toolbar + div {
+	display: block;
+
+	@media (min-width: 767px) {
+		width: 767px;
+		margin: 0 auto;
 	}
 }

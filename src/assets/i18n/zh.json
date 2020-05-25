@@ -1,0 +1,327 @@
+{
+	"toolbar": {
+		"title": "COVID buddy",
+		"qr": "QR Reader",
+		"has_results": "Results"
+	},
+	"langs": {
+		"title": "请选择语言",
+		"english": "English",
+		"bangladesh": "বাংলা",
+		"thai": "ไทย"
+	},
+	"slides": [
+		{
+			"content": "### 您好，这个应用程序能让您告诉医生您有什么症状，解释一下如何服药,以及解释您测试结果。如果出现症状，请按绿色按钮。如果没有，请按红色按钮",
+			"sound": "assets/audio/zh/intro.mp3"
+		}
+	],
+	"buttons": {
+		"slide_next": "Next",
+		"start_questions": "Start",
+		"ok": "Ok",
+		"share": "Share"
+	},
+	"input_required": "Input is required",
+	"questions": [{
+		"title": "你今年几岁？",
+		"name": "age",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "你今年几岁？",
+			"name": "age",
+			"sound": "assets/audio/zh/age.mp3",
+			"type": "number",
+			"required": true
+		}, {
+			"label": "您在新加坡的地址是什么？",
+			"placeholder": "Address",
+			"sound": "assets/audio/zh/address.mp3",
+			"name": "address",
+			"type": "text",
+			"required": true
+		}]
+	}, {
+		"title": "你的电话号码是什么？",
+		"name": "phone",
+		"inputs": [{
+			"label": "Your Phone Number",
+			"sound": "assets/audio/zh/phone_number.mp3",
+			"name": "phone",
+			"type": "tel",
+			"required": true
+		}, {
+			"label": "您的雇主叫什么名字？ (phone?)",
+			"sound": "assets/audio/zh/employer.mp3",
+			"name": "phone",
+			"type": "tel",
+			"required": true
+		}],
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}]
+	}, {
+		"title": "你有呼吸困难吗？",
+		"name": "short_breath",
+		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
+		"sound": "assets/audio/zh/shortness_of_breath.mp3",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success",
+			"action": "emergency"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "你有咳嗽吗？",
+		"image": "assets/symptoms/cough.jpg",
+		"name": "cough",
+		"sound": "assets/audio/zh/cough.mp3",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "你有喉咙痛吗?",
+		"image": "assets/symptoms/sore-throat.jpg",
+		"sound": "assets/audio/zh/sore_throat.mp3",
+		"name": "sore throat",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "你有流鼻涕吗？",
+		"image": "assets/symptoms/runny-nose.jpg",
+		"name": "runny-nose",
+		"sound": "assets/audio/zh/runny_nose.mp3",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "你有胃痛吗？",
+		"image": "assets/symptoms/abdominal-pain.jpg",
+		"name": "stomach pain",
+		"sound": "assets/audio/zh/stomach_pain.mp3",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "你有恶心或呕吐吗?",
+		"image": "assets/symptoms/vomiting.jpg",
+		"sound": "assets/audio/zh/vomiting.mp3",
+		"name": "vomiting",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "你有泻肚子吗？",
+		"image": "assets/symptoms/diarrhea.png",
+		"sound": "assets/audio/zh/diarrhea.mp3",
+		"name": "diarrhea",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "你有肌肉痛吗?",
+		"image": "assets/symptoms/muscle-pain.jpg",
+		"sound": "assets/audio/zh/muscle_pain.mp3",
+		"name": "muscle-pain",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "你感到担心或压力吗?",
+		"image": "assets/symptoms/stress.jpg",
+		"name": "stress",
+		"sound": "assets/audio/zh/stress.mp3",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "您还有其他问题或症状吗?",
+		"image": "assets/symptoms/question.png",
+		"name": "other",
+		"sound": "assets/audio/zh/problems.mp3",
+		"inputs": [{
+			"label": "Symptoms",
+			"name": "symptoms",
+			"type": "text"
+		}],
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}],
+	"emergency": {
+		"title": "Please call us NOW",
+		"message": "We would like to speak with you directly",
+		"sound": "assets/audio/zh/emergency.mp3",
+		"phone": "+65123123123",
+		"button": "CALL NOW"
+	},
+	"allergy": {
+		"title": "Drug allergy warning",
+		"text": "text of allergy warning audio",
+		"sound": "assets/audio/zh/med_allergy.mp3"
+	},
+	"qr_audio": "assets/audio/zh/qr.mp3",
+	"share_ready": "Sharing function is ready",
+	"medsTitle": "Recommended medications",
+	"meds": [
+		{
+			"symptoms": ["cough"],
+			"text": "For cough, please use the cough syrup",
+			"image": "assets/meds/dextromethorphan.png",
+			"dosage": "如果您咳嗽，请使用10毫升dextrometorphan，每天最多3次",
+			"sound": "assets/audio/zh/med_cough_syrup.mp3"
+		}, {
+			"symptoms": ["sore throat"],
+			"text": "sore throat",
+			"image": "assets/meds/dequalinium.png",
+			"dosage": "如果您的喉咙痛，请每天服用1片dequalinium ，最多4次",
+			"sound": "assets/audio/zh/med_sore_throat.mp3"
+		}, {
+			"symptoms": ["runny-nose"],
+			"text": "For runny nose, please take cetrizine",
+			"dosage": "如果您流鼻涕，请每天使用1片cetirizine",
+			"image": "assets/meds/cetrizine.png",
+			"sound": "assets/audio/zh/med_blocked_nose.mp3"
+		}, {
+			"symptoms": ["vomiting"],
+			"text": "For vomiting, please use maxolon",
+			"sound": "assets/audio/zh/med_vomit.mp3",
+			"dosage": "对于恶心和呕吐，请使用1片maxolon，每天最多3次",
+			"image": "assets/meds/metoclopramide.png"
+		}, {
+			"symptoms": ["fever", "muscle-pain"],
+			"text": "For fever or muscle pain, take panadol",
+			"dosage": "如果发烧，请每天服用2片扑热息痛，每天最多服用4次",
+			"sound": "assets/audio/zh/med_fever.mp3",
+			"image": "assets/meds/paracetamol.png"
+		}, {
+			"symptoms": ["diarrhea"],
+			"text": "For diarrhea, take loperamide",
+			"dosage": "如果腹泻，请每天服用1片loperamide ，最多3次",
+			"sound": "assets/audio/zh/med_diarrhea.mp3",
+			"image": "assets/meds/loperamide.png"
+		}, {
+			"symptoms": ["stress"],
+			"text": "If you feel very stressed, please let us know or call xyz"
+		}
+	],
+	"doctor": {
+		"title": "Doctor results",
+		"covid": {
+			"y": {
+				"title": "你有冠状病毒",
+				"text": "some text",
+				"sound": "assets/audio/zh/doc_covid_positive.mp3"
+			},
+			"n": {
+				"title": "你没有冠状病毒",
+				"text": "some text",
+				"sound": "assets/audio/zh/doc_covid_negative.mp3"
+			}
+		},
+		"cxr": {
+			"normal": {
+				"title": "您的胸部X光检查结果正常",
+				"text": "some text",
+				"sound": "assets/audio/zh/doc_cxr_ok.mp3"
+			},
+			"abnormal": {
+				"title": "您的胸部X光检查结果显示出肺炎",
+				"text": "some text",
+				"sound": "assets/audio/zh/doc_cxr_nok.mp3"
+			}
+		},
+		"blood_tests": {
+			"normal": {
+				"title": "你的验血结果正常",
+				"text": "some text",
+				"sound": "assets/audio/zh/doc_blood_nok.mp3"
+			},
+			"abnormal": {
+				"title": "您的验血结果不正常",
+				"text": "some text",
+				"sound": "assets/audio/zh/doc_blood_ok.mp3"
+			}
+		},
+		"disposition": {
+			"hospital": {
+				"title": "我们想让您住院进一步监测",
+				"text": "You will ",
+				"sound": "assets/audio/zh/doc_admission.mp3"
+			},
+			"ccf": {
+				"title": "我们将把您转移到博览会。无需入院",
+				"text": "You will ",
+				"sound": "assets/audio/zh/doc_ccf.mp3"
+			},
+			"discharge": {
+				"title": "You are being discharged",
+				"text": "some text",
+				"sound": "assets/audio/zh/doc_discharge.mp3"
+			}
+		}
+	}
+}
