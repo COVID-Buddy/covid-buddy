@@ -18,11 +18,11 @@ mat-card {
 	text-align: left;
 	position: relative;
 
-	.share-btn {
-		position: absolute;
-		top: 8px;
-		right: 8px;
-	}
+	// .share-btn {
+	// 	position: absolute;
+	// 	top: 8px;
+	// 	right: 8px;
+	// }
 
 	mat-card-content {
 		p {
@@ -47,4 +47,16 @@ h1 {
 	text-align: left;
 	margin-top: 24px;
 	margin-bottom: 0px;
+}
+
+.question-title {
+	display: flex;
+	& > mat-card-title, & > mat-card-subtitle, & > div {
+		flex: 1;
+	}
+
+	.share-btn {
+		position: relative;
+		top: -8px;
+	}
 }

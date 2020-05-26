@@ -7,10 +7,12 @@
 
 	<h1 *ngIf="doctor.length > 0">{{ 'doctor.title' | translate }}</h1>
 	<mat-card *ngFor="let question of doctor">
-		<mat-card-title [innerHTML]="question.title"></mat-card-title>
-		<button class="share-btn" (click)="share(question.title, question.text)" mat-button>
-			<mat-icon>share</mat-icon>
-		</button>
+		<div class="question-title">
+			<mat-card-title [innerHTML]="question.title"></mat-card-title>
+			<button class="share-btn" (click)="share(question.title, question.text)" mat-button>
+				<mat-icon>share</mat-icon>
+			</button>
+		</div>
 		<mat-card-content>
 			<p>{{ question.text }}</p>
 
@@ -30,11 +32,15 @@
 		</mat-card-content>
 	</mat-card>
 	<mat-card *ngFor="let question of questions">
-		<mat-card-title [innerHTML]="question.title"></mat-card-title>
-		<mat-card-subtitle>{{ question.med?.text }}</mat-card-subtitle>
-		<button class="share-btn" (click)="share(question.question.title, question.med.dosage ? question.med.dosage : question.med.text)" mat-button>
-			<mat-icon>share</mat-icon>
-		</button>
+		<div class="question-title">
+			<div>
+				<mat-card-title [innerHTML]="question.title"></mat-card-title>
+				<mat-card-subtitle>{{ question.med?.text }}</mat-card-subtitle>
+			</div>
+			<button class="share-btn" (click)="share(question.question.title, question.med.dosage ? question.med.dosage : question.med.text)" mat-button>
+				<mat-icon>share</mat-icon>
+			</button>
+		</div>
 		<div class="med-images">
 			<img [src]="question.med?.image">
 			<img [src]="question.question.image">

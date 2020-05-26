@@ -1,7 +1,7 @@
 <mat-card class="d-flex ngx-basic-audio-player z-depth-1 mat-elevation-z1">
 	<audio *ngIf="audio" [src]="audio" #player></audio>
 	
-	<button mat-button (click)='playBtnHandler();' class="ngx-basic-audio-player-button-handler" [disabled]="loaderDisplay">
+	<button mat-button (click)='playBtnHandler();' class="ngx-basic-audio-player-button-handler" [disabled]="loaderDisplay || disabled">
 			<mat-icon *ngIf="!loaderDisplay && !isPlaying" class="play-track" aria-hidden="true">
 				<!-- Play icon (play_arrow) -->
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>

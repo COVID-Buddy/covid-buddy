@@ -4,6 +4,8 @@ import { ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSlider } from '@angular/material/slider';
 import { Pipe, PipeTransform } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 import * as mixpanel from 'mixpanel-browser';
 
 @Pipe({ name: 'secondsToMinutes' })
@@ -27,6 +29,7 @@ export class MatBasicAudioPlayerComponent {
 	_audioUrl = "";
 	timeLineDuration: MatSlider;
 
+	disabled = false;
 	loaderDisplay = false;
 	isPlaying = false;
 	currentTime = 0;
@@ -48,7 +51,9 @@ export class MatBasicAudioPlayerComponent {
 				});
 			};
 			reader.readAsDataURL(blob);
-		})
+		}, () => {
+			this.disabled = true;
+		});
 	}
 
 	@ViewChild('player', { static: false }) set player(player: ElementRef) {
@@ -84,7 +89,8 @@ export class MatBasicAudioPlayerComponent {
 
 	constructor(private http: HttpClient,
 		private zone: NgZone,
-		private sanitizer: DomSanitizer) {}
+		private sanitizer: DomSanitizer,
+		private snackbar: MatSnackBar) {}
 
 	currTimePosChanged(event) {
 		this.audioPlayer.nativeElement.currentTime = event.value;
