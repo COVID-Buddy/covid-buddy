@@ -220,7 +220,7 @@
 	},
 	"allergy": {
 		"title": "Drug allergy warning",
-		"text": "text of allergy warning audio",
+		"text": "服用这些药物时，请注意是否有过敏迹象，例如眼睛和嘴唇肿胀，呼吸困难以及瘙痒或皮疹。如果您有这种症状，请去看医生。",
 		"sound": "assets/audio/zh/med_allergy.mp3"
 	},
 	"qr_audio": "assets/audio/zh/qr.mp3",
