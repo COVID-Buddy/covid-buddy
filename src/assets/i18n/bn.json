@@ -13,7 +13,7 @@
 	},
 	"slides": [
 		{
-			"content": "### Hello, this app lets you tell doctors what symptoms you have, and what medication to take\n\nPress the green button if you have a symptom. If not press the red button",
+			"content": "### হ্যালো, এই অ্যাপের মাধ্যমে ডাক্তার কে জানান যে আপনার কী কী লক্ষণ রয়েছে এবং কোন ওষুধ খাওয়া উচিত  | আপনার কোনও লক্ষণ থাকলে সবুজ বোতাম টিপুন। না থাকলে লাল বোতাম টিপুন",
 			"sound": "assets/audio/bn/intro.mp3"
 		}
 	],
@@ -32,13 +32,13 @@
 			"color": "success"
 		}],
 		"inputs": [{
-			"label": "Age",
+			"label": "বয়স",
 			"name": "age",
 			"sound": "assets/audio/bn/age.mp3",
 			"type": "number",
 			"required": true
 		}, {
-			"label": "Where do you live?",
+			"label": "আপনার বাসা কোথায় ?",
 			"placeholder": "Address",
 			"sound": "assets/audio/bn/address.mp3",
 			"name": "address",
@@ -46,16 +46,16 @@
 			"required": true
 		}]
 	}, {
-		"title": "What is your phone number?",
+		"title": "আপনার ফোন নম্বর কি ?",
 		"name": "phone",
 		"inputs": [{
-			"label": "Your Phone Number",
+			"label": "আপনার ফোন নম্বর",
 			"sound": "assets/audio/bn/phone_number.mp3",
 			"name": "phone",
 			"type": "tel",
 			"required": true
 		}, {
-			"label": "Your Employer's Phone Number",
+			"label": "আপনার নিয়োগকর্তার ফোন নম্বর",
 			"name": "phone",
 			"type": "tel",
 			"required": true
@@ -65,134 +65,134 @@
 			"color": "success"
 		}]
 	}, {
-		"title": "আপনি কি **শর্ট অফ ব্রিট**?",
+		"title": "আপনার কি শ্বাসকষ্ট আছে ?",
 		"name": "short_breath",
 		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
 		"sound": "assets/audio/bn/shortness_of_breath.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success",
 			"action": "emergency"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have a cough?",
+		"title": "আপনার কি কাশি আছে ?",
 		"image": "assets/symptoms/cough.jpg",
 		"name": "cough",
 		"sound": "assets/audio/bn/cough.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have a sore throat?",
+		"title": "আপনার কি গলা ব্যাথা আছে ?",
 		"image": "assets/symptoms/sore-throat.jpg",
 		"sound": "assets/audio/bn/sore_throat.mp3",
 		"name": "sore throat",
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have a runny nose?",
+		"title": "আপনার কি সর্দি আছে ?",
 		"image": "assets/symptoms/runny-nose.jpg",
 		"name": "runny-nose",
 		"sound": "assets/audio/bn/runny_nose.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have stomach pain?",
+		"title": "আপনার কি পেট ব্যাথা আছে ?",
 		"image": "assets/symptoms/abdominal-pain.jpg",
 		"name": "stomach pain",
 		"sound": "assets/audio/bn/stomach_pain.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you feel like vomiting?",
+		"title": "আপনার কি বমি বমি ভাব আছে ?",
 		"image": "assets/symptoms/vomiting.jpg",
 		"sound": "assets/audio/bn/vomiting.mp3",
 		"name": "vomiting",
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have diarrhea?",
+		"title": "আপনার কি পেট খারাপ হচ্ছে ?",
 		"image": "assets/symptoms/diarrhea.png",
 		"sound": "assets/audio/bn/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have muscle pains?",
+		"title": "আপনার কি শরীরে কোথাও ব্যাথা আছে ?",
 		"image": "assets/symptoms/muscle-pain.jpg",
 		"sound": "assets/audio/bn/muscle_pain.mp3",
 		"name": "muscle-pain",
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Are you worried or stressed?",
+		"title": "আপনি কি খুব চিন্তিত বা উত্তেজিত বোধ করছেন ?",
 		"image": "assets/symptoms/stress.jpg",
 		"name": "stress",
 		"sound": "assets/audio/bn/stress.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Any other problems?",
+		"title": "আপনার কি শরীরে অন্য কোনো সমস্যা আছে? ",
 		"image": "assets/symptoms/question.png",
 		"name": "other",
 		"sound": "assets/audio/bn/problems.mp3",
@@ -202,18 +202,18 @@
 			"type": "text"
 		}],
 		"buttons": [{
-			"title": "Yes",
+			"title": "হ্যাঁ",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "না",
 			"color": "warn",
 			"value": "no"
 		}]
 	}],
 	"emergency": {
-		"title": "Please call us NOW",
-		"message": "We would like to speak with you directly",
+		"title": "ডাক্তার কে এক্ষুনি ফোন করুন ",
+		"message": "আমরা আপনার সঙ্গে সরাসরি কথা বলতে চাই ",
 		"sound": "assets/audio/bn/emergency.mp3",
 		"phone": "+65123123123",
 		"button": "CALL NOW"
@@ -298,12 +298,12 @@
 			"normal": {
 				"title": "Your blood results are ok",
 				"text": "some text",
-				"sound": "assets/audio/bn/doc_blood_nok.mp3"
+				"sound": "assets/audio/bn/doc_blood_ok.mp3"
 			},
 			"abnormal": {
 				"title": "Your blood results are not ok",
 				"text": "some text",
-				"sound": "assets/audio/bn/doc_blood_ok.mp3"
+				"sound": "assets/audio/bn/doc_blood_nok.mp3"
 			}
 		},
 		"disposition": {
