@@ -8,7 +8,9 @@
 		"title": "请选择语言",
 		"english": "English",
 		"bangladesh": "বাংলা",
-		"thai": "ไทย"
+		"thai": "ไทย",
+		"chinese": "新加坡华语",
+		"tamil": "தமிழ்"
 	},
 	"slides": [
 		{
@@ -24,47 +26,6 @@
 	},
 	"input_required": "Input is required",
 	"questions": [{
-		"title": "你今年几岁？",
-		"name": "age",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "你今年几岁？",
-			"name": "age",
-			"sound": "assets/audio/zh/age.mp3",
-			"type": "number",
-			"required": true
-		}, {
-			"label": "您在新加坡的地址是什么？",
-			"placeholder": "Address",
-			"sound": "assets/audio/zh/address.mp3",
-			"name": "address",
-			"type": "text",
-			"required": true
-		}]
-	}, {
-		"title": "你的电话号码是什么？",
-		"name": "phone",
-		"inputs": [{
-			"label": "Your Phone Number",
-			"sound": "assets/audio/zh/phone_number.mp3",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}, {
-			"label": "您的雇主叫什么名字？ (phone?)",
-			"sound": "assets/audio/zh/employer.mp3",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}],
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}]
-	}, {
 		"title": "你有呼吸困难吗？",
 		"name": "short_breath",
 		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
@@ -209,6 +170,63 @@
 			"title": "没有",
 			"color": "warn",
 			"value": "no"
+		}]
+	}, {
+		"title": "你今年几岁？",
+		"name": "age",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "你今年几岁？",
+			"name": "age",
+			"sound": "assets/audio/zh/age.mp3",
+			"type": "number",
+			"required": true
+		}]
+	}, {
+		"title": "您在新加坡的地址是什么？",
+		"name": "age",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "您在新加坡的地址是什么？",
+			"placeholder": "Address",
+			"sound": "assets/audio/zh/address.mp3",
+			"name": "address",
+			"type": "text",
+			"required": true
+		}]
+	}, {
+		"title": "你的电话号码是什么？",
+		"name": "phone",
+		"inputs": [{
+			"label": "Your Phone Number",
+			"sound": "assets/audio/zh/phone_number.mp3",
+			"name": "phone",
+			"type": "tel",
+			"required": true
+		}],
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}]
+	}, {
+		"title": "您的雇主叫什么名字？ (phone?)",
+		"name": "phone",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "您的雇主叫什么名字？ (phone?)",
+			"sound": "assets/audio/zh/employer.mp3",
+			"name": "employer",
+			"type": "tel",
+			"required": true
 		}]
 	}],
 	"emergency": {

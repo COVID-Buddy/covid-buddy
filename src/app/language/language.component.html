@@ -1,12 +1,14 @@
 <h1><a [routerLink]="['/doctor']" translate>langs.title</a></h1>
 
 <div>
-	<a *ngIf="browser == 'en'" mat-raised-button color="primary" (click)="setLanguage('en')">{{ 'langs.english' | translate }}</a>
-	<a *ngIf="browser != 'en'" mat-stroked-button color="secondary" (click)="setLanguage('en')">{{ 'langs.english' | translate }}</a>
 	<a *ngIf="browser == 'bn'" mat-raised-button color="primary" (click)="setLanguage('bn')">{{ 'langs.bangladesh' | translate }}</a>
 	<a *ngIf="browser != 'bn'" mat-stroked-button color="secondary" (click)="setLanguage('bn')">{{ 'langs.bangladesh' | translate }}</a>
 	<a *ngIf="browser == 'th'" mat-raised-button color="primary" (click)="setLanguage('th')">{{ 'langs.thai' | translate }}</a>
 	<a *ngIf="browser != 'th'" mat-stroked-button color="secondary" (click)="setLanguage('th')">{{ 'langs.thai' | translate }}</a>
 	<a *ngIf="browser == 'zh'" mat-raised-button color="primary" (click)="setLanguage('zh')">{{ 'langs.chinese' | translate }}</a>
 	<a *ngIf="browser != 'zh'" mat-stroked-button color="secondary" (click)="setLanguage('zh')">{{ 'langs.chinese' | translate }}</a>
+	<a *ngIf="browser == 'ta'" mat-raised-button color="primary" (click)="setLanguage('ta')">{{ 'langs.tamil' | translate }}</a>
+	<a *ngIf="browser != 'ta'" mat-stroked-button color="secondary" (click)="setLanguage('ta')">{{ 'langs.tamil' | translate }}</a>
+	<a *ngIf="browser == 'en'" mat-raised-button color="primary" (click)="setLanguage('en')">{{ 'langs.english' | translate }}</a>
+	<a *ngIf="browser != 'en'" mat-stroked-button color="secondary" (click)="setLanguage('en')">{{ 'langs.english' | translate }}</a>
 </div>

@@ -120,6 +120,7 @@ export class QuestionsComponent implements OnInit {
     window.scrollTo(0, 0);
 
     if (this.swiper.isEnd) {
+      this.test.finish = Math.round((+new Date()) / 1000);
       localStorage.setItem('test_results', JSON.stringify(this.test));
       this.router.navigate(['/qr', this.test]);
       return;

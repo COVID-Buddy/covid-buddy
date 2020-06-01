@@ -1,3 +1,4 @@
+<!-- <button mat-raised-button color="primary" (click)="openQR">Open QR Code</button> -->
 <canvas #canvas></canvas>
 
 <mat-basic-audio-player audioUrl="{{ 'qr_audio' | translate }}" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player>
@@ -34,8 +35,8 @@
 	<mat-card *ngFor="let question of questions">
 		<div class="question-title">
 			<div>
-				<mat-card-title [innerHTML]="question.title"></mat-card-title>
-				<mat-card-subtitle>{{ question.med?.text }}</mat-card-subtitle>
+				<mat-card-title>{{ question.med?.text }}</mat-card-title>
+				<mat-card-subtitle></mat-card-subtitle>
 			</div>
 			<button class="share-btn" (click)="share(question.question.title, question.med.dosage ? question.med.dosage : question.med.text)" mat-button>
 				<mat-icon>share</mat-icon>

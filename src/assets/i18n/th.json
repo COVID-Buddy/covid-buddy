@@ -5,11 +5,12 @@
 		"has_results": "Results"
 	},
 	"langs": {
-		"title": "হ্যালো, দয়া করে একটি ভাষা নির্বাচন করুন",
+		"title": "Hello, please select a language",
 		"english": "English",
 		"bangladesh": "বাংলা",
 		"thai": "ไทย",
-		"chinese": "新加坡华语"
+		"chinese": "新加坡华语",
+		"tamil": "தமிழ்"
 	},
 	"slides": [
 		{
@@ -18,54 +19,14 @@
 		}
 	],
 	"buttons": {
-		"slide_next": "পরবর্তী",
-		"start_questions": "শুরু",
+		"slide_next": "Next",
+		"start_questions": "Start",
 		"ok": "Ok",
 		"share": "Share"
 	},
 	"input_required": "Input is required",
 	"questions": [{
-		"title": "আপনার বয়স কত ?",
-		"name": "age",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "Age",
-			"name": "age",
-			"sound": "assets/audio/en/age.mp3",
-			"type": "number",
-			"required": true
-		}, {
-			"label": "Where do you live?",
-			"placeholder": "Address",
-			"sound": "assets/audio/en/address.mp3",
-			"name": "address",
-			"type": "text",
-			"required": true
-		}]
-	}, {
-		"title": "What is your phone number?",
-		"name": "phone",
-		"inputs": [{
-			"label": "Your Phone Number",
-			"sound": "assets/audio/en/phone_number.mp3",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}, {
-			"label": "Your Employer's Phone Number",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}],
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}]
-	}, {
-		"title": "আপনি কি **শর্ট অফ ব্রিট**?",
+		"title": "Do you have **shortness of breath**?",
 		"name": "short_breath",
 		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
 		"sound": "assets/audio/en/shortness_of_breath.mp3",
@@ -209,6 +170,62 @@
 			"title": "No",
 			"color": "warn",
 			"value": "no"
+		}]
+	}, {
+		"title": "How old are you?",
+		"name": "age",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "Age",
+			"name": "age",
+			"sound": "assets/audio/en/age.mp3",
+			"type": "number",
+			"required": true
+		}]
+	}, {
+		"title": "Where do you live?",
+		"name": "age",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "Where do you live?",
+			"placeholder": "Address",
+			"sound": "assets/audio/en/address.mp3",
+			"name": "address",
+			"type": "text",
+			"required": true
+		}]
+	}, {
+		"title": "What is your phone number?",
+		"name": "phone",
+		"inputs": [{
+			"label": "Your Phone Number",
+			"sound": "assets/audio/en/phone_number.mp3",
+			"name": "phone",
+			"type": "tel",
+			"required": true
+		}],
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}]
+	}, {
+		"title": "What is your Employer's Phone Number?",
+		"name": "phone",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "Your Employer's Phone Number",
+			"name": "employer",
+			"type": "tel",
+			"required": true
 		}]
 	}],
 	"emergency": {

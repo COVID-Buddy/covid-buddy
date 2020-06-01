@@ -9,10 +9,10 @@
 					<mat-basic-audio-player [audioUrl]="slide.sound" [autoPlay]="i == 0 ? true : false" [displayVolumeControls]="false"></mat-basic-audio-player>
 				</ng-container>
 
-				<a mat-raised-button color="primary" [routerLink]="['/questions']" *ngIf="i == slides.length - 1">{{ 'buttons.start_questions' | translate }}</a>
+				<a mat-raised-button color="success" [routerLink]="['/questions']" *ngIf="i == slides.length - 1">{{ 'buttons.start_questions' | translate }}</a>
 			</div>
 		</div>
 	</div>
 
-	<div class="swiper-naivgation"></div>
+	<div class="swiper-navigation"></div>
 </div>

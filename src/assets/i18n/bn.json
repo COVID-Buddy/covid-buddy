@@ -2,14 +2,15 @@
 	"toolbar": {
 		"title": "COVID buddy",
 		"qr": "QR Reader",
-		"has_results": "Results"
+		"has_results": "ফলাফল"
 	},
 	"langs": {
 		"title": "হ্যালো, দয়া করে একটি ভাষা নির্বাচন করুন",
 		"english": "English",
 		"bangladesh": "বাংলা",
 		"thai": "ไทย",
-		"chinese": "新加坡华语"
+		"chinese": "新加坡华语",
+		"tamil": "தமிழ்"
 	},
 	"slides": [
 		{
@@ -21,50 +22,10 @@
 		"slide_next": "পরবর্তী",
 		"start_questions": "শুরু",
 		"ok": "Ok",
-		"share": "Share"
+		"share": "শেয়ার করুন"
 	},
-	"input_required": "Input is required",
+	"input_required": "এখানে লিখুন",
 	"questions": [{
-		"title": "আপনার বয়স কত ?",
-		"name": "age",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "বয়স",
-			"name": "age",
-			"sound": "assets/audio/bn/age.mp3",
-			"type": "number",
-			"required": true
-		}, {
-			"label": "আপনার বাসা কোথায় ?",
-			"placeholder": "Address",
-			"sound": "assets/audio/bn/address.mp3",
-			"name": "address",
-			"type": "text",
-			"required": true
-		}]
-	}, {
-		"title": "আপনার ফোন নম্বর কি ?",
-		"name": "phone",
-		"inputs": [{
-			"label": "আপনার ফোন নম্বর",
-			"sound": "assets/audio/bn/phone_number.mp3",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}, {
-			"label": "আপনার নিয়োগকর্তার ফোন নম্বর",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}],
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}]
-	}, {
 		"title": "আপনার কি শ্বাসকষ্ট আছে ?",
 		"name": "short_breath",
 		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
@@ -210,6 +171,62 @@
 			"color": "warn",
 			"value": "no"
 		}]
+	}, {
+		"title": "আপনার বয়স কত ?",
+		"name": "age",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "বয়স",
+			"name": "age",
+			"sound": "assets/audio/bn/age.mp3",
+			"type": "number",
+			"required": true
+		}]
+	}, {
+		"title": "আপনার বাসা কোথায় ?",
+		"name": "age",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "আপনার বাসা কোথায় ?",
+			"placeholder": "Address",
+			"sound": "assets/audio/bn/address.mp3",
+			"name": "address",
+			"type": "text",
+			"required": true
+		}]
+	}, {
+		"title": "আপনার ফোন নম্বর কি ?",
+		"name": "phone",
+		"inputs": [{
+			"label": "আপনার ফোন নম্বর",
+			"sound": "assets/audio/bn/phone_number.mp3",
+			"name": "phone",
+			"type": "tel",
+			"required": true
+		}],
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}]
+	}, {
+		"title": "আপনার ফোন নম্বর কি ?",
+		"name": "phone",
+		"buttons": [{
+			"title": "Next",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "আপনার নিয়োগকর্তার ফোন নম্বর",
+			"name": "employer",
+			"type": "tel",
+			"required": true
+		}]
 	}],
 	"emergency": {
 		"title": "ডাক্তার কে এক্ষুনি ফোন করুন ",
@@ -229,97 +246,97 @@
 	"meds": [
 		{
 			"symptoms": ["cough"],
-			"text": "For cough, please use the cough syrup",
+			"text": "কাশি হলে কফ্ সিরাপ খাবেন",
 			"image": "assets/meds/dextromethorphan.png",
-			"dosage": "When required: 10ml 3 times a day",
+			"dosage": "যখন দরকার: 10 মিলি, প্রতিদিন 3 বার",
 			"sound": "assets/audio/bn/med_cough_syrup.mp3"
 		}, {
 			"symptoms": ["sore throat"],
-			"text": "sore throat",
+			"text": "গলা ব্যাথা হলে Dequalinium লজেন্জ খাবেন",
 			"image": "assets/meds/dequalinium.png",
-			"dosage": "When required: Suck on 1 lozenge 4 times a day",
+			"dosage": "যখন দরকার: 1 লজেন্জ , প্রতিদিন 4 বার চুষে খাবেন।",
 			"sound": "assets/audio/bn/med_sore_throat.mp3"
 		}, {
 			"symptoms": ["runny-nose"],
-			"text": "For runny nose, please take cetrizine",
-			"dosage": "When required: 1 tablet 1 time a day",
+			"text": "সর্দি হলে সেটিরিজিন খাবেন",
+			"dosage": "যখন দরকার: 1 টি ট্যাবলেট, প্রতিদিন 1 বার",
 			"image": "assets/meds/cetrizine.png",
 			"sound": "assets/audio/bn/med_blocked_nose.mp3"
 		}, {
 			"symptoms": ["vomiting"],
-			"text": "For vomiting, please use maxolon",
+			"text": "বমি ভাব থাকলে Metoclopramide খাবেন",
 			"sound": "assets/audio/bn/med_vomit.mp3",
-			"dosage": "When required: 1 tablet 3 times a day",
+			"dosage": "যখন দরকার : 1 টি টেবলেট প্রতিদিন 3 বার",
 			"image": "assets/meds/metoclopramide.png"
 		}, {
 			"symptoms": ["fever", "muscle-pain"],
-			"text": "For fever or muscle pain, take panadol",
-			"dosage": "When required: 2 tablets 4 times a day",
+			"text": "জ্বর বা শরীরে ব্যাথা থাকলে প্যারাসিটামল খাবেন",
+			"dosage": "যখন দরকার: 2 টি ট্যাবলেট, প্রতিদিন 4 বার",
 			"sound": "assets/audio/bn/med_fever.mp3",
 			"image": "assets/meds/paracetamol.png"
 		}, {
 			"symptoms": ["diarrhea"],
-			"text": "For diarrhea, take loperamide",
-			"dosage": "When required: 1 tablet 3 times a day",
+			"text": "পাতলা পায়খানা হলে loperamide খাবেন",
+			"dosage": "যখন দরকার : 1 টা টেবলেট প্রতিদিন 3 বার",
 			"sound": "assets/audio/bn/med_diarrhea.mp3",
 			"image": "assets/meds/loperamide.png"
 		}, {
 			"symptoms": ["stress"],
-			"text": "If you feel very stressed, please let us know or call xyz"
+			"text": "যদি আপনি চিন্তিত বা উত্তেজিত বোধ করেন, তাহলে আমাদের এই নম্বরে জানান"
 		}
 	],
 	"doctor": {
 		"title": "Doctor results",
 		"covid": {
 			"y": {
-				"title": "You are COVID positive",
-				"text": "some text",
+				"title": "আপনার করোনাভাইরাস ধরা পড়েছে",
+				"text": "",
 				"sound": "assets/audio/bn/doc_covid_positive.mp3"
 			},
 			"n": {
-				"title": "You are COVID negative",
-				"text": "some text",
+				"title": "আপনার করোনাভাইরাস ধরা পড়েনি",
+				"text": "",
 				"sound": "assets/audio/bn/doc_covid_negative.mp3"
 			}
 		},
 		"cxr": {
 			"normal": {
-				"title": "Your chest x-ray results are normal",
-				"text": "some text",
+				"title": "আপনার বুকের এক্স-রে তে কোনো ইনফেকশন ধরা পড়েনি",
+				"text": "",
 				"sound": "assets/audio/bn/doc_cxr_ok.mp3"
 			},
 			"abnormal": {
-				"title": "Your chest x-ray results are abnormal",
-				"text": "some text",
+				"title": "আপনার বুকের এক্স-রে তে ইনফেকশন ধরা পড়েছে",
+				"text": "",
 				"sound": "assets/audio/bn/doc_cxr_nok.mp3"
 			}
 		},
 		"blood_tests": {
 			"normal": {
-				"title": "Your blood results are ok",
-				"text": "some text",
+				"title": "আপনার রক্ত পরীক্ষার রিপোর্টে কোনো সমস্যা দেখা দেয়নি",
+				"text": "",
 				"sound": "assets/audio/bn/doc_blood_ok.mp3"
 			},
 			"abnormal": {
-				"title": "Your blood results are not ok",
-				"text": "some text",
+				"title": "আপনার রক্ত পরীক্ষার রিপোর্টে সমস্যা দেখা দিয়েছে",
+				"text": "",
 				"sound": "assets/audio/bn/doc_blood_nok.mp3"
 			}
 		},
 		"disposition": {
 			"hospital": {
-				"title": "We will be sending you to a hospital",
-				"text": "You will ",
+				"title": "আমরা আপনাকে হাসপাতাল নিয়ে যাবো",
+				"text": "",
 				"sound": "assets/audio/bn/doc_admission.mp3"
 			},
 			"ccf": {
-				"title": "We will be sending you to a community care facility",
-				"text": "You will ",
+				"title": "আমরা আপনাকে কমিউনিটি কেয়ার ফেসিলিটি তে নিয়ে যাবো",
+				"text": "",
 				"sound": "assets/audio/bn/doc_ccf.mp3"
 			},
 			"discharge": {
 				"title": "You are being discharged",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/bn/doc_discharge.mp3"
 			}
 		}

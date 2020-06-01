@@ -38,6 +38,7 @@ export class QrComponent {
 
         ['covid', 'cxr', 'blood_tests', 'disposition'].forEach(key => {
           this.translate.get('doctor.' + key + '.' + doctor[key]).subscribe(value => {
+            if (!value) return;
             this.doctor.push(value);
           });
         });

@@ -52,7 +52,8 @@ export class AppComponent {
   	translate.use(lang);
     mixpanel.register({
       lang: lang,
-    })
+      langBrowser: this.translate.getBrowserLang(),
+    });
 
     updates.available.subscribe(event => {
       updates.activateUpdate().then(() => {
