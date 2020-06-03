@@ -214,20 +214,6 @@
 			"title": "Next",
 			"color": "success"
 		}]
-	}, {
-		"title": "您的雇主叫什么名字？ (phone?)",
-		"name": "phone",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "您的雇主叫什么名字？ (phone?)",
-			"sound": "assets/audio/zh/employer.mp3",
-			"name": "employer",
-			"type": "tel",
-			"required": true
-		}]
 	}],
 	"emergency": {
 		"title": "Please call us NOW",

@@ -214,19 +214,6 @@
 			"title": "Next",
 			"color": "success"
 		}]
-	}, {
-		"title": "What is your Employer's Phone Number?",
-		"name": "phone",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "Your Employer's Phone Number",
-			"name": "employer",
-			"type": "tel",
-			"required": true
-		}]
 	}],
 	"emergency": {
 		"title": "Please call us NOW",

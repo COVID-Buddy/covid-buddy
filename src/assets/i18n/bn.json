@@ -214,19 +214,6 @@
 			"title": "Next",
 			"color": "success"
 		}]
-	}, {
-		"title": "আপনার ফোন নম্বর কি ?",
-		"name": "phone",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "আপনার নিয়োগকর্তার ফোন নম্বর",
-			"name": "employer",
-			"type": "tel",
-			"required": true
-		}]
 	}],
 	"emergency": {
 		"title": "ডাক্তার কে এক্ষুনি ফোন করুন ",
