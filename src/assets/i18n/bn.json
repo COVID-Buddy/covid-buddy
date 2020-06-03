@@ -236,13 +236,13 @@
 		"button": "CALL NOW"
 	},
 	"allergy": {
-		"title": "Drug allergy warning",
-		"text": "text of allergy warning audio",
+		"title": "ড্রাগ এলার্জি সাবধানবাণী",
+		"text": "",
 		"sound": "assets/audio/bn/med_allergy.mp3"
 	},
 	"qr_audio": "assets/audio/bn/qr.mp3",
 	"share_ready": "Sharing function is ready",
-	"medsTitle": "Recommended medications",
+	"medsTitle": "মেডিকেশন",
 	"meds": [
 		{
 			"symptoms": ["cough"],
