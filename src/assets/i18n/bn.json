@@ -201,6 +201,32 @@
 			"value": "no"
 		}]
 	}, {
+		"title": "অক্সিজেন %",
+		"image": "assets/symptoms/o2.jpeg",
+		"name": "o2",
+		"buttons": [{
+			"title": "அடுத்தது",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "%",
+			"name": "perc",
+			"type": "number"
+		}]
+	}, {
+		"title": "তাপমাত্রা",
+		"image": "assets/symptoms/temperature.jpeg",
+		"name": "temp",
+		"buttons": [{
+			"title": "அடுத்தது",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "ডিগ্রী সেলসিয়াস",
+			"name": "celsius",
+			"type": "number"
+		}]
+	}, {
 		"title": "আপনার বয়স কত ?",
 		"name": "age",
 		"buttons": [{
@@ -228,20 +254,6 @@
 			"name": "address",
 			"type": "text",
 			"required": true
-		}]
-	}, {
-		"title": "আপনার ফোন নম্বর কি ?",
-		"name": "phone",
-		"inputs": [{
-			"label": "আপনার ফোন নম্বর",
-			"sound": "assets/audio/bn/phone_number.mp3",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}],
-		"buttons": [{
-			"title": "அடுத்தது",
-			"color": "success"
 		}]
 	}],
 	"emergency": {
@@ -297,8 +309,13 @@
 			"sound": "assets/audio/bn/med_diarrhea.mp3",
 			"image": "assets/meds/loperamide.jpg"
 		}, {
-			"symptoms": ["stress", "stress_2"],
-			"text": "যদি আপনি চিন্তিত বা উত্তেজিত বোধ করেন, তাহলে আমাদের এই নম্বরে জানান"
+			"symptoms": ["stress"],
+			"text": "যদি আপনি চিন্তিত বা উত্তেজিত বোধ করেন, তাহলে আমাদের এই নম্বরে জানান",
+			"image": "assets/meds/stress.jpg"
+		}, {
+			"symptoms": ["stress_2"],
+			"text": "যদি আপনি চিন্তিত বা উত্তেজিত বোধ করেন, তাহলে আমাদের এই নম্বরে জানান",
+			"image": "assets/meds/stress_2.jpg"
 		}
 	],
 	"doctor": {

@@ -201,6 +201,32 @@
 			"value": "no"
 		}]
 	}, {
+		"title": "氧气％",
+		"image": "assets/symptoms/o2.jpeg",
+		"name": "o2",
+		"buttons": [{
+			"title": "下一个",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "%",
+			"name": "perc",
+			"type": "number"
+		}]
+	}, {
+		"title": "温度",
+		"image": "assets/symptoms/temperature.jpeg",
+		"name": "temp",
+		"buttons": [{
+			"title": "下一个",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "摄氏温度",
+			"name": "celsius",
+			"type": "number"
+		}]
+	}, {
 		"title": "你今年几岁？",
 		"name": "age",
 		"buttons": [{
@@ -228,20 +254,6 @@
 			"name": "address",
 			"type": "text",
 			"required": true
-		}]
-	}, {
-		"title": "你的电话号码是什么？",
-		"name": "phone",
-		"inputs": [{
-			"label": "你的电话号码",
-			"sound": "assets/audio/zh/phone_number.mp3",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}],
-		"buttons": [{
-			"title": "下一个",
-			"color": "success"
 		}]
 	}],
 	"emergency": {
@@ -297,8 +309,13 @@
 			"sound": "assets/audio/zh/med_diarrhea.mp3",
 			"image": "assets/meds/loperamide.jpg"
 		}, {
-			"symptoms": ["stress", "stress_2"],
-			"text": "如果您感到压力很大，请告诉我们"
+			"symptoms": ["stress"],
+			"text": "如果您感到压力很大，请告诉我们",
+			"image": "assets/meds/stress.jpg"
+		}, {
+			"symptoms": ["stress_2"],
+			"text": "如果您感到压力很大，请告诉我们",
+			"image": "assets/meds/stress_2.jpg"
 		}
 	],
 	"doctor": {

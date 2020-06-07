@@ -201,6 +201,32 @@
 			"value": "no"
 		}]
 	}, {
+		"title": "ออกซิเจน%",
+		"image": "assets/symptoms/o2.jpeg",
+		"name": "o2",
+		"buttons": [{
+			"title": "ต่อไป",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "%",
+			"name": "perc",
+			"type": "number"
+		}]
+	}, {
+		"title": "อุณหภูมิ",
+		"image": "assets/symptoms/temperature.jpeg",
+		"name": "temp",
+		"buttons": [{
+			"title": "ต่อไป",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "องศาเซลเซียส",
+			"name": "celsius",
+			"type": "number"
+		}]
+	}, {
 		"title": "คุณอายุเท่าไร?",
 		"name": "age",
 		"buttons": [{
@@ -228,20 +254,6 @@
 			"name": "address",
 			"type": "text",
 			"required": true
-		}]
-	}, {
-		"title": "เบอร์โทรศัพท์ของคุณคือเบอร์อะไร?",
-		"name": "phone",
-		"inputs": [{
-			"label": "เบอร์โทรศัพท์ของคุณคือเบอร์อะไร?",
-			"sound": "assets/audio/th/phone_number.mp3",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}],
-		"buttons": [{
-			"title": "ต่อไป",
-			"color": "success"
 		}]
 	}],
 	"emergency": {
@@ -297,8 +309,13 @@
 			"sound": "assets/audio/th/med_diarrhea.mp3",
 			"image": "assets/meds/loperamide.jpg"
 		}, {
-			"symptoms": ["stress", "stress_2"],
-			"text": "หากคุณรู้สึกเครียดมากโปรดโทรหาสายด่วน"
+			"symptoms": ["stress"],
+			"text": "หากคุณรู้สึกเครียดมากโปรดโทรหาสายด่วน",
+			"image": "assets/meds/stress.jpg"
+		}, {
+			"symptoms": ["stress_2"],
+			"text": "หากคุณรู้สึกเครียดมากโปรดโทรหาสายด่วน",
+			"image": "assets/meds/stress_2.jpg"
 		}
 	],
 	"doctor": {

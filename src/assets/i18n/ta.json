@@ -201,6 +201,32 @@
 			"value": "no"
 		}]
 	}, {
+		"title": "ஆக்ஸிஜன் %",
+		"image": "assets/symptoms/o2.jpeg",
+		"name": "o2",
+		"buttons": [{
+			"title": "அடுத்தது",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "%",
+			"name": "perc",
+			"type": "number"
+		}]
+	}, {
+		"title": "வெப்ப நிலை",
+		"image": "assets/symptoms/temperature.jpeg",
+		"name": "temp",
+		"buttons": [{
+			"title": "அடுத்தது",
+			"color": "success"
+		}],
+		"inputs": [{
+			"label": "டிகிரி செல்சியஸ்",
+			"name": "celsius",
+			"type": "number"
+		}]
+	}, {
 		"title": "உங்கள் வயது என்ன?",
 		"name": "age",
 		"buttons": [{
@@ -228,20 +254,6 @@
 			"name": "address",
 			"type": "text",
 			"required": true
-		}]
-	}, {
-		"title": "உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்",
-		"name": "phone",
-		"inputs": [{
-			"label": "உங்கள் தொலைபேசி எண்",
-			"sound": "assets/audio/ta/phone_number.mp3",
-			"name": "phone",
-			"type": "tel",
-			"required": true
-		}],
-		"buttons": [{
-			"title": "அடுத்தது",
-			"color": "success"
 		}]
 	}],
 	"emergency": {
@@ -297,8 +309,13 @@
 			"sound": "assets/audio/ta/med_diarrhea.mp3",
 			"image": "assets/meds/loperamide.jpg"
 		}, {
-			"symptoms": ["stress", "stress_2"],
-			"text": "நீங்கள் மன அழுத்தத்தை உணர்ந்தால், தயவு செய்து எங்களிடம் பகிரவும் அல்லது—"
+			"symptoms": ["stress"],
+			"text": "நீங்கள் மன அழுத்தத்தை உணர்ந்தால், தயவு செய்து எங்களிடம் பகிரவும் அல்லது—",
+			"image": "assets/meds/stress.jpg"
+		}, {
+			"symptoms": ["stress_2"],
+			"text": "நீங்கள் மன அழுத்தத்தை உணர்ந்தால், தயவு செய்து எங்களிடம் பகிரவும் அல்லது—",
+			"image": "assets/meds/stress_2.jpg"
 		}
 	],
 	"doctor": {
