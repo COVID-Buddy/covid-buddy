@@ -2,7 +2,7 @@
 	"toolbar": {
 		"title": "COVID buddy",
 		"qr": "QR Reader",
-		"has_results": "Results"
+		"has_results": "结果"
 	},
 	"langs": {
 		"title": "请选择语言",
@@ -19,12 +19,13 @@
 		}
 	],
 	"buttons": {
-		"slide_next": "Next",
-		"start_questions": "Start",
-		"ok": "Ok",
+		"slide_next": "下一个",
+		"start_questions": "开始",
+		"ok": "好",
+		"back": "背部",
 		"share": "Share"
 	},
-	"input_required": "Input is required",
+	"input_required": "需要",
 	"questions": [{
 		"title": "你有呼吸困难吗？",
 		"name": "short_breath",
@@ -73,6 +74,20 @@
 		"image": "assets/symptoms/runny-nose.jpg",
 		"name": "runny-nose",
 		"sound": "assets/audio/zh/runny_nose.mp3",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "你有胸痛吗？",
+		"name": "chest_pain",
+		"image": "assets/symptoms/chest_pain.jpg",
+		"sound": "assets/audio/zh/chest_pain.mp3",
 		"buttons": [{
 			"title": "有",
 			"value": "yes",
@@ -170,10 +185,10 @@
 		"title": "您还有其他问题或症状吗?",
 		"image": "assets/symptoms/question.png",
 		"name": "other",
-		"sound": "assets/audio/zh/problems.mp3",
 		"inputs": [{
-			"label": "Symptoms",
+			"label": "病征",
 			"name": "symptoms",
+			"sound": "assets/audio/zh/problems.mp3",
 			"type": "text"
 		}],
 		"buttons": [{
@@ -189,7 +204,7 @@
 		"title": "你今年几岁？",
 		"name": "age",
 		"buttons": [{
-			"title": "Next",
+			"title": "下一个",
 			"color": "success"
 		}],
 		"inputs": [{
@@ -203,12 +218,12 @@
 		"title": "您在新加坡的地址是什么？",
 		"name": "age",
 		"buttons": [{
-			"title": "Next",
+			"title": "下一个",
 			"color": "success"
 		}],
 		"inputs": [{
 			"label": "您在新加坡的地址是什么？",
-			"placeholder": "Address",
+			"placeholder": "地址",
 			"sound": "assets/audio/zh/address.mp3",
 			"name": "address",
 			"type": "text",
@@ -218,132 +233,147 @@
 		"title": "你的电话号码是什么？",
 		"name": "phone",
 		"inputs": [{
-			"label": "Your Phone Number",
+			"label": "你的电话号码",
 			"sound": "assets/audio/zh/phone_number.mp3",
 			"name": "phone",
 			"type": "tel",
 			"required": true
 		}],
 		"buttons": [{
-			"title": "Next",
+			"title": "下一个",
 			"color": "success"
 		}]
 	}],
 	"emergency": {
-		"title": "Please call us NOW",
-		"message": "We would like to speak with you directly",
+		"title": "请立即找医生",
+		"message": "",
 		"sound": "assets/audio/zh/emergency.mp3",
+		"image": "assets/symptoms/emergency.jpeg",
 		"phone": "+65123123123",
 		"button": "CALL NOW"
 	},
 	"allergy": {
-		"title": "Drug allergy warning",
+		"title": "药物过敏警告",
 		"text": "服用这些药物时，请注意是否有过敏迹象，例如眼睛和嘴唇肿胀，呼吸困难以及瘙痒或皮疹。如果您有这种症状，请去看医生。",
 		"sound": "assets/audio/zh/med_allergy.mp3"
 	},
 	"qr_audio": "assets/audio/zh/qr.mp3",
-	"share_ready": "Sharing function is ready",
-	"medsTitle": "Recommended medications",
+	"medsTitle": "药物",
 	"meds": [
 		{
 			"symptoms": ["cough"],
-			"text": "For cough, please use the cough syrup",
-			"image": "assets/meds/dextromethorphan.png",
-			"dosage": "如果您咳嗽，请使用10毫升dextrometorphan，每天最多3次",
+			"text": "如果您咳嗽，请使用10毫升dextrometorphan，每天最多3次",
+			"image": "assets/meds/dextromethorphan.jpg",
+			"dosage": "",
 			"sound": "assets/audio/zh/med_cough_syrup.mp3"
 		}, {
 			"symptoms": ["sore throat"],
-			"text": "sore throat",
-			"image": "assets/meds/dequalinium.png",
-			"dosage": "如果您的喉咙痛，请每天服用1片dequalinium ，最多4次",
+			"text": "如果您的喉咙痛，请每天服用1片dequalinium ，最多4次",
+			"image": "assets/meds/dequalinium.jpg",
+			"dosage": "",
 			"sound": "assets/audio/zh/med_sore_throat.mp3"
 		}, {
 			"symptoms": ["runny-nose"],
-			"text": "For runny nose, please take cetrizine",
-			"dosage": "如果您流鼻涕，请每天使用1片cetirizine",
-			"image": "assets/meds/cetrizine.png",
+			"text": "如果您流鼻涕，请每天使用1片cetirizine",
+			"dosage": "",
+			"image": "assets/meds/cetrizine.jpg",
 			"sound": "assets/audio/zh/med_blocked_nose.mp3"
 		}, {
 			"symptoms": ["vomiting"],
-			"text": "For vomiting, please use maxolon",
+			"text": "对于恶心和呕吐，请使用1片maxolon，每天最多3次",
 			"sound": "assets/audio/zh/med_vomit.mp3",
-			"dosage": "对于恶心和呕吐，请使用1片maxolon，每天最多3次",
-			"image": "assets/meds/metoclopramide.png"
+			"dosage": "",
+			"image": "assets/meds/metoclopramide.jpg"
 		}, {
 			"symptoms": ["fever", "muscle-pain"],
-			"text": "For fever or muscle pain, take panadol",
-			"dosage": "如果发烧，请每天服用2片扑热息痛，每天最多服用4次",
+			"text": "如果发烧，请每天服用2片扑热息痛，每天最多服用4次",
+			"dosage": "",
 			"sound": "assets/audio/zh/med_fever.mp3",
-			"image": "assets/meds/paracetamol.png"
+			"image": "assets/meds/paracetamol.jpg"
 		}, {
 			"symptoms": ["diarrhea"],
-			"text": "For diarrhea, take loperamide",
-			"dosage": "如果腹泻，请每天服用1片loperamide ，最多3次",
+			"text": "如果腹泻，请每天服用1片loperamide ，最多3次",
+			"dosage": "",
 			"sound": "assets/audio/zh/med_diarrhea.mp3",
-			"image": "assets/meds/loperamide.png"
+			"image": "assets/meds/loperamide.jpg"
 		}, {
-			"symptoms": ["stress"],
-			"text": "If you feel very stressed, please let us know or call xyz"
+			"symptoms": ["stress", "stress_2"],
+			"text": "如果您感到压力很大，请告诉我们"
 		}
 	],
 	"doctor": {
-		"title": "Doctor results",
+		"title": "医生成绩",
 		"covid": {
 			"y": {
 				"title": "你有冠状病毒",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/zh/doc_covid_positive.mp3"
 			},
 			"n": {
 				"title": "你没有冠状病毒",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/zh/doc_covid_negative.mp3"
 			},
 			"maybe": {
-				"title": "You may be COVID positive",
-				"text": "some text",
+				"title": "您可能是冠状病毒阳性",
+				"text": "",
 				"sound": "assets/audio/zh/doc_covid_maybe.mp3"
 			}
 		},
 		"cxr": {
 			"normal": {
 				"title": "您的胸部X光检查结果正常",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/zh/doc_cxr_ok.mp3"
 			},
 			"abnormal": {
 				"title": "您的胸部X光检查结果显示出肺炎",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/zh/doc_cxr_nok.mp3"
 			}
 		},
 		"blood_tests": {
 			"normal": {
 				"title": "你的验血结果正常",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/zh/doc_blood_nok.mp3"
 			},
 			"abnormal": {
 				"title": "您的验血结果不正常",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/zh/doc_blood_ok.mp3"
+			},
+			"previous_positive": {
+				"title": "血液检查结果表明您以前曾感染过COVID，但现在已经免疫了",
+				"text": "",
+				"sound": "assets/audio/zh/doc_blood_prev_positive.mp3"
+			},
+			"previous_negative": {
+				"title": "血液检查结果表明您以前不太可能感染过COVID",
+				"text": "",
+				"sound": "assets/audio/zh/doc_blood_prev_negative.mp3"
 			}
 		},
 		"disposition": {
 			"hospital": {
 				"title": "我们想让您住院进一步监测",
-				"text": "You will ",
+				"text": "",
 				"sound": "assets/audio/zh/doc_admission.mp3"
 			},
 			"ccf": {
 				"title": "我们将把您转移到博览会。无需入院",
-				"text": "You will ",
+				"text": "",
 				"sound": "assets/audio/zh/doc_ccf.mp3"
 			},
 			"discharge": {
-				"title": "You are being discharged",
-				"text": "some text",
+				"title": "你出院了",
+				"text": "",
 				"sound": "assets/audio/zh/doc_discharge.mp3"
+			},
+			"isolation": {
+				"title": "我们将在这里隔离您至少14天",
+				"text": "",
+				"sound": "assets/audio/zh/doc_isolation.mp3"
 			}
 		}
 	}

@@ -22,6 +22,7 @@
 		"slide_next": "Next",
 		"start_questions": "Start",
 		"ok": "Ok",
+		"back": "Back",
 		"share": "Share"
 	},
 	"input_required": "Input is required",
@@ -73,6 +74,20 @@
 		"image": "assets/symptoms/runny-nose.jpg",
 		"name": "runny-nose",
 		"sound": "assets/audio/en/runny_nose.mp3",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "Do you have chest pain?",
+		"name": "chest_pain",
+		"image": "assets/symptoms/chest_pain.jpg",
+		"sound": "assets/audio/en/chest_pain.mp3",
 		"buttons": [{
 			"title": "Yes",
 			"value": "yes",
@@ -170,10 +185,10 @@
 		"title": "Any other problems?",
 		"image": "assets/symptoms/question.png",
 		"name": "other",
-		"sound": "assets/audio/en/problems.mp3",
 		"inputs": [{
 			"label": "Symptoms",
 			"name": "symptoms",
+			"sound": "assets/audio/en/problems.mp3",
 			"type": "text"
 		}],
 		"buttons": [{
@@ -233,6 +248,7 @@
 		"title": "Please call us NOW",
 		"message": "We would like to speak with you directly",
 		"sound": "assets/audio/en/emergency.mp3",
+		"image": "assets/symptoms/emergency.jpeg",
 		"phone": "+65123123123",
 		"button": "CALL NOW"
 	},
@@ -247,41 +263,41 @@
 		{
 			"symptoms": ["cough"],
 			"text": "For cough, please use the cough syrup",
-			"image": "assets/meds/dextromethorphan.png",
+			"image": "assets/meds/dextromethorphan.jpg",
 			"dosage": "When required: 10ml 3 times a day",
 			"sound": "assets/audio/en/med_cough_syrup.mp3"
 		}, {
 			"symptoms": ["sore throat"],
-			"text": "sore throat",
-			"image": "assets/meds/dequalinium.png",
+			"text": "For sore throat please use dequalinium tablets",
+			"image": "assets/meds/dequalinium.jpg",
 			"dosage": "When required: Suck on 1 lozenge 4 times a day",
 			"sound": "assets/audio/en/med_sore_throat.mp3"
 		}, {
 			"symptoms": ["runny-nose"],
 			"text": "For runny nose, please take cetrizine",
 			"dosage": "When required: 1 tablet 1 time a day",
-			"image": "assets/meds/cetrizine.png",
+			"image": "assets/meds/cetrizine.jpg",
 			"sound": "assets/audio/en/med_blocked_nose.mp3"
 		}, {
 			"symptoms": ["vomiting"],
 			"text": "For vomiting, please use maxolon",
 			"sound": "assets/audio/en/med_vomit.mp3",
 			"dosage": "When required: 1 tablet 3 times a day",
-			"image": "assets/meds/metoclopramide.png"
+			"image": "assets/meds/metoclopramide.jpg"
 		}, {
 			"symptoms": ["fever", "muscle-pain"],
-			"text": "For fever or muscle pain, take panadol",
+			"text": "For fever or muscle pain, take paracetamol",
 			"dosage": "When required: 2 tablets 4 times a day",
 			"sound": "assets/audio/en/med_fever.mp3",
-			"image": "assets/meds/paracetamol.png"
+			"image": "assets/meds/paracetamol.jpg"
 		}, {
 			"symptoms": ["diarrhea"],
 			"text": "For diarrhea, take loperamide",
 			"dosage": "When required: 1 tablet 3 times a day",
 			"sound": "assets/audio/en/med_diarrhea.mp3",
-			"image": "assets/meds/loperamide.png"
+			"image": "assets/meds/loperamide.jpg"
 		}, {
-			"symptoms": ["stress"],
+			"symptoms": ["stress", "stress_2"],
 			"text": "If you feel very stressed, please let us know!"
 		}
 	],
@@ -326,6 +342,16 @@
 				"title": "Your blood results are not ok",
 				"text": "",
 				"sound": "assets/audio/en/doc_blood_ok.mp3"
+			},
+			"previous_positive": {
+				"title": "Your blood results show that you may have had the COVID infection before, but you are immune now",
+				"text": "",
+				"sound": "assets/audio/en/doc_blood_prev_positive.mp3"
+			},
+			"previous_negative": {
+				"title": "Your blood results show that you are unlikely to have had a COVID infection before",
+				"text": "",
+				"sound": "assets/audio/en/doc_blood_prev_negative.mp3"
 			}
 		},
 		"disposition": {
@@ -340,9 +366,14 @@
 				"sound": "assets/audio/en/doc_ccf.mp3"
 			},
 			"discharge": {
-				"title": "You are being discharged",
+				"title": "You are being discharged, and are safe for work",
 				"text": "",
 				"sound": "assets/audio/en/doc_discharge.mp3"
+			},
+			"isolation": {
+				"title": "We will be isolating you here for at least 14 days",
+				"text": "",
+				"sound": "assets/audio/en/doc_isolation.mp3"
 			}
 		}
 	}

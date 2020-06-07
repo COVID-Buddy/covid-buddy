@@ -19,6 +19,7 @@ export class QrComponent {
   meds = [];
   questions = [];
   doctor: any = [];
+  translateSub;
 
   constructor(private route: ActivatedRoute,
     private translate: TranslateService,
@@ -27,102 +28,124 @@ export class QrComponent {
     private toast: MatSnackBar,
     private dialog: MatDialog) {
     route.params.subscribe(params => {
-      let doctorStr = localStorage.getItem('doctor_results');
-      if (doctorStr && doctorStr.length > 0) {
-        let doctor: any = {};
-        try {
-          doctor = JSON.parse(doctorStr);
-        } catch {
-          doctor = {};
-        }
+      this.updateQuestions(params);
+    });
 
-        if (!doctor) doctor = {};
+    this.translateSub = translate.onLangChange.subscribe(() => {
+      this.updateQuestions(route.snapshot.params);
+    });
+  }
 
-        ['covid', 'cxr', 'blood_tests', 'disposition'].forEach(key => {
-          this.translate.get('doctor.' + key + '.' + doctor[key]).subscribe(value => {
-            if (!value) return;
-            this.doctor.push(value);
-          });
-        });
+  ngOnDestroy() {
+    this.translateSub.unsubscribe();
+  }
+
+  updateQuestions(params) {
+    this.meds = [];
+    this.questions = [];
+    this.doctor = [];
+
+    let doctorStr = localStorage.getItem('doctor_results');
+    if (doctorStr && doctorStr.length > 0) {
+      let doctor: any = {};
+      try {
+        doctor = JSON.parse(doctorStr);
+      } catch {
+        doctor = {};
       }
 
-      this.translate.get('questions').subscribe(questions => {
-        let data = [];
-        questions = JSON.parse(JSON.stringify(questions));
+      if (!doctor) doctor = {};
 
-        let groups = {};
+      ['covid', 'cxr', 'blood_tests', 'disposition'].forEach(key => {
+        console.log('doctor.' + key + '.' + doctor[key]);
+        this.translate.get('doctor.' + key + '.' + doctor[key]).subscribe(value => {
+          console.log('doctor.' + key + '.' + doctor[key], value);
+          if (!value) return;
+          this.doctor.push(value);
+        });
+      });
+    }
 
-        for (let key in params) {
-          if (key == 'start' || !params.hasOwnProperty(key)) {
+    this.translate.get('questions').subscribe(questions => {
+      let data = [];
+      questions = JSON.parse(JSON.stringify(questions));
+
+      let groups = {};
+
+      for (let key in params) {
+        if (key == 'start' || !params.hasOwnProperty(key)) {
+          continue;
+        }
+
+        for (let i = 0; i < questions.length; i++) {
+          let question = questions[i];
+          question._title = this.sanitizer.bypassSecurityTrustHtml(marked(question.title));
+
+          let group: any = {
+            title: "",
+            answer: "",
+            key: "",
+            question: question,
+          };
+
+          if (key == question.name) {
+            group.key = question.name;
+            group.title = question._title;
+            group.answer = params[key];
+          } else {
             continue;
           }
 
-          for (let i = 0; i < questions.length; i++) {
-            let question = questions[i];
-            question._title = this.sanitizer.bypassSecurityTrustHtml(marked(question.title));
+          if (!groups[group.key]) {
+            groups[group.key] = group;
+          } else {
+            group = groups[group.key];
+          }
 
-            let group: any = {
-              title: "",
-              answer: "",
-              key: "",
-              question: question,
-            };
-
-            if (key == question.name) {
-              group.key = question.name;
-              group.title = question._title;
-              group.answer = params[key];
-            } else {
-              continue;
-            }
-
-            if (!groups[group.key]) {
-              groups[group.key] = group;
-            } else {
-              group = groups[group.key];
-            }
-
-            if (question.buttons) {
-              for (let bi = 0; bi < question.buttons.length; bi++) {
-                let btn = question.buttons[bi];
-                if (btn.value == params[key]) {
-                  group.answer = btn.title;
-                }
+          if (question.buttons) {
+            for (let bi = 0; bi < question.buttons.length; bi++) {
+              let btn = question.buttons[bi];
+              if (btn.value == params[key]) {
+                group.answer = btn.title;
               }
             }
           }
         }
+      }
 
-        questions = [];
-        for (let key in groups) {
+      questions = [];
+      for (let key in groups) {
+        if (key == 'stress' || key == 'stress_2') {
+          questions.splice(0, 0, groups[key]);
+        } else {
           questions.push(groups[key]);
         }
+      }
 
-        translate.get('meds').subscribe(meds => {
-          meds = JSON.parse(JSON.stringify(meds));
-          this.meds = [];
-          meds.forEach(med => {
-            med.symptoms.forEach(symptom => {
-              if (params[symptom] != "yes") {
-                return;
-              }
-
-              med.show = true;
-              questions.forEach(question => {
-                if (question.key == symptom) {
-                  question.med = med;
-                }
-              });
-            });
-          });
-
-          questions.forEach(question => {
-            if (!question.med) {
+      this.translate.get('meds').subscribe(meds => {
+        meds = JSON.parse(JSON.stringify(meds));
+        this.meds = [];
+        meds.forEach(med => {
+          med.symptoms.forEach(symptom => {
+            if (params[symptom] != "yes") {
               return;
             }
 
-            this.questions.push(question);
+            med.show = true;
+            questions.forEach(question => {
+              if (question.key == symptom) {
+                question.med = med;
+              }
+            });
           });
+        });
+
+        questions.forEach(question => {
+          if (!question.med) {
+            return;
+          }
+
+          this.questions.push(question);
         });
       });
     });

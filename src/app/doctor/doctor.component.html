@@ -37,6 +37,8 @@
 		<mat-radio-group [(ngModel)]="results.blood_tests">
 			<mat-radio-button value="normal">Norm</mat-radio-button>
 			<mat-radio-button value="abnormal">Abnormal</mat-radio-button>
+			<mat-radio-button value="previous_positive">Have had the COVID before</mat-radio-button>
+			<mat-radio-button value="previous_negative">Have not had COVID before</mat-radio-button>
 			<mat-radio-button value="n/a">N/A</mat-radio-button>
 		</mat-radio-group>
 
@@ -45,6 +47,7 @@
 			<mat-radio-button value="hospital">Hospital</mat-radio-button>
 			<mat-radio-button value="ccf">CCF</mat-radio-button>
 			<mat-radio-button value="discharge">Discharge</mat-radio-button>
+			<mat-radio-button value="isolation">Isolation</mat-radio-button>
 			<mat-radio-button value="n/a">N/A</mat-radio-button>
 		</mat-radio-group>
 	</mat-card-content>

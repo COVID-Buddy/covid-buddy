@@ -22,6 +22,7 @@
 		"slide_next": "அடுத்தது",
 		"start_questions": "தொடங்கு",
 		"ok": "சரி",
+		"back": "மீண்டும்",
 		"share": "பகிர்"
 	},
 	"input_required": "இந்த பகுதி அவசியமானது",
@@ -73,6 +74,20 @@
 		"image": "assets/symptoms/runny-nose.jpg",
 		"name": "runny-nose",
 		"sound": "assets/audio/ta/runny_nose.mp3",
+		"buttons": [{
+			"title": "ஆம்",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "இல்லை",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "உங்களுக்கு மார்பு வலி இருக்கிறதா?",
+		"name": "chest_pain",
+		"image": "assets/symptoms/chest_pain.jpg",
+		"sound": "assets/audio/ta/chest_pain.mp3",
 		"buttons": [{
 			"title": "ஆம்",
 			"value": "yes",
@@ -170,10 +185,10 @@
 		"title": "வேறு ஏதேனும் பிரச்சினைகள் அல்லது அறிகுறிகளை நீங்கள் கொண்டிருக்கிறீர்களா?",
 		"image": "assets/symptoms/question.png",
 		"name": "other",
-		"sound": "assets/audio/ta/problems.mp3",
 		"inputs": [{
 			"label": "அறிகுறிகள்",
 			"name": "symptoms",
+			"sound": "assets/audio/ta/problems.mp3",
 			"type": "text"
 		}],
 		"buttons": [{
@@ -208,7 +223,7 @@
 		}],
 		"inputs": [{
 			"label": "உங்கள் சிங்கப்பூர் முகவரி என்ன?",
-			"placeholder": "Address",
+			"placeholder": "முகவரி",
 			"sound": "assets/audio/ta/address.mp3",
 			"name": "address",
 			"type": "text",
@@ -218,7 +233,7 @@
 		"title": "உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்",
 		"name": "phone",
 		"inputs": [{
-			"label": "Your Phone Number",
+			"label": "உங்கள் தொலைபேசி எண்",
 			"sound": "assets/audio/ta/phone_number.mp3",
 			"name": "phone",
 			"type": "tel",
@@ -233,6 +248,7 @@
 		"title": "தயவுசெய்து இப்போது ஒரு மருத்துவரை சந்திக்கவும்",
 		"message": "உங்களுடன் நேரடியாக பேச விரும்புகிறோம்",
 		"sound": "assets/audio/ta/emergency.mp3",
+		"image": "assets/symptoms/emergency.jpeg",
 		"phone": "+65123123123",
 		"button": "CALL NOW"
 	},
@@ -247,41 +263,41 @@
 		{
 			"symptoms": ["cough"],
 			"text": "இருமலுக்கு, இருமல் சிரப் மருந்தை 10மில்லி அளவு ஒரு நாளில் தேவைக்கேற்ப மூன்று முறை வரை எடுக்கலாம்.",
-			"image": "assets/meds/dextromethorphan.png",
+			"image": "assets/meds/dextromethorphan.jpg",
 			"dosage": "",
 			"sound": "assets/audio/ta/med_cough_syrup.mp3"
 		}, {
 			"symptoms": ["sore throat"],
 			"text": "தொண்டை வலிக்கு, இந்த உறிஞ்சு உட்கொள்ளும் மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 1 மாத்திரை நான்கு முறை வரை எடுக்கலாம்",
-			"image": "assets/meds/dequalinium.png",
+			"image": "assets/meds/dequalinium.jpg",
 			"dosage": "",
 			"sound": "assets/audio/ta/med_sore_throat.mp3"
 		}, {
 			"symptoms": ["runny-nose"],
 			"text": "சளி அல்லது மூக்கு அடைப்புக்கு, இந்த மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 1 மாத்திரை ஒரு முறை மட்டும் எடுக்கலாம்",
 			"dosage": "",
-			"image": "assets/meds/cetrizine.png",
+			"image": "assets/meds/cetrizine.jpg",
 			"sound": "assets/audio/ta/med_blocked_nose.mp3"
 		}, {
 			"symptoms": ["vomiting"],
 			"text": "வாந்தி ஏற்பட்டால், இந்த மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 1 மாத்திரை மூன்று முறை வரை எடுக்கலாம்",
 			"sound": "assets/audio/ta/med_vomit.mp3",
 			"dosage": "",
-			"image": "assets/meds/metoclopramide.png"
+			"image": "assets/meds/metoclopramide.jpg"
 		}, {
 			"symptoms": ["fever", "muscle-pain"],
 			"text": "காய்ச்சல் அல்லது உடல் வலிக்கு, , இந்த மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 2 மாத்திரை நான்கு முறை வரை எடுக்கலாம் ",
 			"dosage": "",
 			"sound": "assets/audio/ta/med_fever.mp3",
-			"image": "assets/meds/paracetamol.png"
+			"image": "assets/meds/paracetamol.jpg"
 		}, {
 			"symptoms": ["diarrhea"],
 			"text": "வயிற்றுபோக்கு இருந்தால், இந்த மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 1 மாத்திரை மூன்று முறை வரை எடுக்கலாம்",
 			"dosage": "",
 			"sound": "assets/audio/ta/med_diarrhea.mp3",
-			"image": "assets/meds/loperamide.png"
+			"image": "assets/meds/loperamide.jpg"
 		}, {
-			"symptoms": ["stress"],
+			"symptoms": ["stress", "stress_2"],
 			"text": "நீங்கள் மன அழுத்தத்தை உணர்ந்தால், தயவு செய்து எங்களிடம் பகிரவும் அல்லது—"
 		}
 	],
@@ -326,6 +342,16 @@
 				"title": "உங்கள் இரத்த முடிவுகள் சரியில்லை",
 				"text": "",
 				"sound": "assets/audio/ta/doc_blood_ok.mp3"
+			},
+			"previous_positive": {
+				"title": "உங்கள் இரத்த முடிவுகள் உங்களுக்கு முன்பு COVID நோய்த்தொற்று ஏற்பட்டிருக்கலாம் என்பதைக் காட்டுகின்றன, ஆனால் இப்போது நீங்கள் நோய் எதிர்ப்பு சக்தி கொண்டவர்",
+				"text": "",
+				"sound": "assets/audio/ta/doc_blood_prev_positive.mp3"
+			},
+			"previous_negative": {
+				"title": "இதற்கு முன்பு நீங்கள் ஒரு COVID ஐ வைத்திருக்க வாய்ப்பில்லை என்பதை உங்கள் இரத்த முடிவுகள் காட்டுகின்றன",
+				"text": "",
+				"sound": "assets/audio/ta/doc_blood_prev_negative.mp3"
 			}
 		},
 		"disposition": {
@@ -340,9 +366,14 @@
 				"sound": "assets/audio/ta/doc_ccf.mp3"
 			},
 			"discharge": {
-				"title": "நாங்கள் உங்களை 14 முதல் 21 நாட்கள் இங்கு தனிமைப்படுத்துகிறோம்",
+				"title": "நீங்கள் வெளியேற்றப்படுகிறீர்கள், வேலைக்கு பாதுகாப்பாக இருக்கிறீர்கள்",
 				"text": "",
 				"sound": "assets/audio/ta/doc_discharge.mp3"
+			},
+			"isolation": {
+				"title": "நாங்கள் உங்களை 14 முதல் 21 நாட்கள் இங்கு தனிமைப்படுத்துகிறோம்",
+				"text": "",
+				"sound": "assets/audio/ta/doc_isolation.mp3"
 			}
 		}
 	}

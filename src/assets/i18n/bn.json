@@ -22,6 +22,7 @@
 		"slide_next": "পরবর্তী",
 		"start_questions": "শুরু",
 		"ok": "Ok",
+		"back": "পেছনে",
 		"share": "শেয়ার করুন"
 	},
 	"input_required": "এখানে লিখুন",
@@ -82,7 +83,21 @@
 			"color": "warn",
 			"value": "no"
 		}]
-	}, {
+	},{
+		"title": "তোমার বুকে ব্যথা আছে?",
+		"name": "chest_pain",
+		"image": "assets/symptoms/chest_pain.jpg",
+		"sound": "assets/audio/ta/chest_pain.mp3",
+		"buttons": [{
+			"title": "হ্যাঁ",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "না",
+			"color": "warn",
+			"value": "no"
+		}]
+	},  {
 		"title": "আপনার কি পেট ব্যাথা আছে ?",
 		"image": "assets/symptoms/abdominal-pain.jpg",
 		"name": "stomach pain",
@@ -170,10 +185,10 @@
 		"title": "আপনার কি শরীরে অন্য কোনো সমস্যা আছে? ",
 		"image": "assets/symptoms/question.png",
 		"name": "other",
-		"sound": "assets/audio/bn/problems.mp3",
 		"inputs": [{
-			"label": "Symptoms",
+			"label": "লক্ষণ",
 			"name": "symptoms",
+			"sound": "assets/audio/bn/problems.mp3",
 			"type": "text"
 		}],
 		"buttons": [{
@@ -189,7 +204,7 @@
 		"title": "আপনার বয়স কত ?",
 		"name": "age",
 		"buttons": [{
-			"title": "Next",
+			"title": "அடுத்தது",
 			"color": "success"
 		}],
 		"inputs": [{
@@ -203,7 +218,7 @@
 		"title": "আপনার বাসা কোথায় ?",
 		"name": "age",
 		"buttons": [{
-			"title": "Next",
+			"title": "அடுத்தது",
 			"color": "success"
 		}],
 		"inputs": [{
@@ -225,7 +240,7 @@
 			"required": true
 		}],
 		"buttons": [{
-			"title": "Next",
+			"title": "அடுத்தது",
 			"color": "success"
 		}]
 	}],
@@ -233,6 +248,7 @@
 		"title": "ডাক্তার কে এক্ষুনি ফোন করুন",
 		"message": "আমরা আপনার সঙ্গে সরাসরি কথা বলতে চাই ",
 		"sound": "assets/audio/bn/emergency.mp3",
+		"image": "assets/symptoms/emergency.jpeg",
 		"phone": "+65123123123",
 		"button": "CALL NOW"
 	},
@@ -247,41 +263,41 @@
 		{
 			"symptoms": ["cough"],
 			"text": "কাশি হলে কফ্ সিরাপ খাবেন",
-			"image": "assets/meds/dextromethorphan.png",
+			"image": "assets/meds/dextromethorphan.jpg",
 			"dosage": "যখন দরকার: 10 মিলি, প্রতিদিন 3 বার",
 			"sound": "assets/audio/bn/med_cough_syrup.mp3"
 		}, {
 			"symptoms": ["sore throat"],
 			"text": "গলা ব্যাথা হলে Dequalinium লজেন্জ খাবেন",
-			"image": "assets/meds/dequalinium.png",
+			"image": "assets/meds/dequalinium.jpg",
 			"dosage": "যখন দরকার: 1 লজেন্জ , প্রতিদিন 4 বার চুষে খাবেন।",
 			"sound": "assets/audio/bn/med_sore_throat.mp3"
 		}, {
 			"symptoms": ["runny-nose"],
 			"text": "সর্দি হলে সেটিরিজিন খাবেন",
 			"dosage": "যখন দরকার: 1 টি ট্যাবলেট, প্রতিদিন 1 বার",
-			"image": "assets/meds/cetrizine.png",
+			"image": "assets/meds/cetrizine.jpg",
 			"sound": "assets/audio/bn/med_blocked_nose.mp3"
 		}, {
 			"symptoms": ["vomiting"],
 			"text": "বমি ভাব থাকলে Metoclopramide খাবেন",
 			"sound": "assets/audio/bn/med_vomit.mp3",
 			"dosage": "যখন দরকার : 1 টি টেবলেট প্রতিদিন 3 বার",
-			"image": "assets/meds/metoclopramide.png"
+			"image": "assets/meds/metoclopramide.jpg"
 		}, {
 			"symptoms": ["fever", "muscle-pain"],
 			"text": "জ্বর বা শরীরে ব্যাথা থাকলে প্যারাসিটামল খাবেন",
 			"dosage": "যখন দরকার: 2 টি ট্যাবলেট, প্রতিদিন 4 বার",
 			"sound": "assets/audio/bn/med_fever.mp3",
-			"image": "assets/meds/paracetamol.png"
+			"image": "assets/meds/paracetamol.jpg"
 		}, {
 			"symptoms": ["diarrhea"],
 			"text": "পাতলা পায়খানা হলে loperamide খাবেন",
 			"dosage": "যখন দরকার : 1 টা টেবলেট প্রতিদিন 3 বার",
 			"sound": "assets/audio/bn/med_diarrhea.mp3",
-			"image": "assets/meds/loperamide.png"
+			"image": "assets/meds/loperamide.jpg"
 		}, {
-			"symptoms": ["stress"],
+			"symptoms": ["stress", "stress_2"],
 			"text": "যদি আপনি চিন্তিত বা উত্তেজিত বোধ করেন, তাহলে আমাদের এই নম্বরে জানান"
 		}
 	],
@@ -326,6 +342,16 @@
 				"title": "আপনার রক্ত পরীক্ষার রিপোর্টে সমস্যা দেখা দিয়েছে",
 				"text": "",
 				"sound": "assets/audio/bn/doc_blood_nok.mp3"
+			},
+			"previous_positive": {
+				"title": "আপনার রক্তের ফলাফলগুলি দেখায় যে আপনার আগে COVID সংক্রমণ হতে পারে তবে আপনি এখন অনাক্রম্য",
+				"text": "",
+				"sound": "assets/audio/bn/doc_blood_prev_positive.mp3"
+			},
+			"previous_negative": {
+				"title": "আপনার রক্তের ফলাফলগুলি দেখায় যে এর আগে আপনার কোনও COVID সংক্রমণ হওয়ার সম্ভাবনা নেই",
+				"text": "",
+				"sound": "assets/audio/bn/doc_blood_prev_negative.mp3"
 			}
 		},
 		"disposition": {
@@ -343,6 +369,11 @@
 				"title": "আপনি হাসপাতাল থেকে ফিরে যেতে পারেন",
 				"text": "",
 				"sound": "assets/audio/bn/doc_discharge.mp3"
+			},
+			"isolation": {
+				"title": "আমরা আপনাকে এখানে কমপক্ষে 14 দিনের জন্য বিচ্ছিন্ন করব",
+				"text": "",
+				"sound": "assets/audio/bn/doc_isolation.mp3"
 			}
 		}
 	}

@@ -14,7 +14,7 @@
 
 							<mat-form-field *ngIf="in.type != 'checkbox'" appearance="outline">
 								<mat-label>{{ in.label }}</mat-label>
-								<input matInput [required]="in.required" [type]="in.type ? in.type : 'text'" [placeholder]="in.label" [(ngModel)]="questions[i].inputs[qi]._response" [name]="'q_' + i + '_' + in.name">
+								<input matInput [required]="in.required" [type]="in.type ? in.type : 'text'" [placeholder]="in.label" [(ngModel)]="questions[i].inputs[qi]._response" [attr.name]="'q_' + i + '_' + in.name">
 							</mat-form-field>
 							<mat-checkbox [id]="'q_' + i + '_' + in.name" *ngIf="in.type == 'checkbox'" [name]="'q_' + i + '_' + in.name" [(ngModel)]="questions[i].inputs[qi]._response">{{ in.label }}</mat-checkbox>
 							<img mat-card-image *ngIf="in.image" [src]="in.image">
@@ -29,7 +29,6 @@
 						<button [color]="button.color ? button.color : 'primary'" *ngFor="let button of question.buttons" mat-raised-button (click)="pressedButton(question, button)">{{ button.title }}</button>
 					</mat-card-actions>
 				</mat-card>
-				<!-- <h1 [innerHTML]="question._title"></h1> -->
 			</div>
 		</div>
 	</div>

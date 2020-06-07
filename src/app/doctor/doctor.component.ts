@@ -23,6 +23,7 @@ export class DoctorComponent {
   		}
 
   		this.snackbar.open('Invalid access code', 'OK', { duration: 5000 });
+      return;
   	}
 
   	this.unlocked = true;

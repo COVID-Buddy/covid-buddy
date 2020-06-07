@@ -2,10 +2,10 @@
 	"toolbar": {
 		"title": "COVID buddy",
 		"qr": "QR Reader",
-		"has_results": "Results"
+		"has_results": "ผล"
 	},
 	"langs": {
-		"title": "Hello, please select a language",
+		"title": "สวัสดีโปรดเลือกภาษาของคุณ",
 		"english": "English",
 		"bangladesh": "বাংলা",
 		"thai": "ไทย",
@@ -14,336 +14,366 @@
 	},
 	"slides": [
 		{
-			"content": "### Hello, this app lets you tell doctors what symptoms you have, and what medication to take\n\nPress the green button if you have a symptom. If not press the red button",
-			"sound": "assets/audio/en/intro.mp3"
+			"content": "### แอพพลิเคชันนี้จะช่วยแจ้งให้หมอทราบว่าคุณมีอาการอย่างไร และคุณต้องได้รับยาแบบไหน กดปุ่มสีเขียวหากคุณมีอาการดังต่อไปนี้ และกดปุ่มสีแดงหากคุณไม่มีอาการ",
+			"sound": "assets/audio/th/intro.mp3"
 		}
 	],
 	"buttons": {
-		"slide_next": "Next",
-		"start_questions": "Start",
+		"slide_next": "ต่อไป",
+		"start_questions": "เริ่มต้น",
 		"ok": "Ok",
+		"back": "กลับ",
 		"share": "Share"
 	},
-	"input_required": "Input is required",
+	"input_required": "จำเป็นต้องใช้",
 	"questions": [{
-		"title": "Do you have **shortness of breath**?",
+		"title": "คุณมีอาการหายใจเหนื่อยหอบหรือไม่?",
 		"name": "short_breath",
 		"image": "assets/symptoms/short_breath.jpg",
-		"sound": "assets/audio/en/shortness_of_breath.mp3",
+		"sound": "assets/audio/th/shortness_of_breath.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success",
 			"action": "emergency"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have a cough?",
+		"title": "คุณมีอาการไอหรือไม่?",
 		"image": "assets/symptoms/cough.jpg",
 		"name": "cough",
-		"sound": "assets/audio/en/cough.mp3",
+		"sound": "assets/audio/th/cough.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have a sore throat?",
+		"title": "คุณมีอาการเจ็บคอหรือไม่?",
 		"image": "assets/symptoms/sore-throat.jpg",
-		"sound": "assets/audio/en/sore_throat.mp3",
+		"sound": "assets/audio/th/sore_throat.mp3",
 		"name": "sore throat",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have a runny nose?",
+		"title": "คุณมีน้ำมูกไหลหรือไม่?",
 		"image": "assets/symptoms/runny-nose.jpg",
 		"name": "runny-nose",
-		"sound": "assets/audio/en/runny_nose.mp3",
+		"sound": "assets/audio/th/runny_nose.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have stomach pain?",
+		"title": "คุณมีอาการเจ็บหน้าอกหรือไม่?",
+		"name": "chest_pain",
+		"image": "assets/symptoms/chest_pain.jpg",
+		"sound": "assets/audio/th/chest_pain.mp3",
+		"buttons": [{
+			"title": "ใช่",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "ไม่",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "คุณมีอาการปวดท้องหรือไม่?",
 		"image": "assets/symptoms/abdominal-pain.jpg",
 		"name": "stomach pain",
-		"sound": "assets/audio/en/stomach_pain.mp3",
+		"sound": "assets/audio/th/stomach_pain.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you feel like vomiting?",
+		"title": "คุณมีอาการคลื่นไส้หรือไม่?",
 		"image": "assets/symptoms/vomiting.jpg",
-		"sound": "assets/audio/en/vomiting.mp3",
+		"sound": "assets/audio/th/vomiting.mp3",
 		"name": "vomiting",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have diarrhea?",
+		"title": "คุณมีอาการถ่ายเหลว ท้องเสีย หรือไม่?",
 		"image": "assets/symptoms/diarrhea.jpeg",
-		"sound": "assets/audio/en/diarrhea.mp3",
+		"sound": "assets/audio/th/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have muscle pains?",
+		"title": "คุณมีอาการปวดกล้ามเนื้อหรือไม่?",
 		"image": "assets/symptoms/muscle-pain.jpg",
-		"sound": "assets/audio/en/muscle_pain.mp3",
+		"sound": "assets/audio/th/muscle_pain.mp3",
 		"name": "muscle-pain",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Are you worried or stressed?",
+		"title": "คุณมีความเครียดเกี่ยวกับเงินหรือการทำงานหรือไม่?",
 		"image": "assets/symptoms/stress.jpg",
 		"name": "stress",
-		"sound": "assets/audio/en/stress.mp3",
+		"sound": "assets/audio/th/stress.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Are you worried or stressed? (2)",
+		"title": "คุณมีความเครียดเกี่ยวกับสุขภาพหรือ coronavirus หรือไม่?",
 		"image": "assets/symptoms/stress_2.jpg",
 		"name": "stress_2",
-		"sound": "assets/audio/en/stress_2.mp3",
+		"sound": "assets/audio/th/stress_2.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Any other problems?",
+		"title": "คุณมีอาการอื่นอีกหรือไม่?",
 		"image": "assets/symptoms/question.png",
 		"name": "other",
-		"sound": "assets/audio/en/problems.mp3",
 		"inputs": [{
-			"label": "Symptoms",
+			"label": "อาการ",
 			"name": "symptoms",
+			"sound": "assets/audio/th/problems.mp3",
 			"type": "text"
 		}],
 		"buttons": [{
-			"title": "Yes",
+			"title": "ใช่",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "ไม่",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "How old are you?",
+		"title": "คุณอายุเท่าไร?",
 		"name": "age",
 		"buttons": [{
-			"title": "Next",
+			"title": "ต่อไป",
 			"color": "success"
 		}],
 		"inputs": [{
-			"label": "Age",
+			"label": "อายุ",
 			"name": "age",
-			"sound": "assets/audio/en/age.mp3",
+			"sound": "assets/audio/th/age.mp3",
 			"type": "number",
 			"required": true
 		}]
 	}, {
-		"title": "Where do you live?",
+		"title": "ที่อยู่สิงคโปร์ของคุณคืออะไร?",
 		"name": "age",
 		"buttons": [{
-			"title": "Next",
+			"title": "ต่อไป",
 			"color": "success"
 		}],
 		"inputs": [{
-			"label": "Where do you live?",
-			"placeholder": "Address",
-			"sound": "assets/audio/en/address.mp3",
+			"label": "คุณอาศัยอยู่ที่ไหน?",
+			"placeholder": "ที่อยู่",
+			"sound": "assets/audio/th/address.mp3",
 			"name": "address",
 			"type": "text",
 			"required": true
 		}]
 	}, {
-		"title": "What is your phone number?",
+		"title": "เบอร์โทรศัพท์ของคุณคือเบอร์อะไร?",
 		"name": "phone",
 		"inputs": [{
-			"label": "Your Phone Number",
-			"sound": "assets/audio/en/phone_number.mp3",
+			"label": "เบอร์โทรศัพท์ของคุณคือเบอร์อะไร?",
+			"sound": "assets/audio/th/phone_number.mp3",
 			"name": "phone",
 			"type": "tel",
 			"required": true
 		}],
 		"buttons": [{
-			"title": "Next",
+			"title": "ต่อไป",
 			"color": "success"
 		}]
 	}],
 	"emergency": {
-		"title": "Please call us NOW",
+		"title": "โปรดโทรเรียกหมอทันที",
 		"message": "We would like to speak with you directly",
-		"sound": "assets/audio/en/emergency.mp3",
+		"sound": "assets/audio/th/emergency.mp3",
+		"image": "assets/symptoms/emergency.jpeg",
 		"phone": "+65123123123",
 		"button": "CALL NOW"
 	},
 	"allergy": {
-		"title": "Drug allergy warning",
-		"text": "text of allergy warning audio",
-		"sound": "assets/audio/en/med_allergy.mp3"
+		"title": "คำเตือนการแพ้ยา",
+		"text": "",
+		"sound": "assets/audio/th/med_allergy.mp3"
 	},
-	"qr_audio": "assets/audio/en/qr.mp3",
-	"share_ready": "Sharing function is ready",
-	"medsTitle": "Recommended medications",
+	"qr_audio": "assets/audio/th/qr.mp3",
+	"medsTitle": "ยา",
 	"meds": [
 		{
 			"symptoms": ["cough"],
-			"text": "For cough, please use the cough syrup",
-			"image": "assets/meds/dextromethorphan.png",
-			"dosage": "When required: 10ml 3 times a day",
-			"sound": "assets/audio/en/med_cough_syrup.mp3"
+			"text": "สำหรับอาการไอโปรดใช้น้ำเชื่อมแก้ไอ",
+			"image": "assets/meds/dextromethorphan.jpg",
+			"dosage": "เมื่อต้องการ: 10ml 3 ครั้งต่อวัน",
+			"sound": "assets/audio/th/med_cough_syrup.mp3"
 		}, {
 			"symptoms": ["sore throat"],
-			"text": "sore throat",
-			"image": "assets/meds/dequalinium.png",
-			"dosage": "When required: Suck on 1 lozenge 4 times a day",
-			"sound": "assets/audio/en/med_sore_throat.mp3"
+			"text": "สำหรับอาการเจ็บคอให้ใช้ dequalinium",
+			"image": "assets/meds/dequalinium.jpg",
+			"dosage": "เมื่อต้องการ: ดูดวันละ 1 เม็ดวันละ 4 ครั้ง",
+			"sound": "assets/audio/th/med_sore_throat.mp3"
 		}, {
 			"symptoms": ["runny-nose"],
-			"text": "For runny nose, please take cetrizine",
-			"dosage": "When required: 1 tablet 1 time a day",
-			"image": "assets/meds/cetrizine.png",
-			"sound": "assets/audio/en/med_blocked_nose.mp3"
+			"text": "สำหรับอาการน้ำมูกไหลโปรดทานเซซิริซีน",
+			"dosage": "เมื่อต้องการ: 1 เม็ดวันละ 1 ครั้ง",
+			"image": "assets/meds/cetrizine.jpg",
+			"sound": "assets/audio/th/med_blocked_nose.mp3"
 		}, {
 			"symptoms": ["vomiting"],
-			"text": "For vomiting, please use maxolon",
-			"sound": "assets/audio/en/med_vomit.mp3",
-			"dosage": "When required: 1 tablet 3 times a day",
-			"image": "assets/meds/metoclopramide.png"
+			"text": "สำหรับอาเจียนกรุณาใช้ maxolon",
+			"sound": "assets/audio/th/med_vomit.mp3",
+			"dosage": "เมื่อต้องการ: 1 เม็ดวันละ 3 ครั้ง",
+			"image": "assets/meds/metoclopramide.jpg"
 		}, {
 			"symptoms": ["fever", "muscle-pain"],
-			"text": "For fever or muscle pain, take panadol",
-			"dosage": "When required: 2 tablets 4 times a day",
-			"sound": "assets/audio/en/med_fever.mp3",
-			"image": "assets/meds/paracetamol.png"
+			"text": "สำหรับผู้ที่มีไข้หรือปวดกล้ามเนื้อทานพานาดอล",
+			"dosage": "เมื่อต้องการ: 2 เม็ดวันละ 4 ครั้ง",
+			"sound": "assets/audio/th/med_fever.mp3",
+			"image": "assets/meds/paracetamol.jpg"
 		}, {
 			"symptoms": ["diarrhea"],
-			"text": "For diarrhea, take loperamide",
-			"dosage": "When required: 1 tablet 3 times a day",
-			"sound": "assets/audio/en/med_diarrhea.mp3",
-			"image": "assets/meds/loperamide.png"
+			"text": "สำหรับอาการท้องเสียใช้ loperamide",
+			"dosage": "เมื่อต้องการ: 1 เม็ดวันละ 3 ครั้ง",
+			"sound": "assets/audio/th/med_diarrhea.mp3",
+			"image": "assets/meds/loperamide.jpg"
 		}, {
-			"symptoms": ["stress"],
-			"text": "If you feel very stressed, please let us know or call xyz"
+			"symptoms": ["stress", "stress_2"],
+			"text": "หากคุณรู้สึกเครียดมากโปรดโทรหาสายด่วน"
 		}
 	],
 	"doctor": {
-		"title": "Doctor results",
+		"title": "ผลการแพทย์",
 		"covid": {
 			"y": {
-				"title": "You are COVID positive",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_covid_positive.mp3"
+				"title": "การทดสอบของคุณแสดงว่าคุณมี coronavirus",
+				"text": "",
+				"sound": "assets/audio/th/doc_covid_positive.mp3"
 			},
 			"n": {
-				"title": "You are COVID negative",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_covid_negative.mp3"
+				"title": "การทดสอบของคุณแสดงว่าคุณไม่มี coronavirus",
+				"text": "",
+				"sound": "assets/audio/th/doc_covid_negative.mp3"
 			},
 			"maybe": {
-				"title": "You may be COVID positive",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_covid_maybe.mp3"
+				"title": "จากอาการของคุณคุณมีแนวโน้มที่จะมี coronavirus",
+				"text": "",
+				"sound": "assets/audio/th/doc_covid_maybe.mp3"
 			}
 		},
 		"cxr": {
 			"normal": {
-				"title": "Your chest x-ray results are normal",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_cxr_ok.mp3"
+				"title": "หน้าอกของคุณ X-ray เป็นเรื่องปกติ",
+				"text": "",
+				"sound": "assets/audio/th/doc_cxr_ok.mp3"
 			},
 			"abnormal": {
-				"title": "Your chest x-ray results are abnormal",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_cxr_nok.mp3"
+				"title": "เอ็กซ์เรย์ทรวงอกของคุณไม่ปกติ",
+				"text": "",
+				"sound": "assets/audio/th/doc_cxr_nok.mp3"
 			}
 		},
 		"blood_tests": {
 			"normal": {
-				"title": "Your blood results are ok",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_blood_nok.mp3"
+				"title": "การตรวจเลือดของคุณไม่ปกติ",
+				"text": "",
+				"sound": "assets/audio/th/doc_blood_nok.mp3"
 			},
 			"abnormal": {
-				"title": "Your blood results are not ok",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_blood_ok.mp3"
+				"title": "การตรวจเลือดของคุณเป็นเรื่องปกติ",
+				"text": "",
+				"sound": "assets/audio/th/doc_blood_ok.mp3"
+			},
+			"previous_positive": {
+				"title": "การตรวจเลือดของคุณแสดงว่าเป็นไปได้ว่าคุณติดเชื้อ coronavirus แต่ตอนนี้คุณมีภูมิคุ้มกัน",
+				"text": "",
+				"sound": "assets/audio/th/doc_blood_prev_positive.mp3"
+			},
+			"previous_negative": {
+				"title": "ผลการตรวจเลือดของคุณแสดงให้เห็นว่าคุณอาจไม่เคยติดเชื้อ coronavirus มาก่อน",
+				"text": "",
+				"sound": "assets/audio/th/doc_blood_prev_negative.mp3"
 			}
 		},
 		"disposition": {
 			"hospital": {
-				"title": "We will be sending you to a hospital",
-				"text": "You will ",
-				"sound": "assets/audio/en/doc_admission.mp3"
+				"title": "เราจะส่งคุณไปที่โรงพยาบาล",
+				"text": "",
+				"sound": "assets/audio/th/doc_admission.mp3"
 			},
 			"ccf": {
-				"title": "We will be sending you to a community care facility",
-				"text": "You will ",
-				"sound": "assets/audio/en/doc_ccf.mp3"
+				"title": "เราจะกักกันคุณในสถานดูแล",
+				"text": "",
+				"sound": "assets/audio/th/doc_ccf.mp3"
 			},
 			"discharge": {
-				"title": "You are being discharged",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_discharge.mp3"
+				"title": "คุณสามารถออกจากโรงพยาบาลและคุณปลอดภัยสำหรับการทำงาน",
+				"text": "",
+				"sound": "assets/audio/th/doc_discharge.mp3"
+			},
+			"isolation": {
+				"title": "คุณจะถูกกักตัว มันจะมีอายุ 14 ถึง 21 วัน",
+				"text": "",
+				"sound": "assets/audio/th/doc_isolation.mp3"
 			}
 		}
 	}

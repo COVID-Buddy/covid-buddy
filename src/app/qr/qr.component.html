@@ -12,13 +12,13 @@
 	<div class="clearfix"></div>
 	<mat-card *ngFor="let question of doctor">
 		<div class="question-title">
-			<mat-card-title [innerHTML]="question.title"></mat-card-title>
+			<mat-card-title>{{ question.title }}</mat-card-title>
 			<button class="share-btn" (click)="share(question.title, question.text)" mat-button>
 				<mat-icon>share</mat-icon>
 			</button>
 		</div>
 		<mat-card-content>
-			<p>{{ question.text }}</p>
+			<p class="dosage">{{ question.text }}</p>
 
 			<ng-container *ngIf="question.sound">
 				<mat-basic-audio-player [audioUrl]="question.sound" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player>
@@ -50,7 +50,7 @@
 			<img [src]="question.question.image">
 		</div>
 		<mat-card-content>
-			<p>{{ question.med?.dosage }}</p>
+			<p class="dosage">{{ question.med?.dosage }}</p>
 			
 			<ng-container *ngIf="question.med?.sound">
 				<mat-basic-audio-player [audioUrl]="question.med.sound" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player>

@@ -1,4 +1,13 @@
-import { Component, OnInit, ViewChild, ElementRef, NgZone, ViewChildren, QueryList, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  NgZone,
+  ViewChildren,
+  QueryList,
+  ViewEncapsulation,
+} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -131,5 +140,30 @@ export class QuestionsComponent implements OnInit {
     this.next();
     this.swiper.allowSlideNext = false;
     this.swiper.allowSlidePrev = false;
+
+    let questionIndex = this.questions.indexOf(question);
+    let next = this.questions[questionIndex+1];
+    console.log(questionIndex)
+    if (next && next.inputs && next.inputs.length > 0) {
+      let input;
+      for (let i = 0; i < next.inputs.length; i++) {
+        if (next.inputs[i].required) {
+          input = next.inputs[i];
+          break;
+        }
+      }
+
+      if (input) {
+        // focus element
+        console.log('input[name="q_' + (questionIndex+1) + '_' + input.name + '"]');
+        let inputEl = document.querySelector('input[name="q_' + (questionIndex+1) + '_' + input.name + '"]');
+        if (inputEl) {
+          // 300ms is transition speed for swiper
+          setTimeout(() => {
+            (inputEl as HTMLElement).focus();
+          }, 300);
+        }
+      }
+    }
   }
 }
