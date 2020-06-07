@@ -93,6 +93,7 @@ export class MatBasicAudioPlayerComponent {
 		private snackbar: MatSnackBar) {}
 
 	currTimePosChanged(event) {
+		if (!this.audioPlayer || !this.audioPlayer.nativeElement) return;
 		this.audioPlayer.nativeElement.currentTime = event.value;
 	}
 

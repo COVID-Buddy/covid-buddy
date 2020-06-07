@@ -5,4 +5,17 @@ app-view-qr {
 	p {
 		margin: 0 !important;
 	}
+
+	ul {
+		margin-bottom: 0;
+		margin-top: 4px;
+	}
+
+	canvas {
+		width: 100%;
+	}
+}
+
+mat-dialog-container app-view-qr {
+	padding: 0;
 }

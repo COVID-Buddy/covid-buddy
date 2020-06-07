@@ -1,12 +1,15 @@
-<!-- <button mat-raised-button color="primary" (click)="openQR">Open QR Code</button> -->
-<canvas #canvas></canvas>
-
-<mat-basic-audio-player audioUrl="{{ 'qr_audio' | translate }}" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player>
+<!-- <mat-basic-audio-player audioUrl="{{ 'qr_audio' | translate }}" [autoPlay]="false" [displayVolumeControls]="false"></mat-basic-audio-player> -->
 
 <div>
 	<!-- <p translate style="font-size: 110%; padding: 16px;">qr.message</p> -->
+	<h1 *ngIf="doctor.length == 0" style="margin-top: 0; text-align: right;">
+		<button mat-stroked-button color="secondary" (click)="openQR()">QR & Results</button>
+	</h1>
 
-	<h1 *ngIf="doctor.length > 0">{{ 'doctor.title' | translate }}</h1>
+	<h1 *ngIf="doctor.length > 0" style="margin-top: 0;">{{ 'doctor.title' | translate }}
+		<button mat-stroked-button color="secondary" (click)="openQR()" style="float: right;">QR & Results</button>
+	</h1>
+	<div class="clearfix"></div>
 	<mat-card *ngFor="let question of doctor">
 		<div class="question-title">
 			<mat-card-title [innerHTML]="question.title"></mat-card-title>

@@ -9,10 +9,6 @@
 	padding: 16px;
 }
 
-canvas {
-	width: 100%;
-}
-
 mat-card {
 	margin-top: 16px;
 	text-align: left;
@@ -59,4 +55,8 @@ h1 {
 		position: relative;
 		top: -8px;
 	}
+}
+
+.clearfix {
+	clear: both;
 }

@@ -19,6 +19,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,6 +52,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SecondsToMinutesPipe,
     DoctorComponent,
   ],
+  entryComponents: [
+    ViewQrComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -78,6 +82,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatDividerModule,
     MatSnackBarModule,
     MatRadioModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

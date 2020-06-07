@@ -14,7 +14,7 @@
 	},
 	"slides": [
 		{
-			"content": "### হ্যালো, এই অ্যাপের মাধ্যমে ডাক্তার কে জানান যে আপনার কী কী লক্ষণ রয়েছে এবং কোন ওষুধ খাওয়া উচিত  | আপনার কোনও লক্ষণ থাকলে সবুজ বোতাম টিপুন। না থাকলে লাল বোতাম টিপুন",
+			"content": "### হ্যালো, এই অ্যাপের মাধ্যমে ডাক্তার কে জানান যে আপনার কী কী লক্ষণ রয়েছে এবং জেনে নিন কোন ওষুধ খাওয়া উচিত  | আপনার কোনও লক্ষণ থাকলে সবুজ বোতাম টিপুন। না থাকলে লাল বোতাম টিপুন",
 			"sound": "assets/audio/bn/intro.mp3"
 		}
 	],
@@ -28,7 +28,7 @@
 	"questions": [{
 		"title": "আপনার কি শ্বাসকষ্ট আছে ?",
 		"name": "short_breath",
-		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
+		"image": "assets/symptoms/short_breath.jpg",
 		"sound": "assets/audio/bn/shortness_of_breath.mp3",
 		"buttons": [{
 			"title": "হ্যাঁ",
@@ -112,7 +112,7 @@
 		}]
 	}, {
 		"title": "আপনার কি পেট খারাপ হচ্ছে ?",
-		"image": "assets/symptoms/diarrhea.png",
+		"image": "assets/symptoms/diarrhea.jpeg",
 		"sound": "assets/audio/bn/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{
@@ -139,10 +139,24 @@
 			"value": "no"
 		}]
 	}, {
-		"title": "আপনি কি খুব চিন্তিত বা উত্তেজিত বোধ করছেন ?",
+		"title": "আপনি কি আপনার স্বাস্থ্য বা করোনাভাইরাস নিয়ে চিন্তিত বা উত্তেজিত বোধ করছেন?",
 		"image": "assets/symptoms/stress.jpg",
 		"name": "stress",
 		"sound": "assets/audio/bn/stress.mp3",
+		"buttons": [{
+			"title": "হ্যাঁ",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "না",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "আপনি কি আপনার চাকরি নিয়ে চিন্তিত বোধ করছেন?",
+		"image": "assets/symptoms/stress_2.jpg",
+		"name": "stress_2",
+		"sound": "assets/audio/bn/stress_2.mp3",
 		"buttons": [{
 			"title": "হ্যাঁ",
 			"value": "yes",
@@ -216,7 +230,7 @@
 		}]
 	}],
 	"emergency": {
-		"title": "ডাক্তার কে এক্ষুনি ফোন করুন ",
+		"title": "ডাক্তার কে এক্ষুনি ফোন করুন",
 		"message": "আমরা আপনার সঙ্গে সরাসরি কথা বলতে চাই ",
 		"sound": "assets/audio/bn/emergency.mp3",
 		"phone": "+65123123123",
@@ -228,7 +242,6 @@
 		"sound": "assets/audio/bn/med_allergy.mp3"
 	},
 	"qr_audio": "assets/audio/bn/qr.mp3",
-	"share_ready": "Sharing function is ready",
 	"medsTitle": "মেডিকেশন",
 	"meds": [
 		{
@@ -284,6 +297,11 @@
 				"title": "আপনার করোনাভাইরাস ধরা পড়েনি",
 				"text": "",
 				"sound": "assets/audio/bn/doc_covid_negative.mp3"
+			},
+			"maybe": {
+				"title": "আপনার করোনভাইরাস থাকার সম্ভাবনা রয়েছে ",
+				"text": "",
+				"sound": "assets/audio/bn/doc_covid_maybe.mp3"
 			}
 		},
 		"cxr": {
@@ -322,7 +340,7 @@
 				"sound": "assets/audio/bn/doc_ccf.mp3"
 			},
 			"discharge": {
-				"title": "You are being discharged",
+				"title": "আপনি হাসপাতাল থেকে ফিরে যেতে পারেন",
 				"text": "",
 				"sound": "assets/audio/bn/doc_discharge.mp3"
 			}

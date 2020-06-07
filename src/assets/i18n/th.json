@@ -28,7 +28,7 @@
 	"questions": [{
 		"title": "Do you have **shortness of breath**?",
 		"name": "short_breath",
-		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
+		"image": "assets/symptoms/short_breath.jpg",
 		"sound": "assets/audio/en/shortness_of_breath.mp3",
 		"buttons": [{
 			"title": "Yes",
@@ -112,7 +112,7 @@
 		}]
 	}, {
 		"title": "Do you have diarrhea?",
-		"image": "assets/symptoms/diarrhea.png",
+		"image": "assets/symptoms/diarrhea.jpeg",
 		"sound": "assets/audio/en/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{
@@ -143,6 +143,20 @@
 		"image": "assets/symptoms/stress.jpg",
 		"name": "stress",
 		"sound": "assets/audio/en/stress.mp3",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "Are you worried or stressed? (2)",
+		"image": "assets/symptoms/stress_2.jpg",
+		"name": "stress_2",
+		"sound": "assets/audio/en/stress_2.mp3",
 		"buttons": [{
 			"title": "Yes",
 			"value": "yes",
@@ -284,6 +298,11 @@
 				"title": "You are COVID negative",
 				"text": "some text",
 				"sound": "assets/audio/en/doc_covid_negative.mp3"
+			},
+			"maybe": {
+				"title": "You may be COVID positive",
+				"text": "some text",
+				"sound": "assets/audio/en/doc_covid_maybe.mp3"
 			}
 		},
 		"cxr": {

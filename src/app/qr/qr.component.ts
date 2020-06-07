@@ -1,12 +1,14 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 
-import QRious from 'qrious';
 import marked from 'marked';
+
+import { ViewQrComponent } from '../view-qr/view-qr.component';
 
 @Component({
   selector: 'app-qr',
@@ -14,7 +16,6 @@ import marked from 'marked';
   styleUrls: ['./qr.component.scss']
 })
 export class QrComponent {
-  _canvas: ElementRef;
   meds = [];
   questions = [];
   doctor: any = [];
@@ -23,7 +24,8 @@ export class QrComponent {
     private translate: TranslateService,
     private sanitizer: DomSanitizer,
     private http: HttpClient,
-    private toast: MatSnackBar) {
+    private toast: MatSnackBar,
+    private dialog: MatDialog) {
     route.params.subscribe(params => {
       let doctorStr = localStorage.getItem('doctor_results');
       if (doctorStr && doctorStr.length > 0) {
@@ -133,18 +135,18 @@ export class QrComponent {
     }).catch((error) => {});
   }
 
-  @ViewChild('canvas') set canvas(el: ElementRef) {
-    this._canvas = el;
-  	this.render();
-  }
-
-  render() {
-    if (!this._canvas) return;
-
-    let qr = new QRious({
-      value: window.location.protocol + "//" + window.location.hostname + "/view" + document.location.pathname,
-      element: this._canvas.nativeElement,
-      size: this._canvas.nativeElement.offsetWidth,
-    });
+  openQR() {
+    this.dialog.open(ViewQrComponent, {
+      width: '98vw',
+      data: {
+        qr: window.location.protocol + "//" + window.location.hostname + "/view" + document.location.pathname,
+        params: this.route.snapshot.params,
+      },
+    }).afterClosed().subscribe(() => {
+      let lang = localStorage.getItem('lang');
+      if (lang) {
+        this.translate.use(lang);
+      }
+    })
   }
 }

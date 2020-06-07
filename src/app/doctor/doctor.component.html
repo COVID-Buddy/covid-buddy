@@ -20,8 +20,9 @@
 	<mat-card-content>
 		<mat-label>COVID-19 Result:</mat-label>
 		<mat-radio-group [(ngModel)]="results.covid">
-			<mat-radio-button value="y">Y</mat-radio-button>
-			<mat-radio-button value="n">N</mat-radio-button>
+			<mat-radio-button value="y">Positive</mat-radio-button>
+			<mat-radio-button value="n">Negative</mat-radio-button>
+			<mat-radio-button value="maybe">Maybe</mat-radio-button>
 			<mat-radio-button value="n/a">N/A</mat-radio-button>
 		</mat-radio-group>
 

@@ -2,10 +2,10 @@
 	"toolbar": {
 		"title": "COVID buddy",
 		"qr": "QR Reader",
-		"has_results": "Results"
+		"has_results": "முடிவுகள்"
 	},
 	"langs": {
-		"title": "Hello, please select a language",
+		"title": "வணக்கம், உங்கள் மொழி என்ன?",
 		"english": "English",
 		"bangladesh": "বাংলা",
 		"thai": "ไทย",
@@ -14,317 +14,335 @@
 	},
 	"slides": [
 		{
-			"content": "### Hello, this app lets you tell doctors what symptoms you have, and what medication to take\n\nPress the green button if you have a symptom. If not press the red button",
-			"sound": "assets/audio/en/intro.mp3"
+			"content": "### வணக்கம், உங்களிடம் என்ன அறிகுறிகள் உள்ளன என்று மருத்துவர்களிடம் சொல்வதற்கும்,மருத்துவர்களின்பரிந்துரைப்படி என்ன மருந்துகள் எடுக்க வேண்டும் என்பதை உங்களுக்கு தெறிவிப்பதற்கும்  இந்த செயலி உதவும்.  உங்களுக்கு அறிகுறி இருந்தால் பச்சை பொத்தானை அழுத்தவும். இல்லையென்றால் சிவப்பு பொத்தானை அழுத்தவும்",
+			"sound": "assets/audio/ta/intro.mp3"
 		}
 	],
 	"buttons": {
-		"slide_next": "Next",
-		"start_questions": "Start",
-		"ok": "Ok",
-		"share": "Share"
+		"slide_next": "அடுத்தது",
+		"start_questions": "தொடங்கு",
+		"ok": "சரி",
+		"share": "பகிர்"
 	},
-	"input_required": "Input is required",
+	"input_required": "இந்த பகுதி அவசியமானது",
 	"questions": [{
-		"title": "Do you have **shortness of breath**?",
+		"title": "உங்களுக்கு மூச்சுத் திணறல் இருக்கிறதா?",
 		"name": "short_breath",
-		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
-		"sound": "assets/audio/en/shortness_of_breath.mp3",
+		"image": "assets/symptoms/short_breath.jpg",
+		"sound": "assets/audio/ta/shortness_of_breath.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success",
 			"action": "emergency"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have a cough?",
+		"title": "உங்களுக்கு இருமல் இருக்கிறதா?",
 		"image": "assets/symptoms/cough.jpg",
 		"name": "cough",
-		"sound": "assets/audio/en/cough.mp3",
+		"sound": "assets/audio/ta/cough.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have a sore throat?",
+		"title": "உங்களுக்கு தொண்டை வலி இருக்கிறதா?",
 		"image": "assets/symptoms/sore-throat.jpg",
-		"sound": "assets/audio/en/sore_throat.mp3",
+		"sound": "assets/audio/ta/sore_throat.mp3",
 		"name": "sore throat",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have a runny nose?",
+		"title": "உங்களுக்கு மூக்கு ஒழுகுதல் அல்லது  மூக்கு அடைப்பு இருக்கிறதா?",
 		"image": "assets/symptoms/runny-nose.jpg",
 		"name": "runny-nose",
-		"sound": "assets/audio/en/runny_nose.mp3",
+		"sound": "assets/audio/ta/runny_nose.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have stomach pain?",
+		"title": "உங்களுக்கு வயிற்று வலி இருக்கிறதா?",
 		"image": "assets/symptoms/abdominal-pain.jpg",
 		"name": "stomach pain",
-		"sound": "assets/audio/en/stomach_pain.mp3",
+		"sound": "assets/audio/ta/stomach_pain.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you feel like vomiting?",
+		"title": "நீங்கள் வாந்தியெடுப்பதைப் போல உணர்கிறீர்களா?",
 		"image": "assets/symptoms/vomiting.jpg",
-		"sound": "assets/audio/en/vomiting.mp3",
+		"sound": "assets/audio/ta/vomiting.mp3",
 		"name": "vomiting",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have diarrhea?",
-		"image": "assets/symptoms/diarrhea.png",
-		"sound": "assets/audio/en/diarrhea.mp3",
+		"title": "உங்களுக்கு வயிற்றுப்போக்கு இருக்கிறதா?",
+		"image": "assets/symptoms/diarrhea.jpeg",
+		"sound": "assets/audio/ta/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Do you have muscle pains?",
+		"title": "உங்களுக்கு ஏதாவது தசை வலி இருக்கிறதா?",
 		"image": "assets/symptoms/muscle-pain.jpg",
-		"sound": "assets/audio/en/muscle_pain.mp3",
+		"sound": "assets/audio/ta/muscle_pain.mp3",
 		"name": "muscle-pain",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Are you worried or stressed?",
+		"title": "சம்பளம் அல்லது வேலைவாய்ப்பு பற்றி நீங்கள் கவலைப்படுகிறீர்களா?",
 		"image": "assets/symptoms/stress.jpg",
 		"name": "stress",
-		"sound": "assets/audio/en/stress.mp3",
+		"sound": "assets/audio/ta/stress.mp3",
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "Any other problems?",
+		"title": "நீங்கள் உங்கள் உடல்நலம் அல்லது கொரோனா வைரஸ் குறித்து கவலை அல்லது மன அழுத்தம் அடைகிறீர்களா?",
+		"image": "assets/symptoms/stress_2.jpg",
+		"name": "stress_2",
+		"sound": "assets/audio/ta/stress_2.mp3",
+		"buttons": [{
+			"title": "ஆம்",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "இல்லை",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "வேறு ஏதேனும் பிரச்சினைகள் அல்லது அறிகுறிகளை நீங்கள் கொண்டிருக்கிறீர்களா?",
 		"image": "assets/symptoms/question.png",
 		"name": "other",
-		"sound": "assets/audio/en/problems.mp3",
+		"sound": "assets/audio/ta/problems.mp3",
 		"inputs": [{
-			"label": "Symptoms",
+			"label": "அறிகுறிகள்",
 			"name": "symptoms",
 			"type": "text"
 		}],
 		"buttons": [{
-			"title": "Yes",
+			"title": "ஆம்",
 			"value": "yes",
 			"color": "success"
 		}, {
-			"title": "No",
+			"title": "இல்லை",
 			"color": "warn",
 			"value": "no"
 		}]
 	}, {
-		"title": "How old are you?",
+		"title": "உங்கள் வயது என்ன?",
 		"name": "age",
 		"buttons": [{
-			"title": "Next",
+			"title": "அடுத்தது",
 			"color": "success"
 		}],
 		"inputs": [{
-			"label": "Age",
+			"label": "உங்கள் வயது என்ன?",
 			"name": "age",
-			"sound": "assets/audio/en/age.mp3",
+			"sound": "assets/audio/ta/age.mp3",
 			"type": "number",
 			"required": true
 		}]
 	}, {
-		"title": "Where do you live?",
+		"title": "உங்கள் சிங்கப்பூர் முகவரி என்ன?",
 		"name": "age",
 		"buttons": [{
-			"title": "Next",
+			"title": "அடுத்தது",
 			"color": "success"
 		}],
 		"inputs": [{
-			"label": "Where do you live?",
+			"label": "உங்கள் சிங்கப்பூர் முகவரி என்ன?",
 			"placeholder": "Address",
-			"sound": "assets/audio/en/address.mp3",
+			"sound": "assets/audio/ta/address.mp3",
 			"name": "address",
 			"type": "text",
 			"required": true
 		}]
 	}, {
-		"title": "What is your phone number?",
+		"title": "உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்",
 		"name": "phone",
 		"inputs": [{
 			"label": "Your Phone Number",
-			"sound": "assets/audio/en/phone_number.mp3",
+			"sound": "assets/audio/ta/phone_number.mp3",
 			"name": "phone",
 			"type": "tel",
 			"required": true
 		}],
 		"buttons": [{
-			"title": "Next",
+			"title": "அடுத்தது",
 			"color": "success"
 		}]
 	}],
 	"emergency": {
-		"title": "Please call us NOW",
-		"message": "We would like to speak with you directly",
-		"sound": "assets/audio/en/emergency.mp3",
+		"title": "தயவுசெய்து இப்போது ஒரு மருத்துவரை சந்திக்கவும்",
+		"message": "உங்களுடன் நேரடியாக பேச விரும்புகிறோம்",
+		"sound": "assets/audio/ta/emergency.mp3",
 		"phone": "+65123123123",
 		"button": "CALL NOW"
 	},
 	"allergy": {
-		"title": "Drug allergy warning",
-		"text": "text of allergy warning audio",
-		"sound": "assets/audio/en/med_allergy.mp3"
+		"title": "மருந்து ஒவ்வாமை எச்சரிக்கை",
+		"text": "பட்டியலிடப்பட்ட மருந்துகளுக்கு ஒவ்வாமை ஏற்பட உங்கள் மருத்துவருக்கு அறிவுறுத்துங்கள்",
+		"sound": "assets/audio/ta/med_allergy.mp3"
 	},
-	"qr_audio": "assets/audio/en/qr.mp3",
-	"share_ready": "Sharing function is ready",
-	"medsTitle": "Recommended medications",
+	"qr_audio": "assets/audio/ta/qr.mp3",
+	"medsTitle": "பரிந்துரைக்கப்பட்ட மருந்துகள்",
 	"meds": [
 		{
 			"symptoms": ["cough"],
-			"text": "For cough, please use the cough syrup",
+			"text": "இருமலுக்கு, இருமல் சிரப் மருந்தை 10மில்லி அளவு ஒரு நாளில் தேவைக்கேற்ப மூன்று முறை வரை எடுக்கலாம்.",
 			"image": "assets/meds/dextromethorphan.png",
-			"dosage": "When required: 10ml 3 times a day",
-			"sound": "assets/audio/en/med_cough_syrup.mp3"
+			"dosage": "",
+			"sound": "assets/audio/ta/med_cough_syrup.mp3"
 		}, {
 			"symptoms": ["sore throat"],
-			"text": "sore throat",
+			"text": "தொண்டை வலிக்கு, இந்த உறிஞ்சு உட்கொள்ளும் மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 1 மாத்திரை நான்கு முறை வரை எடுக்கலாம்",
 			"image": "assets/meds/dequalinium.png",
-			"dosage": "When required: Suck on 1 lozenge 4 times a day",
-			"sound": "assets/audio/en/med_sore_throat.mp3"
+			"dosage": "",
+			"sound": "assets/audio/ta/med_sore_throat.mp3"
 		}, {
 			"symptoms": ["runny-nose"],
-			"text": "For runny nose, please take cetrizine",
-			"dosage": "When required: 1 tablet 1 time a day",
+			"text": "சளி அல்லது மூக்கு அடைப்புக்கு, இந்த மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 1 மாத்திரை ஒரு முறை மட்டும் எடுக்கலாம்",
+			"dosage": "",
 			"image": "assets/meds/cetrizine.png",
-			"sound": "assets/audio/en/med_blocked_nose.mp3"
+			"sound": "assets/audio/ta/med_blocked_nose.mp3"
 		}, {
 			"symptoms": ["vomiting"],
-			"text": "For vomiting, please use maxolon",
-			"sound": "assets/audio/en/med_vomit.mp3",
-			"dosage": "When required: 1 tablet 3 times a day",
+			"text": "வாந்தி ஏற்பட்டால், இந்த மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 1 மாத்திரை மூன்று முறை வரை எடுக்கலாம்",
+			"sound": "assets/audio/ta/med_vomit.mp3",
+			"dosage": "",
 			"image": "assets/meds/metoclopramide.png"
 		}, {
 			"symptoms": ["fever", "muscle-pain"],
-			"text": "For fever or muscle pain, take panadol",
-			"dosage": "When required: 2 tablets 4 times a day",
-			"sound": "assets/audio/en/med_fever.mp3",
+			"text": "காய்ச்சல் அல்லது உடல் வலிக்கு, , இந்த மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 2 மாத்திரை நான்கு முறை வரை எடுக்கலாம் ",
+			"dosage": "",
+			"sound": "assets/audio/ta/med_fever.mp3",
 			"image": "assets/meds/paracetamol.png"
 		}, {
 			"symptoms": ["diarrhea"],
-			"text": "For diarrhea, take loperamide",
-			"dosage": "When required: 1 tablet 3 times a day",
-			"sound": "assets/audio/en/med_diarrhea.mp3",
+			"text": "வயிற்றுபோக்கு இருந்தால், இந்த மாத்திரையை ஒரு நாளில் தேவைக்கேற்ப 1 மாத்திரை மூன்று முறை வரை எடுக்கலாம்",
+			"dosage": "",
+			"sound": "assets/audio/ta/med_diarrhea.mp3",
 			"image": "assets/meds/loperamide.png"
 		}, {
 			"symptoms": ["stress"],
-			"text": "If you feel very stressed, please let us know or call xyz"
+			"text": "நீங்கள் மன அழுத்தத்தை உணர்ந்தால், தயவு செய்து எங்களிடம் பகிரவும் அல்லது—"
 		}
 	],
 	"doctor": {
-		"title": "Doctor results",
+		"title": "மருத்துவர் முடிவுகள்",
 		"covid": {
 			"y": {
-				"title": "You are COVID positive",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_covid_positive.mp3"
+				"title": "உங்களுக்கு கொரோனா வைரஸ் தொற்று உறுதி செய்யபட்டுள்ளது",
+				"text": "",
+				"sound": "assets/audio/ta/doc_covid_positive.mp3"
 			},
 			"n": {
-				"title": "You are COVID negative",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_covid_negative.mp3"
+				"title": "உங்களுக்கு கொரோனா வைரஸ் தொற்று இல்லை",
+				"text": "",
+				"sound": "assets/audio/ta/doc_covid_negative.mp3"
+			},
+			"maybe": {
+				"title": "உங்கள் அறிகுறிகளின் காரணமாக உங்களுக்கு கொரோனா வைரஸ் தொற்று இருக்க வாய்ப்புள்ளது",
+				"text": "",
+				"sound": "assets/audio/ta/doc_covid_maybe.mp3"
 			}
 		},
 		"cxr": {
 			"normal": {
-				"title": "Your chest x-ray results are normal",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_cxr_ok.mp3"
+				"title": "உங்கள் மார்பு எக்ஸ்ரே சரியாக உள்ளது",
+				"text": "",
+				"sound": "assets/audio/ta/doc_cxr_ok.mp3"
 			},
 			"abnormal": {
-				"title": "Your chest x-ray results are abnormal",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_cxr_nok.mp3"
+				"title": "உங்கள் மார்பு எக்ஸ்ரே நுரையீரல் தொற்றுநோயைக் காட்டுகிறது",
+				"text": "",
+				"sound": "assets/audio/ta/doc_cxr_nok.mp3"
 			}
 		},
 		"blood_tests": {
 			"normal": {
-				"title": "Your blood results are ok",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_blood_nok.mp3"
+				"title": "உங்கள் இரத்த முடிவுகள் சரியாக உள்ளது",
+				"text": "",
+				"sound": "assets/audio/ta/doc_blood_nok.mp3"
 			},
 			"abnormal": {
-				"title": "Your blood results are not ok",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_blood_ok.mp3"
+				"title": "உங்கள் இரத்த முடிவுகள் சரியில்லை",
+				"text": "",
+				"sound": "assets/audio/ta/doc_blood_ok.mp3"
 			}
 		},
 		"disposition": {
 			"hospital": {
-				"title": "We will be sending you to a hospital",
-				"text": "You will ",
-				"sound": "assets/audio/en/doc_admission.mp3"
+				"title": "நாங்கள் உங்களை ஒரு மருத்துவமனைக்கு அனுமதிக்கிறோம்",
+				"text": "",
+				"sound": "assets/audio/ta/doc_admission.mp3"
 			},
 			"ccf": {
-				"title": "We will be sending you to a community care facility",
-				"text": "You will ",
-				"sound": "assets/audio/en/doc_ccf.mp3"
+				"title": "நாங்கள் உங்களை ஒரு சமூக தனிமைப்படுத்தும் வசதிக்கு அனுப்புகிறோம்",
+				"text": "",
+				"sound": "assets/audio/ta/doc_ccf.mp3"
 			},
 			"discharge": {
-				"title": "You are being discharged",
-				"text": "some text",
-				"sound": "assets/audio/en/doc_discharge.mp3"
+				"title": "நாங்கள் உங்களை 14 முதல் 21 நாட்கள் இங்கு தனிமைப்படுத்துகிறோம்",
+				"text": "",
+				"sound": "assets/audio/ta/doc_discharge.mp3"
 			}
 		}
 	}

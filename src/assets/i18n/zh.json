@@ -28,7 +28,7 @@
 	"questions": [{
 		"title": "你有呼吸困难吗？",
 		"name": "short_breath",
-		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
+		"image": "assets/symptoms/short_breath.jpg",
 		"sound": "assets/audio/zh/shortness_of_breath.mp3",
 		"buttons": [{
 			"title": "有",
@@ -112,7 +112,7 @@
 		}]
 	}, {
 		"title": "你有泻肚子吗？",
-		"image": "assets/symptoms/diarrhea.png",
+		"image": "assets/symptoms/diarrhea.jpeg",
 		"sound": "assets/audio/zh/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{
@@ -139,10 +139,24 @@
 			"value": "no"
 		}]
 	}, {
-		"title": "你感到担心或压力吗?",
+		"title": "您担心工资或工作吗？",
 		"image": "assets/symptoms/stress.jpg",
 		"name": "stress",
 		"sound": "assets/audio/zh/stress.mp3",
+		"buttons": [{
+			"title": "有",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "没有",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "您是否对健康或冠状病毒感到担忧或压力？",
+		"image": "assets/symptoms/stress_2.jpg",
+		"name": "stress_2",
+		"sound": "assets/audio/zh/stress_2.mp3",
 		"buttons": [{
 			"title": "有",
 			"value": "yes",
@@ -284,6 +298,11 @@
 				"title": "你没有冠状病毒",
 				"text": "some text",
 				"sound": "assets/audio/zh/doc_covid_negative.mp3"
+			},
+			"maybe": {
+				"title": "You may be COVID positive",
+				"text": "some text",
+				"sound": "assets/audio/zh/doc_covid_maybe.mp3"
 			}
 		},
 		"cxr": {

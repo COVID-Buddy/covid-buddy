@@ -28,7 +28,7 @@
 	"questions": [{
 		"title": "Do you have **shortness of breath**?",
 		"name": "short_breath",
-		"image": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/10/breathless-679994146-650x450.jpg",
+		"image": "assets/symptoms/short_breath.jpg",
 		"sound": "assets/audio/en/shortness_of_breath.mp3",
 		"buttons": [{
 			"title": "Yes",
@@ -112,7 +112,7 @@
 		}]
 	}, {
 		"title": "Do you have diarrhea?",
-		"image": "assets/symptoms/diarrhea.png",
+		"image": "assets/symptoms/diarrhea.jpeg",
 		"sound": "assets/audio/en/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{
@@ -139,10 +139,24 @@
 			"value": "no"
 		}]
 	}, {
-		"title": "Are you worried or stressed?",
+		"title": "Are you worried about salary or employment?",
 		"image": "assets/symptoms/stress.jpg",
 		"name": "stress",
 		"sound": "assets/audio/en/stress.mp3",
+		"buttons": [{
+			"title": "Yes",
+			"value": "yes",
+			"color": "success"
+		}, {
+			"title": "No",
+			"color": "warn",
+			"value": "no"
+		}]
+	}, {
+		"title": "Are your worried or stressed about your health or coronavirus?",
+		"image": "assets/symptoms/stress_2.jpg",
+		"name": "stress_2",
+		"sound": "assets/audio/en/stress_2.mp3",
 		"buttons": [{
 			"title": "Yes",
 			"value": "yes",
@@ -224,11 +238,10 @@
 	},
 	"allergy": {
 		"title": "Drug allergy warning",
-		"text": "text of allergy warning audio",
+		"text": "Please advise your doctor for possible allergies to the medication listed",
 		"sound": "assets/audio/en/med_allergy.mp3"
 	},
 	"qr_audio": "assets/audio/en/qr.mp3",
-	"share_ready": "Sharing function is ready",
 	"medsTitle": "Recommended medications",
 	"meds": [
 		{
@@ -269,7 +282,7 @@
 			"image": "assets/meds/loperamide.png"
 		}, {
 			"symptoms": ["stress"],
-			"text": "If you feel very stressed, please let us know or call xyz"
+			"text": "If you feel very stressed, please let us know!"
 		}
 	],
 	"doctor": {
@@ -277,53 +290,58 @@
 		"covid": {
 			"y": {
 				"title": "You are COVID positive",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/en/doc_covid_positive.mp3"
 			},
 			"n": {
 				"title": "You are COVID negative",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/en/doc_covid_negative.mp3"
+			},
+			"maybe": {
+				"title": "You may be COVID positive",
+				"text": "",
+				"sound": "assets/audio/en/doc_covid_maybe.mp3"
 			}
 		},
 		"cxr": {
 			"normal": {
 				"title": "Your chest x-ray results are normal",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/en/doc_cxr_ok.mp3"
 			},
 			"abnormal": {
 				"title": "Your chest x-ray results are abnormal",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/en/doc_cxr_nok.mp3"
 			}
 		},
 		"blood_tests": {
 			"normal": {
 				"title": "Your blood results are ok",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/en/doc_blood_nok.mp3"
 			},
 			"abnormal": {
 				"title": "Your blood results are not ok",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/en/doc_blood_ok.mp3"
 			}
 		},
 		"disposition": {
 			"hospital": {
 				"title": "We will be sending you to a hospital",
-				"text": "You will ",
+				"text": "",
 				"sound": "assets/audio/en/doc_admission.mp3"
 			},
 			"ccf": {
 				"title": "We will be sending you to a community care facility",
-				"text": "You will ",
+				"text": "",
 				"sound": "assets/audio/en/doc_ccf.mp3"
 			},
 			"discharge": {
 				"title": "You are being discharged",
-				"text": "some text",
+				"text": "",
 				"sound": "assets/audio/en/doc_discharge.mp3"
 			}
 		}
