@@ -1,10 +1,15 @@
 mat-toolbar.mat-toolbar.mat-primary {
 	background: darken(#334856, 10%);
-	position: sticky;
+	position: fixed;
 	top: 0;
 	z-index: 3;
 
 	a {
 		cursor: pointer;
 	}
+}
+
+:host {
+	padding-top: 56px;
+	display: block;
 }

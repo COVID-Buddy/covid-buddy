@@ -12,18 +12,18 @@
 			</mat-icon>
 	</button>
 	
-	<div class="flex-fill pl-1 ngx-basic-audio-player-slider">
+	<div class="flex-fill ngx-basic-audio-player-slider">
 		<mat-slider style="width: 100%" min="0" max="{{duration}}" value="{{currentTime}}"
 			(change)="currTimePosChanged($event)"></mat-slider>
 	</div>
 	
-	<div class="d-flex ngx-basic-audio-player-duration">
+	<!-- <div class="d-flex ngx-basic-audio-player-duration">
 		<span *ngIf="duration !== 0.01" class="pl-2 pr-3 my-auto">
 			-{{duration-currentTime | secondsToMinutes }}
 		</span>
-	</div>
+	</div> -->
 
-	<button mat-button (click)='share()' class="share-btn">
+	<button mat-button (click)='share()' class="share-btn ngx-basic-audio-player-button-handler">
 			<mat-icon class="play-track">share</mat-icon>
 	</button>
 </mat-card>

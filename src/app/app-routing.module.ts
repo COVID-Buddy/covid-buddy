@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { LanguageComponent } from './language/language.component';
 import { PreTestComponent } from './pre-test/pre-test.component';
 import { QuestionsComponent } from './questions/questions.component';
-import { FaqComponent } from './faq/faq.component';
 import { QrComponent } from './qr/qr.component';
 import { EmergencyComponent } from './emergency/emergency.component';
 import { ViewQrComponent } from './view-qr/view-qr.component';
@@ -22,10 +21,6 @@ const routes: Routes = [
 	{
 		path: 'questions',
 		component: QuestionsComponent,
-	},
-	{
-		path: 'faq',
-		component: FaqComponent,
 	},
 	{
 		path: 'qr',

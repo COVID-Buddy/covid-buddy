@@ -1,5 +1,11 @@
+<br/>
+
 <h1><a [routerLink]="['/doctor']" translate>langs.title</a></h1>
 
+<div class="fluidMedia">
+	<iframe src="https://www.youtube.com/embed/keyYo5lmT_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br/>
 <div>
 	<a *ngIf="browser == 'bn'" mat-raised-button color="primary" (click)="setLanguage('bn')">{{ 'langs.bangladesh' | translate }}</a>
 	<a *ngIf="browser != 'bn'" mat-stroked-button color="secondary" (click)="setLanguage('bn')">{{ 'langs.bangladesh' | translate }}</a>

@@ -9,7 +9,7 @@ button:hover, button:focus {
 }
 
 .ngx-basic-audio-player {
-    min-width: 300px;
+    /*min-width: 300px;*/
 }
 
 svg {
@@ -56,5 +56,10 @@ mat-card {
 .share-btn .mat-icon {
     height: 22px !important;
     width: 22px !important;
+    min-width: 22px !important;
     font-size: 22px !important;
+}
+
+:host {
+    display: block;
 }

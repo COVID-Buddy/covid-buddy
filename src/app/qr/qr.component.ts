@@ -6,8 +6,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 
-import marked from 'marked';
-
 import { ViewQrComponent } from '../view-qr/view-qr.component';
 
 @Component({
@@ -77,7 +75,7 @@ export class QrComponent {
 
         for (let i = 0; i < questions.length; i++) {
           let question = questions[i];
-          question._title = this.sanitizer.bypassSecurityTrustHtml(marked(question.title));
+          question._title = this.sanitizer.bypassSecurityTrustHtml(question.title);
 
           let group: any = {
             title: "",
@@ -152,7 +150,7 @@ export class QrComponent {
   share(title, text) {
     (navigator as any).share({
       title: title,
-      text: title + '\n' + text,
+      text: title + '\n' + text + '\n' + 'https://covidbuddysg.com',
     }).catch((error) => {});
   }
 

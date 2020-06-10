@@ -14,7 +14,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import * as mixpanel from 'mixpanel-browser';
-import marked from 'marked';
 import Swiper from 'swiper';
 
 @Component({
@@ -54,7 +53,7 @@ export class QuestionsComponent implements OnInit {
     this.translate.get('questions').subscribe(questions => {
       this.questions = JSON.parse(JSON.stringify(questions));
       this.questions.forEach(q => {
-        q._title = this.sanitizer.bypassSecurityTrustHtml(marked(q.title));
+        q._title = this.sanitizer.bypassSecurityTrustHtml(q.title);
 
         if (q.inputs) {
           q.inputs.forEach(input => {

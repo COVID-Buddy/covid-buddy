@@ -1,18 +1,7 @@
-<div class="swiper-container" #swiperEl>
-	<div class="swiper-wrapper">
-		<div class="swiper-slide" #slideElements *ngFor="let slide of slides; let i = index">
-			<div>
-				<div [innerHTML]="slide._html"></div>
-				<button mat-raised-button color="primary" (click)="next()" *ngIf="i < slides.length - 1">{{ 'buttons.slide_next' | translate }}</button>
+<div>
+	<h2>{{ 'slides.content' | translate }}</h2>
 
-				<ng-container *ngIf="slide.sound">
-					<mat-basic-audio-player [audioUrl]="slide.sound" [autoPlay]="i == 0 ? true : false" [displayVolumeControls]="false"></mat-basic-audio-player>
-				</ng-container>
+	<mat-basic-audio-player audioUrl="{{ 'slides.sound' | translate }}" [autoPlay]="true" [displayVolumeControls]="false"></mat-basic-audio-player>
 
-				<a mat-raised-button color="success" [routerLink]="['/questions']" *ngIf="i == slides.length - 1">{{ 'buttons.start_questions' | translate }}</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="swiper-navigation"></div>
+	<a mat-raised-button color="success" [routerLink]="['/questions']">{{ 'buttons.start_questions' | translate }}</a>
 </div>

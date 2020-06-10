@@ -44,6 +44,7 @@ export class MatBasicAudioPlayerComponent {
 		this._audioUrl = url;
 		this.http.get(url, { responseType: 'blob' }).subscribe(blob => {
 			this.audioBlob = blob;
+
 			let reader = new FileReader();
 			reader.onload = (e) => {
 				this.zone.run(() => {
@@ -52,6 +53,7 @@ export class MatBasicAudioPlayerComponent {
 			};
 			reader.readAsDataURL(blob);
 		}, () => {
+			console.log('disabled');
 			this.disabled = true;
 		});
 	}
@@ -75,7 +77,7 @@ export class MatBasicAudioPlayerComponent {
 			this.volume = Math.floor(el.volume);
 		});
 		el.addEventListener('loadstart', () => {
-			this.loaderDisplay = true;
+			this.loaderDisplay = false;
 		});
 		el.addEventListener('loadeddata', () => {
 			this.loaderDisplay = false;

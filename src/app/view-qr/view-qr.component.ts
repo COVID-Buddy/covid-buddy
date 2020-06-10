@@ -12,7 +12,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import marked from 'marked';
 import QRious from 'qrious';
 
 import { QrComponent } from '../qr/qr.component';
@@ -64,7 +63,7 @@ export class ViewQrComponent implements OnInit {
 
 				for (let i = 0; i < questions.length; i++) {
 					let question = questions[i];
-					question._title = this.sanitizer.bypassSecurityTrustHtml(marked(question.title));
+					question._title = this.sanitizer.bypassSecurityTrustHtml(question.title);
 
 					let group: any = {
 						title: "",
@@ -97,7 +96,7 @@ export class ViewQrComponent implements OnInit {
 							}
 							 
 							let answer = {
-								title: this.sanitizer.bypassSecurityTrustHtml(marked(input.label)),
+								title: this.sanitizer.bypassSecurityTrustHtml(input.label),
 								answer: "",
 							}
 

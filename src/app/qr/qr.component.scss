@@ -26,14 +26,20 @@ mat-card {
 			user-select: initial;
 		}
 	}
+
+	mat-card-title {
+		line-height: 24px;
+		font-size: 22px;
+	}
 }
 
 .med-images {
-	display: flex;
+	// display: flex;
 	margin: 0 -16px;
 
 	img {
-		flex: 1;
+		// flex: 1;
+		display: inline-block;
 		width: 50%;
 		object-fit: contain;
 	}
@@ -63,4 +69,5 @@ h1 {
 
 p.dosage {
 	font-size: 20px;
+	line-height: 22px;
 }

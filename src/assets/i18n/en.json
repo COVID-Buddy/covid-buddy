@@ -12,12 +12,10 @@
 		"chinese": "新加坡华语",
 		"tamil": "தமிழ்"
 	},
-	"slides": [
-		{
-			"content": "### Hello, this app lets you tell doctors what symptoms you have, and what medication to take\n\nPress the green button if you have a symptom. If not press the red button",
-			"sound": "assets/audio/en/intro.mp3"
-		}
-	],
+	"slides": {
+		"content": "Hello, this app lets you tell doctors what symptoms you have, and what medication to take\n\nPress the green button if you have a symptom. If not press the red button",
+		"sound": "assets/audio/en/intro.mp3"
+	},
 	"buttons": {
 		"slide_next": "Next",
 		"start_questions": "Start",
@@ -27,7 +25,7 @@
 	},
 	"input_required": "Input is required",
 	"questions": [{
-		"title": "Do you have **shortness of breath**?",
+		"title": "Do you have shortness of breath?",
 		"name": "short_breath",
 		"image": "assets/symptoms/short_breath.jpg",
 		"sound": "assets/audio/en/shortness_of_breath.mp3",
@@ -127,7 +125,7 @@
 		}]
 	}, {
 		"title": "Do you have diarrhea?",
-		"image": "assets/symptoms/diarrhea.jpeg",
+		"image": "assets/symptoms/diarrhea.jpg",
 		"sound": "assets/audio/en/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{

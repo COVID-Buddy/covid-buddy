@@ -10,8 +10,8 @@ app-questions {
 	}
 
 	.swiper-container, .swiper-wrapper, .swiper-slide, .swiper-slide > div {
-		min-height: 70vh;
-		min-height: calc(75vh - 36px);
+		min-height: 40vh;
+		min-height: calc(45vh - 36px);
 	}
 
 	.swiper-slide {
@@ -38,8 +38,9 @@ app-questions {
 					// padding-top: 8px;
 				// }
 				mat-card-title {
-					padding-top: 8px;
-					font-size: 28px;
+					// padding-top: 8px;
+					font-size: 22px;
+					line-height: 24px;
 				}
 
 				mat-card-content.mat-card-content {

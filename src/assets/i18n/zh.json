@@ -12,12 +12,10 @@
 		"chinese": "新加坡华语",
 		"tamil": "தமிழ்"
 	},
-	"slides": [
-		{
-			"content": "### 您好，这个应用程序能让您告诉医生您有什么症状，解释一下如何服药,以及解释您测试结果。如果出现症状，请按绿色按钮。如果没有，请按红色按钮",
-			"sound": "assets/audio/zh/intro.mp3"
-		}
-	],
+	"slides": {
+		"content": "您好，这个应用程序能让您告诉医生您有什么症状，解释一下如何服药,以及解释您测试结果。如果出现症状，请按绿色按钮。如果没有，请按红色按钮",
+		"sound": "assets/audio/zh/intro.mp3"
+	},
 	"buttons": {
 		"slide_next": "下一个",
 		"start_questions": "开始",
@@ -127,7 +125,7 @@
 		}]
 	}, {
 		"title": "你有泻肚子吗？",
-		"image": "assets/symptoms/diarrhea.jpeg",
+		"image": "assets/symptoms/diarrhea.jpg",
 		"sound": "assets/audio/zh/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{

@@ -1,4 +1,4 @@
-<div style="display: flex; flex-direction: column; height: 100%;">
+<div>
 	<mat-toolbar color="primary">
 		<a (click)="goHome()"><i translate>toolbar.title</i></a>
 
@@ -8,7 +8,6 @@
 		<a mat-button *ngIf="hasResults" [routerLink]="['/qr', results]">{{ 'toolbar.has_results' | translate }}</a>
 		<a mat-button [matMenuTriggerFor]="menu">
 			<mat-icon>language</mat-icon>
-			<!-- <mat-icon>arrow_drop_down</mat-icon> -->
 		</a>
 		<mat-menu class="languageMenu" #menu="matMenu" xPosition="before">
 			<button mat-menu-item [class.active]="translate.currentLang == 'en'" (click)="setLanguage('en')">{{ 'langs.english' | translate }}</button>
@@ -19,7 +18,7 @@
 		</mat-menu>
 	</mat-toolbar>
 
-	<div style="position: relative; flex: 1;">
+	<div>
 		<router-outlet></router-outlet>
 	</div>
 </div>

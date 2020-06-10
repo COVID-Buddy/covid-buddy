@@ -27,7 +27,6 @@ import { environment } from '../environments/environment';
 import { LanguageComponent } from './language/language.component';
 import { PreTestComponent } from './pre-test/pre-test.component';
 import { QuestionsComponent } from './questions/questions.component';
-import { FaqComponent } from './faq/faq.component';
 import { QrComponent } from './qr/qr.component';
 import { EmergencyComponent } from './emergency/emergency.component';
 import { ViewQrComponent } from './view-qr/view-qr.component';
@@ -44,7 +43,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     LanguageComponent,
     PreTestComponent,
     QuestionsComponent,
-    FaqComponent,
     QrComponent,
     EmergencyComponent,
     ViewQrComponent,

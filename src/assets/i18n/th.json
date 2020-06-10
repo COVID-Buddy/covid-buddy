@@ -12,12 +12,10 @@
 		"chinese": "新加坡华语",
 		"tamil": "தமிழ்"
 	},
-	"slides": [
-		{
-			"content": "### แอพพลิเคชันนี้จะช่วยแจ้งให้หมอทราบว่าคุณมีอาการอย่างไร และคุณต้องได้รับยาแบบไหน กดปุ่มสีเขียวหากคุณมีอาการดังต่อไปนี้ และกดปุ่มสีแดงหากคุณไม่มีอาการ",
-			"sound": "assets/audio/th/intro.mp3"
-		}
-	],
+	"slides": {
+		"content": "แอพพลิเคชันนี้จะช่วยแจ้งให้หมอทราบว่าคุณมีอาการอย่างไร และคุณต้องได้รับยาแบบไหน กดปุ่มสีเขียวหากคุณมีอาการดังต่อไปนี้ และกดปุ่มสีแดงหากคุณไม่มีอาการ",
+		"sound": "assets/audio/th/intro.mp3"
+	},
 	"buttons": {
 		"slide_next": "ต่อไป",
 		"start_questions": "เริ่มต้น",
@@ -127,7 +125,7 @@
 		}]
 	}, {
 		"title": "คุณมีอาการถ่ายเหลว ท้องเสีย หรือไม่?",
-		"image": "assets/symptoms/diarrhea.jpeg",
+		"image": "assets/symptoms/diarrhea.jpg",
 		"sound": "assets/audio/th/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{

@@ -12,12 +12,10 @@
 		"chinese": "新加坡华语",
 		"tamil": "தமிழ்"
 	},
-	"slides": [
-		{
-			"content": "### হ্যালো, এই অ্যাপের মাধ্যমে ডাক্তার কে জানান যে আপনার কী কী লক্ষণ রয়েছে এবং জেনে নিন কোন ওষুধ খাওয়া উচিত  | আপনার কোনও লক্ষণ থাকলে সবুজ বোতাম টিপুন। না থাকলে লাল বোতাম টিপুন",
-			"sound": "assets/audio/bn/intro.mp3"
-		}
-	],
+	"slides": {
+		"content": "হ্যালো, এই অ্যাপের মাধ্যমে ডাক্তার কে জানান যে আপনার কী কী লক্ষণ রয়েছে এবং জেনে নিন কোন ওষুধ খাওয়া উচিত  | আপনার কোনও লক্ষণ থাকলে সবুজ বোতাম টিপুন। না থাকলে লাল বোতাম টিপুন",
+		"sound": "assets/audio/bn/intro.mp3"
+	},
 	"buttons": {
 		"slide_next": "পরবর্তী",
 		"start_questions": "শুরু",
@@ -87,7 +85,7 @@
 		"title": "তোমার বুকে ব্যথা আছে?",
 		"name": "chest_pain",
 		"image": "assets/symptoms/chest_pain.jpg",
-		"sound": "assets/audio/ta/chest_pain.mp3",
+		"sound": "assets/audio/bn/chest_pain.mp3",
 		"buttons": [{
 			"title": "হ্যাঁ",
 			"value": "yes",
@@ -127,7 +125,7 @@
 		}]
 	}, {
 		"title": "আপনার কি পেট খারাপ হচ্ছে ?",
-		"image": "assets/symptoms/diarrhea.jpeg",
+		"image": "assets/symptoms/diarrhea.jpg",
 		"sound": "assets/audio/bn/diarrhea.mp3",
 		"name": "diarrhea",
 		"buttons": [{
@@ -205,7 +203,7 @@
 		"image": "assets/symptoms/o2.jpeg",
 		"name": "o2",
 		"buttons": [{
-			"title": "அடுத்தது",
+			"title": "পরবর্তী",
 			"color": "success"
 		}],
 		"inputs": [{
@@ -218,7 +216,7 @@
 		"image": "assets/symptoms/temperature.jpeg",
 		"name": "temp",
 		"buttons": [{
-			"title": "அடுத்தது",
+			"title": "পরবর্তী",
 			"color": "success"
 		}],
 		"inputs": [{
@@ -230,7 +228,7 @@
 		"title": "আপনার বয়স কত ?",
 		"name": "age",
 		"buttons": [{
-			"title": "அடுத்தது",
+			"title": "পরবর্তী",
 			"color": "success"
 		}],
 		"inputs": [{
@@ -244,7 +242,7 @@
 		"title": "আপনার বাসা কোথায় ?",
 		"name": "age",
 		"buttons": [{
-			"title": "அடுத்தது",
+			"title": "পরবর্তী",
 			"color": "success"
 		}],
 		"inputs": [{
