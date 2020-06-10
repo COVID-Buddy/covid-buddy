@@ -2,7 +2,7 @@
 	"toolbar": {
 		"title": "COVID buddy",
 		"qr": "QR Reader",
-		"has_results": "结果"
+		"has_results": "检查结果"
 	},
 	"langs": {
 		"title": "请选择语言",
