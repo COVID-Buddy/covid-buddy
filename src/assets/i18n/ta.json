@@ -198,61 +198,6 @@
 			"color": "warn",
 			"value": "no"
 		}]
-	}, {
-		"title": "ஆக்ஸிஜன் %",
-		"image": "assets/symptoms/o2.jpeg",
-		"name": "o2",
-		"buttons": [{
-			"title": "அடுத்தது",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "%",
-			"name": "perc",
-			"type": "number"
-		}]
-	}, {
-		"title": "வெப்ப நிலை",
-		"image": "assets/symptoms/temperature.jpeg",
-		"name": "temp",
-		"buttons": [{
-			"title": "அடுத்தது",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "டிகிரி செல்சியஸ்",
-			"name": "celsius",
-			"type": "number"
-		}]
-	}, {
-		"title": "உங்கள் வயது என்ன?",
-		"name": "age",
-		"buttons": [{
-			"title": "அடுத்தது",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "உங்கள் வயது என்ன?",
-			"name": "age",
-			"sound": "assets/audio/ta/age.mp3",
-			"type": "number",
-			"required": true
-		}]
-	}, {
-		"title": "உங்கள் சிங்கப்பூர் முகவரி என்ன?",
-		"name": "age",
-		"buttons": [{
-			"title": "அடுத்தது",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "உங்கள் சிங்கப்பூர் முகவரி என்ன?",
-			"placeholder": "முகவரி",
-			"sound": "assets/audio/ta/address.mp3",
-			"name": "address",
-			"type": "text",
-			"required": true
-		}]
 	}],
 	"emergency": {
 		"title": "தயவுசெய்து இப்போது ஒரு மருத்துவரை சந்திக்கவும்",

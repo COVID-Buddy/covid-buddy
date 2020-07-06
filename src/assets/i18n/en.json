@@ -198,61 +198,6 @@
 			"color": "warn",
 			"value": "no"
 		}]
-	}, {
-		"title": "Oxygen %",
-		"image": "assets/symptoms/o2.jpeg",
-		"name": "o2",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "o2 %",
-			"name": "perc",
-			"type": "number"
-		}]
-	}, {
-		"title": "Temperature",
-		"image": "assets/symptoms/temperature.jpeg",
-		"name": "temp",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "Degrees Celsius",
-			"name": "celsius",
-			"type": "number"
-		}]
-	}, {
-		"title": "How old are you?",
-		"name": "age",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "Age",
-			"name": "age",
-			"sound": "assets/audio/en/age.mp3",
-			"type": "number",
-			"required": true
-		}]
-	}, {
-		"title": "Where do you live?",
-		"name": "age",
-		"buttons": [{
-			"title": "Next",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "Where do you live?",
-			"placeholder": "Address",
-			"sound": "assets/audio/en/address.mp3",
-			"name": "address",
-			"type": "text",
-			"required": true
-		}]
 	}],
 	"emergency": {
 		"title": "Please call us NOW",

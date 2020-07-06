@@ -7,6 +7,15 @@ mat-toolbar.mat-toolbar.mat-primary {
 	a {
 		cursor: pointer;
 	}
+
+	.logo {
+		display: block;
+		height: 50%;
+
+		img {
+			height: 100%;
+		}
+	}
 }
 
 :host {

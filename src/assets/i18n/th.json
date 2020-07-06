@@ -198,61 +198,6 @@
 			"color": "warn",
 			"value": "no"
 		}]
-	}, {
-		"title": "ออกซิเจน%",
-		"image": "assets/symptoms/o2.jpeg",
-		"name": "o2",
-		"buttons": [{
-			"title": "ต่อไป",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "%",
-			"name": "perc",
-			"type": "number"
-		}]
-	}, {
-		"title": "อุณหภูมิ",
-		"image": "assets/symptoms/temperature.jpeg",
-		"name": "temp",
-		"buttons": [{
-			"title": "ต่อไป",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "องศาเซลเซียส",
-			"name": "celsius",
-			"type": "number"
-		}]
-	}, {
-		"title": "คุณอายุเท่าไร?",
-		"name": "age",
-		"buttons": [{
-			"title": "ต่อไป",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "อายุ",
-			"name": "age",
-			"sound": "assets/audio/th/age.mp3",
-			"type": "number",
-			"required": true
-		}]
-	}, {
-		"title": "ที่อยู่สิงคโปร์ของคุณคืออะไร?",
-		"name": "age",
-		"buttons": [{
-			"title": "ต่อไป",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "คุณอาศัยอยู่ที่ไหน?",
-			"placeholder": "ที่อยู่",
-			"sound": "assets/audio/th/address.mp3",
-			"name": "address",
-			"type": "text",
-			"required": true
-		}]
 	}],
 	"emergency": {
 		"title": "โปรดโทรเรียกหมอทันที",

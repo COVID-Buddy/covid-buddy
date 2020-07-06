@@ -198,61 +198,6 @@
 			"color": "warn",
 			"value": "no"
 		}]
-	}, {
-		"title": "অক্সিজেন %",
-		"image": "assets/symptoms/o2.jpeg",
-		"name": "o2",
-		"buttons": [{
-			"title": "পরবর্তী",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "%",
-			"name": "perc",
-			"type": "number"
-		}]
-	}, {
-		"title": "তাপমাত্রা",
-		"image": "assets/symptoms/temperature.jpeg",
-		"name": "temp",
-		"buttons": [{
-			"title": "পরবর্তী",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "ডিগ্রী সেলসিয়াস",
-			"name": "celsius",
-			"type": "number"
-		}]
-	}, {
-		"title": "আপনার বয়স কত ?",
-		"name": "age",
-		"buttons": [{
-			"title": "পরবর্তী",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "বয়স",
-			"name": "age",
-			"sound": "assets/audio/bn/age.mp3",
-			"type": "number",
-			"required": true
-		}]
-	}, {
-		"title": "আপনার বাসা কোথায় ?",
-		"name": "age",
-		"buttons": [{
-			"title": "পরবর্তী",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "আপনার বাসা কোথায় ?",
-			"placeholder": "Address",
-			"sound": "assets/audio/bn/address.mp3",
-			"name": "address",
-			"type": "text",
-			"required": true
-		}]
 	}],
 	"emergency": {
 		"title": "ডাক্তার কে এক্ষুনি ফোন করুন",

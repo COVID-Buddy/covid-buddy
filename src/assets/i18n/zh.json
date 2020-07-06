@@ -198,61 +198,6 @@
 			"color": "warn",
 			"value": "no"
 		}]
-	}, {
-		"title": "氧气％",
-		"image": "assets/symptoms/o2.jpeg",
-		"name": "o2",
-		"buttons": [{
-			"title": "下一个",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "%",
-			"name": "perc",
-			"type": "number"
-		}]
-	}, {
-		"title": "温度",
-		"image": "assets/symptoms/temperature.jpeg",
-		"name": "temp",
-		"buttons": [{
-			"title": "下一个",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "摄氏温度",
-			"name": "celsius",
-			"type": "number"
-		}]
-	}, {
-		"title": "你今年几岁？",
-		"name": "age",
-		"buttons": [{
-			"title": "下一个",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "你今年几岁？",
-			"name": "age",
-			"sound": "assets/audio/zh/age.mp3",
-			"type": "number",
-			"required": true
-		}]
-	}, {
-		"title": "您在新加坡的地址是什么？",
-		"name": "age",
-		"buttons": [{
-			"title": "下一个",
-			"color": "success"
-		}],
-		"inputs": [{
-			"label": "您在新加坡的地址是什么？",
-			"placeholder": "地址",
-			"sound": "assets/audio/zh/address.mp3",
-			"name": "address",
-			"type": "text",
-			"required": true
-		}]
 	}],
 	"emergency": {
 		"title": "请立即找医生",
