@@ -4,7 +4,7 @@
 			<div>
 				<mat-card>
 					<img mat-card-image *ngIf="question.image" [src]="question.image">
-					<mat-card-title [innerHTML]="question._title"></mat-card-title>
+					<mat-card-title style="white-space: pre-wrap;" [innerHTML]="question._title"></mat-card-title>
 					
 					<mat-card-content>
 						<ng-container *ngFor="let in of question.inputs; let qi = index">
@@ -25,7 +25,7 @@
 						</ng-container>
 					</mat-card-content>
 
-					<mat-card-actions>
+					<mat-card-actions [class.display-vertical]="question.buttons && question.buttons.length > 2">
 						<button [color]="button.color ? button.color : 'primary'" *ngFor="let button of question.buttons" mat-raised-button (click)="pressedButton(question, button)">{{ button.title }}</button>
 					</mat-card-actions>
 				</mat-card>

@@ -64,6 +64,15 @@ app-questions {
 						height: 50px;
 						font-size: 120%;
 					}
+
+					&.display-vertical {
+						flex-direction: column;
+
+						button {
+							margin: 0 0 6px;
+							padding: 7px 0;
+						}
+					}
 				}
 			}
 

@@ -69,6 +69,7 @@ export class ViewQrComponent implements OnInit {
 						title: "",
 						answer: "",
 						answers: [],
+						highlight: ["stress", "stress_2", "suicide"].indexOf(question.name) > -1,
 					};
 
 					if (key == question.name) {

@@ -157,19 +157,49 @@
 		"name": "stress",
 		"sound": "assets/audio/zh/stress.mp3",
 		"buttons": [{
-			"title": "有",
-			"value": "yes",
+			"title": "没有担忧",
+			"value": "not_worried",
 			"color": "success"
 		}, {
-			"title": "没有",
-			"color": "warn",
-			"value": "no"
+			"title": "有点担忧",
+			"value": "slightly_worried",
+			"color": "yellow"
+		}, {
+			"title": "担心",
+			"value": "worried",
+			"color": "worried"
+		}, {
+			"title": "非常担心",
+			"value": "very_worried",
+			"color": "warn"
 		}]
 	}, {
-		"title": "您是否对健康或冠状病毒感到担忧或压力？",
+		"title": "您是否担心自己的健康，朋友和家人或住所？",
 		"image": "assets/symptoms/stress_2.jpg",
 		"name": "stress_2",
 		"sound": "assets/audio/zh/stress_2.mp3",
+		"buttons": [{
+			"title": "没有担忧",
+			"value": "not_worried",
+			"color": "success"
+		}, {
+			"title": "有点担忧",
+			"value": "slightly_worried",
+			"color": "yellow"
+		}, {
+			"title": "担心",
+			"value": "worried",
+			"color": "worried"
+		}, {
+			"title": "非常担心",
+			"value": "very_worried",
+			"color": "warn"
+		}]
+	}, {
+		"title": "当我的病人遇到问题时，我通常都会问这个问题\n\n请问你目前有自杀的念头吗？",
+		"image": "assets/symptoms/suicide.jpg",
+		"name": "suicide",
+		"sound": "assets/audio/zh/suicide.mp3",
 		"buttons": [{
 			"title": "有",
 			"value": "yes",
@@ -253,12 +283,16 @@
 			"image": "assets/meds/loperamide.jpg"
 		}, {
 			"symptoms": ["stress"],
-			"text": "如果您感到压力很大，请告诉我们",
+			"text": "如果您有任何疑问，请拨打这些电话。",
 			"image": "assets/meds/stress.jpg"
 		}, {
 			"symptoms": ["stress_2"],
-			"text": "如果您感到压力很大，请告诉我们",
+			"text": "如果您有任何疑问，请拨打这些电话。",
 			"image": "assets/meds/stress_2.jpg"
+		}, {
+			"symptoms": ["suicide"],
+			"text": "请不要自杀，请与我们联系或致电+65 31384443",
+			"image": "assets/meds/suicide.jpg"
 		}
 	],
 	"doctor": {

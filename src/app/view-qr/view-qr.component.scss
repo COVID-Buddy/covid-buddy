@@ -8,11 +8,29 @@ app-view-qr {
 
 	ul {
 		margin-bottom: 0;
-		margin-top: 4px;
+		margin-top: 6px;
+		padding-left: 0px;
+		border-bottom: 1px solid #eee;
+	}
+
+	.mat-dialog-content > ul {
+		& > li {
+			display: flex;
+			justify-content: space-between;
+
+			.answer {
+				font-weight: bold;
+				text-align: right;
+			}
+		}
 	}
 
 	canvas {
 		width: 100%;
+	}
+
+	.bold {
+		font-weight: bold;
 	}
 }
 

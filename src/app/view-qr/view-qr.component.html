@@ -4,8 +4,8 @@
 	<p *ngIf="start">Started {{ start | date:'medium' }}</p>
 
 	<ul *ngFor="let group of data">
-		<li *ngIf="group.answer.length == 0"><span [innerHTML]="group.title"></span></li>
-		<li *ngIf="group.answer.length > 0"><span [innerHTML]="group.title"></span> {{ group.answer }}</li>
+		<li *ngIf="group.answer.length == 0"><span [class.bold]="group.highlight" [innerHTML]="group.title"></span></li>
+		<li *ngIf="group.answer.length > 0"><span [class.bold]="group.highlight" [innerHTML]="group.title"></span><span class="answer">{{ group.answer }}</span></li>
 		<ul>
 			<li *ngFor="let d of group.answers"><span [innerHTML]="d.title"></span> {{ d.answer }}</li>
 		</ul>

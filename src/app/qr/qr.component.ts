@@ -111,7 +111,7 @@ export class QrComponent {
 
       questions = [];
       for (let key in groups) {
-        if (key == 'stress' || key == 'stress_2') {
+        if (key == 'stress' || key == 'stress_2' || key == 'suicide') {
           questions.splice(0, 0, groups[key]);
         } else {
           questions.push(groups[key]);
@@ -123,7 +123,8 @@ export class QrComponent {
         this.meds = [];
         meds.forEach(med => {
           med.symptoms.forEach(symptom => {
-            if (params[symptom] != "yes") {
+            console.log(params[symptom]);
+            if (["yes", "worried", "very_worried"].indexOf(params[symptom]) == -1) {
               return;
             }
 

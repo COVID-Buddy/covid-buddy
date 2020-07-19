@@ -23,3 +23,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Deployment
+
+1. `ng build --prod` - builds the project into the `dist/` folder.
+2. `docker build -t asia.gcr.io/matej-kramny/covid-sg .` - The docker image is just nginx embedded with cloudflare ssl certificates, you can put them into `ngx/` folder (files `cert.crt`, `cert.key` and nginx conf `conf.conf`).
