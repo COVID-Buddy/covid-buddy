@@ -24,6 +24,19 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+## Setup
+
+### Requirements
+
+- node.js
+- `npm install -g @angular/cli`
+
+### Installation steps / development
+
+- `npm install`
+- `ng serve`
+- now open `http://localhost:4200`
+
 ## Deployment
 
 1. `ng build --prod` - builds the project into the `dist/` folder.
