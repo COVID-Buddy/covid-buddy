@@ -196,20 +196,6 @@
 			"color": "warn"
 		}]
 	}, {
-		"title": "இது எனது நோயாளிகளுக்கு பிரச்சினைகள் இருக்கும்போது நான் கேட்கும் கேள்வி.\n\nதற்கொலை எண்ணங்கள் அல்லது உங்களைக் கொல்லும் எண்ணங்கள் உண்டா?",
-		"image": "assets/symptoms/suicide.jpg",
-		"name": "suicide",
-		"sound": "assets/audio/ta/suicide.mp3",
-		"buttons": [{
-			"title": "ஆம்",
-			"value": "yes",
-			"color": "success"
-		}, {
-			"title": "இல்லை",
-			"color": "warn",
-			"value": "no"
-		}]
-	}, {
 		"title": "வேறு ஏதேனும் பிரச்சினைகள் அல்லது அறிகுறிகளை நீங்கள் கொண்டிருக்கிறீர்களா?",
 		"image": "assets/symptoms/question.png",
 		"name": "other",

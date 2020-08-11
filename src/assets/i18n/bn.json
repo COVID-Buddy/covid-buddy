@@ -196,20 +196,6 @@
 			"color": "warn"
 		}]
 	}, {
-		"title": "একটি প্রশ্ন যা আমি আমার রোগীদের করে থাকি জখন তাদের সমস্যা হয় বা থাকে.\nআপনাদের কী আত্মহত্যা বা নিজেদের হত্যা করার চিন্তা হয় কী?",
-		"image": "assets/symptoms/suicide.jpg",
-		"name": "suicide",
-		"sound": "assets/audio/bn/suicide.mp3",
-		"buttons": [{
-			"title": "হ্যাঁ",
-			"value": "yes",
-			"color": "success"
-		}, {
-			"title": "না",
-			"color": "warn",
-			"value": "no"
-		}]
-	}, {
 		"title": "আপনার কি শরীরে অন্য কোনো সমস্যা আছে? ",
 		"image": "assets/symptoms/question.png",
 		"name": "other",

@@ -196,20 +196,6 @@
 			"color": "warn"
 		}]
 	}, {
-		"title": "This is a question I ask patients who are having problems.\n\nDo you feel of think of killing yourself?",
-		"image": "assets/symptoms/suicide.jpg",
-		"name": "suicide",
-		"sound": "assets/audio/en/suicide.mp3",
-		"buttons": [{
-			"title": "Yes",
-			"value": "yes",
-			"color": "success"
-		}, {
-			"title": "No",
-			"color": "warn",
-			"value": "no"
-		}]
-	}, {
 		"title": "Any other problems?",
 		"image": "assets/symptoms/question.png",
 		"name": "other",

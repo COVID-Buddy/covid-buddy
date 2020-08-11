@@ -196,20 +196,6 @@
 			"color": "warn"
 		}]
 	}, {
-		"title": "当我的病人遇到问题时，我通常都会问这个问题\n\n请问你目前有自杀的念头吗？",
-		"image": "assets/symptoms/suicide.jpg",
-		"name": "suicide",
-		"sound": "assets/audio/zh/suicide.mp3",
-		"buttons": [{
-			"title": "有",
-			"value": "yes",
-			"color": "success"
-		}, {
-			"title": "没有",
-			"color": "warn",
-			"value": "no"
-		}]
-	}, {
 		"title": "您还有其他问题或症状吗?",
 		"image": "assets/symptoms/question.png",
 		"name": "other",

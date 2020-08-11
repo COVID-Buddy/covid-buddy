@@ -196,20 +196,6 @@
 			"color": "warn"
 		}]
 	}, {
-		"title": "คำถามนี้ สำหรับคนไข้ที่มีอาการเกี่ยวกับสุขภาพกายและสุขภาพจิต\n\nท่านเคยมีความคิดที่จะฆ่าตัวตายหรือไม่)",
-		"image": "assets/symptoms/suicide.jpg",
-		"name": "suicide",
-		"sound": "assets/audio/th/suicide.mp3",
-		"buttons": [{
-			"title": "ใช่",
-			"value": "yes",
-			"color": "success"
-		}, {
-			"title": "ไม่",
-			"color": "warn",
-			"value": "no"
-		}]
-	}, {
 		"title": "คุณมีอาการอื่นอีกหรือไม่?",
 		"image": "assets/symptoms/question.png",
 		"name": "other",
