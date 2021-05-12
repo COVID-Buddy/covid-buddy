@@ -32,7 +32,7 @@
     "mixpanel-browser": "^2.36.0",
     "qrious": "^4.0.2",
     "rxjs": "~6.5.4",
-    "swiper": "^5.3.7",
+    "swiper": "^6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
