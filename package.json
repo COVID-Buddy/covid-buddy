@@ -28,7 +28,7 @@
     "classlist-polyfill": "^1.2.0",
     "core-js": "^3.6.5",
     "csv-stringify": "^5.5.0",
-    "marked": "^1.0.0",
+    "marked": "^4.0.10",
     "mixpanel-browser": "^2.36.0",
     "qrious": "^4.0.2",
     "rxjs": "~6.5.4",
